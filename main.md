@@ -11,9 +11,9 @@ Celem bieżącej części rozprawy jest sformułowanie optymalnej polityki finan
 
 Przedstawiony w niniejszej pracy doktorskiej model opisuje problem, przed którym stoją decydenci jednostki samorządu terytorialnego (wójt, burmistrz gminy lub prezydent miasta) w okresie, w którym istotną rolę w finansowaniu inwestycji odgrywają środki unijne\footnote{Model można jednak uogólnić na okres, w którym środki unijne przestaną być istotne.}. Jednostka samorządu terytorialnego jest w niniejszej pracy rozumiana jako gmina lub miasto na prawach powiatu, w tym Warszawa. 
 
-Województwa i powiaty ziemskie nie są więc brane pod uwagę. Wynika to z ,,silnego zróżnicowania potencjału finansowego pomiędzy rodzajami JST'' (Sierak i in., 2013). Przykładowo, udział wydatków majątkowych w wydatkach ogółem jest wyraźnie mniejszy w powiatach ziemskich niż w gminach, natomiast odwrotna sytuacja ma miejsce w województwach. W niniejszej pracy wykorzystywane są dane empiryczne dotyczące gmin i miast na prawach powiatu, dlatego zdecydowano się zawęzić obszar badań do najniższego szczebla jednostek samorządowych. Należy zarazem podkreślić, że samorządy wojewódzkie i powiatowe ziemskie mają stosunkowo małe znaczenie - łącznie ich wydatki ogółem w każdym roku z okresu 2005-2014 były około cztery razy mniejsze niż łącznie wydatki gmin i miast powiatowych. W 2015 r. łączne wydatki samorządów województw i powiatów wyniosły 40,6 mld zł, natomiast gmin, Warszawy i miast na prawach powiatów wyniosły 155,8 mld zł (RIO, 2015)\nocite{RIO_2015}. 
+Województwa i powiaty ziemskie nie są więc brane pod uwagę. Wynika to z ,,silnego zróżnicowania potencjału finansowego pomiędzy rodzajami JST'' (Sierak i in., 2013). Przykładowo, udział wydatków majątkowych w wydatkach ogółem jest wyraźnie mniejszy w powiatach ziemskich niż w gminach, natomiast odwrotna sytuacja ma miejsce w województwach. W niniejszej pracy wykorzystywane są dane empiryczne dotyczące gmin i miast na prawach powiatu, dlatego zdecydowano się zawęzić obszar badań do najniższego szczebla jednostek samorządowych. Należy zarazem podkreślić, że samorządy wojewódzkie i powiatowe ziemskie mają stosunkowo małe znaczenie - łącznie ich wydatki ogółem w każdym roku z okresu 2005-2014 były około cztery razy mniejsze niż łącznie wydatki gmin i miast powiatowych. W 2015 r. łączne wydatki samorządów województw i powiatów wyniosły 40,6 mld zł, natomiast gmin, Warszawy i miast na prawach powiatów wyniosły 155,8 mld zł (RIO, 2015). 
 
-\subsection{Preferencje}
+# Preferencje
 
 Problem decyzyjny samorządowców można zinterpretować następująco. Po wygranych wyborach, które odbywają się na koniec roku zerowego, nowe władze samorządowe mają przed sobą cztery lata kadencji. Decydenci owi zastanawiają się, ile środków przeznaczyć na wydatki bieżące i inwestycje w roku pierwszym, drugim, trzecim i czwartym.\footnote{W wyżej opisany sposób można zinterpretować problem optymalizacyjny z rozdziału \ref{rozdzial_model_czteroletni}. Nieco inaczej należy opisać problem z rozdziału \ref{rozdzial_model_dwuletni}. Władze samorządowe dokonują tam decyzji po zakończeniu drugiego roku - planują wydatki jedynie na rok trzeci i czwarty.} W pierwszym dniu roku piątego odbywają się kolejne wybory, podczas których mieszkańcy danej gminy lub miasta oceniają dotychczasowe władze pod kątem strumienia wydatków bieżących z czterech ostatnich lat i zasobu infrastruktury na moment bieżący, a także w trzech zeszłych latach.
 
@@ -161,6 +161,924 @@ Warunki Kuhna-Tuckera są warunkami koniecznymi tylko wtedy, gdy spełnione są 
 Teoretycznie ekstremów lokalnych spełniających warunki KKT mogłoby być więcej niż jeden i wówczas należałoby wybrać spośród nich ekstremum (ewentualnie ekstrema) globalne. Jednak ,,żaden punkt wewnętrzny zbioru rozwiązań dopuszczalnych, nie spełniający warunków KKT, nie może być rozwiązaniem optymalnym'' (Chiang, 1994). Oznacza to, że jeżeli ekstremum globalne istnieje  w punkcie wewnętrznym oraz jeżeli zbiór punktów spełniających warunki KKT jest jednoelementowy, to punkt należący do tego zbioru jest ekstremum globalnym. W dalszej części pracy (w szczególności w porozdziale \ref{rozdzial_szescienne} oraz części B i C aneksu) pokazano, że punkty spełniające warunki KKT dla pewnego podzbioru zbioru rozwiązań dopuszczalnych stanowią rozwiązanie równania sześciennego. Spośród trzech takich rozwiązań, dwa stanowią liczby zespolone, a tylko jeden należy do zbioru liczb rzeczywistych. Oznacza to, że punkt ten musi być globalnym rozwiązaniem optymalnym w ramach omawianego podzbioru.
 
 Wyznaczenie pełnego rozwiązania analitycznego takiego modelu jest niewykonalne ze względu na ogromną złożoność zagadnienia. Już nawet rozwiązanie dla trzeciego i czwartego roku (patrz podrozdział \ref{rozdzial_szescienne}) wymaga bardzo żmudnych i czasochłonnych rachunków, które prowadzą do równania sześciennego. Dlatego w kolejnych podrozdziałach zostaną wyznaczone, metodą analityczną, fragmentaryczne rozwiązania modelu, dla $t = 3,4$ (dla z góry ustalonych wartości zmiennych decyzyjnych z lat $t=1,2$), a następnie, metodą numeryczną, pełne rozwiązanie modelu, dla $t = 1,2,3,4$. Innymi słowy, w kolejnych podrozdziałach przedstawione zostaną rozwiązania analityczne problemu (\ref{problem_maks}) na pewnych podzbiorach pełnego zbioru rozwiązań dopuszczalnych. Rozwiązania takie co do zasady nie będą stanowiły globalnego maksimum problemu (\ref{problem_maks}), jednak pozwolą zbudować cenną intuicję odnośnie do funkcjonowania modelu. Pełne rozwiązanie modelu zostanie wyznaczone metodą numeryczną w rozdziale \ref{analiza_wrazliwosci}, po kalibracji modelu w rozdziale \ref{rozdzial_dane}. Jak się okaże, struktura warunków ograniczających w rozwiązaniu optymalnym z dużym prawdopodobieństwem będzie zgodna z tą, którą założono  na potrzeby rozwiązania analitycznego w rozdziale \ref{rozwiazanie_modelu}. Pozwala to potwierdzić praktyczną użyteczność przedstawionych tu analiz.
+
+\subsection{Analityczne rozwiązanie dla czwartego roku z napiętym warunkiem IWZ}
+\label{podrozdzial_napiety_IWZ_bez_nadwyzki}
+
+Uprośćmy teraz problem, znajdując ,,na skróty'' optymalne wartości dla zmiennych z roku czwartego. W tym celu warunek $h_{14}(\bm{x})$ należy przekształcić do postaci:
+
+\begin{IEEEeqnarray}{rCl}
+\theta u_{4} + i_{4} + c_{4}   & = &  z_{4} + y_{4} - rb_{4}. \nonumber
+\end{IEEEeqnarray}
+
+Zmienne $y_{4}$, $b_{4}$ są z góry ustalone w roku czwartym. Widać zatem, że suma wydatków bieżących i inwestycyjnych zależy dodatnio od wielkości zaciągniętego długu w czwartym roku. Optymalnie byłoby zatem powiększyć dług jak najbardziej to możliwe, czyli na tyle, na ile pozwalają reguły fiskalne. Z analizy rozwiązań optymalnych uzyskanych za pomocą metod numerycznych (rozdz. \ref{rozdz_numeryczna_metoda}) wynika, że prawie zawsze napięty jest warunek indywidualnego wskaźnika zadłużenia (IWZ, patrz równanie (\ref{IWZ})), a bardzo rzadko - zrównoważonego wyniku bieżącego (ZWB, patrz równanie (\ref{regula_bez_nadwyzki})). Dlatego dalej założono, że IWZ jest warunkiem napiętym, a ZWB - luźnym. 
+
+Z napiętego warunku IWZ można wyprowadzić wzór na optymalny deficyt w roku czwartym: 
+\begin{IEEEeqnarray}{rCl}
+\frac{(\chi+r) b_{5}^{*}}{y_{5} + u_{5}^{*}} & = & \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
+%b_{5}^{*} & = & \frac{{y_{5} + u_{5}^{*}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \nonumber \\
+%z_{4}^{*} & = & b_{5}^{*} - b_{4} \nonumber \\
+\Rightarrow z_{4}^{*} & = & \frac{y_{5} + u_{5}^{*}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. \nonumber
+\end{IEEEeqnarray}
+
+Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{*}_{5} = U_{5}$.   
+
+{\footnotesize
+\begin{IEEEeqnarray}{rCl}
+\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*} + r b_{4} & = &  z_{4}^{*} + y_{4} \Rightarrow \nonumber \\
+%
+%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*} & = &  \frac{y_{5} + U_{5}}{\chi+ r} \left( \frac{1}{3}  \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - (1+r) b_{4} + y_{4} \nonumber 
+%\\
+%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r ) b_{4} + y_{4} \nonumber
+%\\
+%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4} }{y_{4} + u_{4}^{*}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r) b_{4} + y_{4} \nonumber
+%\\
+\label{eq_ograniczenie_t4}
+\Rightarrow \theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} & = & \phi
+\end{IEEEeqnarray}
+}
+
+Czynnik dyskontujący $\beta^{4}$ można w funkcji celu pominąć, gdyż w tym rozdziale brany pod uwagę jest tylko jeden rok. Model optymalizacyjny można zapisać zatem w następujący sposób: 
+\begin{equation}
+\max_{c_{4}, u_{4}, i_{4}} \left( \alpha \ln c_{4} + \left(1 - \alpha \right) \ln k_{5} \right) \nonumber
+\end{equation}
+p.w.
+\begin{IEEEeqnarray}{rCl}
+\theta u_{4} + i_{4} + c_{4} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi& = & 0 \nonumber \\
+-c_{4} & \leq & 0 \nonumber \\
+-i_{4} & \leq & 0 \nonumber \\
+-u_{4} & \leq & 0 \nonumber \\
+u_{4} - U_{4} & \leq & 0 \nonumber \\
+c_{4} + r b_{4} & = & y_{4}. \nonumber
+\end{IEEEeqnarray}
+
+Funkcja Lagrange'a i warunki konieczne (pierwszego rzędu) przedstawiają się następująco:
+\begin{equation}
+\begin{split}
+\mathcal{L}(c_{4}, u_{4}, i_{4}) = \alpha \ln c_{4} + \left(1 - \alpha \right) \ln  \left( (1-\delta) k_{4} + (1+\theta)u_{4} + i_{4} \right) +\\
++ \lambda \left[ \theta u_{4} + i_{4} + c_{4}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi\right]\\ - \mu_{1}c_{4} - \mu_{2}i_{4} - \mu_{3}u_{4} + \mu_{4}(u_{4} - U_{4})
+\nonumber
+\end{split}
+\end{equation}
+
+\begin{equation} 
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \mu_{1}^{*} = 0 
+\nonumber
+\end{equation}
+
+\begin{equation}
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*} - \mu_{2}^{*} = 0 
+\nonumber
+\end{equation}
+
+\begin{equation}
+\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) - \mu_{3}^{*} + \mu_{4}^{*} = 0.
+\nonumber
+\end{equation}   
+
+Teoretycznie należałoby rozważyć szesnaście ($2^{4}$) zestawów potencjalnych rozwiązań optymalnych, gdyż każdy z czterech parametrów $\mu_{i}$ może przyjąć wartość zerową lub dodatnią. Poniżej przeanalizowano jednak tylko cztery wybrane warianty. Przede wszystkim założono, że $c^{*}_{4}>0$, co implikuje $\mu_{1} = 0$, a jednocześnie pozwala uniknąć rozpatrywania ośmiu wariantów. Trudno bowiem wyobrazić sobie samorząd, nawet o bardzo złym stanie infrastruktury, w którym nie poniesiono by żadnych wydatków bieżących. Zrezygnowano także z dwóch nierealistycznych scenariuszy: zerowych inwestycji zwykłych i unijnych dokładnie równych limitowi oraz dodatnich inwestycji zwykłych i zerowych unijnych, a także dwóch sprzecznych scenariuszy, które zakładałyby zerowe i zarazem równe limitowi inwestycje unijne (przy zerowych lub dodatnich inwestycjach zwykłych). Poniżej wyróżniono zatem cztery rodzaje rozwiązań, z których ostatnie zasługuje na szczególną uwagę. 
+
+Zbieżność poniższych rozwiązań, uzyskanych metodą analityczną, z rozwiązaniami otrzymanymi dzięki numerycznym metodom optymalizacyjnym, zaprezentowano szczegółowo w aneksie \ref{Aneks_kody}. Wyjątek stanowi wariant trzeci, który nie został uwzględniony w aneksie (jest mało realny), lecz metoda postępowania w jego przypadku byłaby analogiczna do wariantu drugiego. 
+
+Wariant I
+
+Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio wysoka, to największą użyteczność przynosi przeznaczenie całych dostępnych funduszy na wydatki bieżące. Warunek (\ref{eq_warunek}) oznacza, że krańcowa użyteczność z wydatków bieżących sfinansowanych z całego dostępnego budżetu jest wyższa niż z dowolnie małego powiększenia infrastruktury: 
+\begin{IEEEeqnarray}{rCl}
+\frac {\partial f}{\partial c_{4}} & > &  \frac {\partial f}{\partial k_{5}} \mbox{ dla } k_{5} = (1-\delta) k_{4} \label{eq_warunek} \\
+\frac{\alpha \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right)}{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r}} & > & \frac{1- \alpha}{(1-\delta)k_{4}}. \nonumber
+\end{IEEEeqnarray}
+%
+\begin{IEEEeqnarray}{rCl}
+u^{*}_{4} & =  &0 \nonumber \\ 
+i^{*}_{4} & = & 0  \nonumber\\
+c^{*}_{4} & = & \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}. \label{eq_tylko_c4}
+\end{IEEEeqnarray}
+
+Wariant II
+
+Jeżeli wartość $(1-\delta)k_{4}$ jest niższa, tzn. gdy warunek (\ref{eq_warunek}) nie zachodzi, to optymalnie jest przeznaczyć pewną część budżetu na inwestycje. Poniżej zakłada się, że optymalne inwestycje unijne nie przekroczą maksymalnej kwoty $U_{4}$. W pierwszej kolejności zazwyczaj (przeciwny przypadek został omówiony w dalszej części pracy) powinny być realizowane inwestycje unijne, gdyż są tańsze. Jeśli więc ich wysokość nie przekracza ustalonej granicy, wówczas realizacja jakichkolwiek inwestycji ze środków własnych może nie mieć uzasadnienia. 
+%
+\begin{IEEEeqnarray}{rCl}
+U_{4} > u^{*}_{4} &>& 0 \nonumber \\ 
+i^{*}_{4} &=& 0 \nonumber \\
+c^{*}_{4} &>& 0 \nonumber \\
+\mu_{2}^{*} &>& 0 \nonumber \\
+\mu_{3}^{*} &=& 0 \nonumber \\ 
+\mu_{4}^{*} &=& 0. \nonumber
+\end{IEEEeqnarray}
+
+Wartości trzech niewiadomych: $u^{*}_{4}$, $c^{*}_{4}$ i $\lambda^{*}$ można otrzymać, rozwiązując układ trzech równań złożonych z niżej zapisanych warunków I rzędu oraz ograniczenia budżetowego (\ref{eq_ograniczenie_t4}). Warto nadmienić, iż $\mu_{2}^{*}$ nie znajduje się w tych równaniach, ponieważ parametr ten pełni rolę pomocniczą - może on zostać obliczony z warunku I rzędu dla $i^{*}_{4}$. 
+
+\begin{equation}
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) = 0 
+\label{eq_3_wariant_krotki}
+\end{equation}
+
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) = 0 
+\label{eq_3_wariant_dlugi}
+\end{equation}
+
+\begin{equation}
+\theta u_{4}^{*} +  c_{4}^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} = \phi.
+\label{eq_3_wariant_budzet}
+\end{equation}
+
+Próba analitycznego rozwiązania powyższego układu równań prowadzi do na tyle skomplikowanych rachunków, że nie zostały przedstawione. Co więcej, należy uznać całkowity brak inwestycji własnych samorządu za mało prawdopodobną sytuację. Niemniej jednak, optymalne rozwiązanie można uzyskać za pomocą numerycznych metod optymalizacji, o ile otrzymane rozwiązane spełnia powyższe równania. 
+
+Wariant III
+
+Jednocześnie mogą być wykonywane inwestycje własne oraz unijne w wysokości poniżej limitu. Wynika to z faktu, iż wysoki poziom inwestycji unijnych utrudnia spełnianie reguły IWZ w czwartym roku. Powoduje bowiem wzrost dochodów JST, przez co zmniejsza przestrzeń na odsetki i spłatę rat zadłużenia. Dlatego, wbrew intuicji, inwestowanie ze środków własnych może być optymalne mimo możliwości tańszego finansowania unijnego. Podobnie jak w wariancie drugim, także w tym przypadku podanie optymalnego rozwiązania w postaci analitycznej było niemożliwe z uwagi na stopień złożoności rachunków. 
+
+\begin{IEEEeqnarray}{rCl}
+U_{4} > u^{*}_{4} & > & 0 \nonumber \\ 
+i^{*}_{4} & > & 0 \nonumber \\
+c^{*}_{4} & > & 0 \nonumber \\
+\mu_{2}^{*} & = & 0 \nonumber \\
+\mu_{3}^{*} & = & 0 \nonumber \\ 
+\mu_{4}^{*} & = & 0 \nonumber 
+\end{IEEEeqnarray}
+
+\begin{equation}
+\begin{split}
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) = 0 
+\\
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*}  = 0  
+\\  
+\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta)k_{4} + (1+\theta) u_{4}^{*} + i_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) = 0
+\\
+\theta u_{4}^{*} + i_{4}^{*} +  c_{4}^{*}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} = \phi.
+\nonumber
+\end{split}
+\end{equation}
+
+Wariant IV
+
+Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio niska, może opłacać się zrealizować inwestycje unijne na możliwie największą skalę, a dodatkowo zrealizować inwestycje zwykłe. Jest to najbardziej prawdopodobny wariant:
+
+\begin{IEEEeqnarray}{rCl}
+u^{*}_{4} & = & U_{4} \nonumber \\ 
+i^{*}_{4} & > & 0 \nonumber \\
+c^{*}_{4} & > & 0 \nonumber \\
+\mu_{2}^{*} & = & 0 \nonumber \\
+\mu_{3}^{*} & = & 0 \nonumber \\ 
+\mu_{4}^{*} & > & 0 \nonumber 
+\end{IEEEeqnarray}
+
+\begin{equation}
+\begin{split}
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) = 0 \Rightarrow  c_{4} = -\frac{\alpha}{\lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)}\\
+%
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{*}} + \lambda^{*}  = 0  \Rightarrow  i_{4}^{*} = -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4} \nonumber
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\theta U_{4} -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4} - \\
+- \frac{\alpha}{\lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4}+U_{4}} = \phi \nonumber 
+\\
+\theta U_{4} -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4}  -\frac{\alpha}{\lambda^{*}} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi \nonumber 
+\\
+- U_{4} -\frac{1}{\lambda^{*}} - (1-\delta)k_{4} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi\nonumber 
+\\
+\lambda^{*}  = -\frac{1}{\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + u_{4}^{*} + (1-\delta)k_{4}}  \nonumber
+\end{split}
+\end{equation}
+
+\begin{IEEEeqnarray}{rCl}
+c_{4}^{*} & = & \frac{\alpha (\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + (1-\delta)k_{4} + U_{4})}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}} \label{eq_c4_wariant4} \\
+i_{4}^{*} & = & (1 - \alpha) \left(\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - \alpha (1-\delta)k_{4} - (\theta + \alpha) U_{4}. \label{eq_i4_wariant4}
+\end{IEEEeqnarray}
+
+Optymalny poziom wydatków bieżących zależy dodatnio od: parametru $\alpha$ opisującego preferencje samorządów w odniesieniu do $c$, stałej $\phi_{0}$ oraz dochodów $y_{4}$, które wyznaczają przestrzeń fiskalną, infrastruktury $k_{4}$ (im większa, tym mniej potrzebne są inwestycje) oraz limitu $U_{4}$ (im większy, tym wystarczy realizować mniej inwestycji zwykłych). Z kolei optymalny poziom inwestycji zwykłych również zależą dodatnio od $\phi_{0}$ i $y_{4}$, a ujemnie od: $\alpha$, $k_{4}$, $U_{4}$, a także $\theta$. 
+
+\subsection{Analityczne rozwiązanie dla trzeciego roku z napiętym warunkiem IWZ}
+\label{rozdzial_szescienne}
+
+Po znalezieniu optymalnych wartości zmiennych decyzyjnych z roku czwartego, można przejść do poszukiwania rozwiązań dla roku trzeciego. W tym celu problem decyzyjny został najpierw przeformułowany w warunkach roku trzeciego, a następnie rozwiązany za pomocą warunków KKT. Funkcja celu tego problemu ma następującą postać: 
+\begin{equation}
+\max_{c_{3}, u_{3}, i_{3}, z_{3}}  f(\bm{x_{3}}) = \beta^{3} \left( \alpha \ln c_{3} + (1 - \alpha) \ln k_{4} \right) + \beta^{4} \left( \alpha \ln c_{4}^{*} + (1-\alpha) \ln k_{5}^{*} \right).  \nonumber
+\end{equation}
+ 
+Zakłada się, że w czwartym roku realizowany jest wariant czwarty z podrozdziału \ref{podrozdzial_napiety_IWZ_bez_nadwyzki}, t.j. z inwestycjami unijnymi na maksymalnym poziomie. Wariant ten wydaje się być najbardziej realistyczny, gdyż z symulacji opisanych w podrozdziale \ref{podrozdz_struktura} wynika, że w zdecydowanej większości przypadków taki wariant jest optymalny. Ponadto, można domniemywać, że inwestycje w czwartym roku mogą być wyjątkowo wysokie z uwagi na ignorowanie przez decydentów przyszłego zadłużenia oraz IWZ dotyczących przyszłych lat. Wartość funkcji można dla uproszczenia podzielić przez $\beta^{3}$:
+
+{\footnotesize
+\begin{equation}
+\begin{split}
+f(\bm{x_{3}}) & = \alpha \ln c_{3} + (1 - \alpha) \ln ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) + \\
+&+ \beta \alpha \ln \left( \frac{\alpha \left(  \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}} + \frac{y_{4} - r b_{4}}{y_{4} + U_{4}}  \right) - (1+r) b_{4} + y_{4} + (1-\delta)((1-\delta)k_{3} + (1+\theta)u_{3} + i_{3}) + U_{4} \right) }{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}}  \right) + 
+\\
+&+ \beta  (1-\alpha) \ln ( (1-\alpha) (1-\delta) ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) + (1+\theta) U_{4} +\\
+%
+&+   (1 - \alpha) \left(\frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left( \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}}  + \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - (1+r) b_{4} + y_{4}\right)  - (\theta + \alpha) U_{4})    \nonumber
+\end{split}
+\end{equation}
+}
+\begin{IEEEeqnarray}{lCl}
+\mbox{p.w.} \nonumber
+\\
+& & \nonumber
+\\
+h_{13}(\bm{x_{3}}): \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3} & = & 0
+\label{h13}
+\\
+h_{23}(\bm{x_{3}}): b_{4} - b_{3} - z_{3} & = & 0
+\label{h23}
+\\
+g_{13}(\bm{x}_{3}): -u_{3} & \leq & 0 \nonumber
+\\
+g_{23}(\bm{x_{3}}): u_{3} - U_{3} & \leq & 0 \nonumber
+\\
+g_{33}(\bm{x}_{3}): -c_{3} & \leq & 0 \nonumber
+\\
+g_{43}(\bm{x}_{3}): -i_{3} & \leq & 0 \nonumber
+\\
+g_{53}(\bm{x}_{3}): \frac{(\chi + r) b_{4}}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right)  & \leq & 0 
+\label{g53}
+\\
+g_{63}(\bm{x}_{3}): c_{3} + r b_{3} - y_{3} & \leq & 0. \label{g63}
+\end{IEEEeqnarray}
+
+Powyższy problem można uprościć poprzez wyeliminowanie zmiennych $b_{4}$ i $z_{3}$, których wartości mogą zostać obliczone rezydualnie, po znalezieniu optymalnych wartości pozostałych zmiennych decyzyjnych $u_{3}$, $i_{3}$ i $c_{3}$: 
+
+\begin{equation} 
+%\theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3} = 0\\
+z_{3} = \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3}, 
+\end{equation}
+
+\begin{equation} 
+b_{4} = b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3}. 
+\end{equation}
+
+Dzięki powyższym przekształceniom, problem ogranicza się do trzech zmiennych decyzyjnych: $u_{3}$, $i_{3}$ i $c_{3}$. Wyeliminowane zostają też warunki ograniczające (\ref{h13}) i (\ref{h23}), które zostaną wykorzystane dopiero w celu obliczenia $b_{4}$ i $z_{3}$. Modyfikacji ulegnie także warunek (\ref{g53}):
+
+{\footnotesize
+\begin{equation}
+g_{53}(\bm{x}): \frac{(\chi + r) \left(b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} \right)}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right) \leq  0. 
+\nonumber
+\end{equation}
+}
+
+Wydatki bieżące wynikają z napiętego warunku IWZ.
+
+Poniżej założono także, że warunek (\ref{g53}) jest bardziej rygorystyczny od warunku (\ref{g63}). Z analizy zaprezentowanej w podrozdziale \ref{podrozdz_struktura} wynika, że warunek IWZ jest napięty prawie zawsze, a reguła zrównoważonego wyniku bieżącego - rzadko. Co więcej, JST występują przeciwko regule IWZ\footnote{,,Wprowadzony w 2014 r. indywidualny wskaźnik zadłużenia samorządów wymaga zmiany lub wręcz likwidacji, bo dusi inwestycje i nie pozwoli wykorzystać środków unijnych - przekonywali uczestnicy piątkowej debaty zorganizowanej przez Serwis Samorządowy PAP.'' (PAP, 2015)\nocite{PAP_2015} ,,Samorządowcy wskazują, że gorset, który wskaźnik nakłada na JST, jest zbyt ciasny.'' (Portal Samorządowy, 2016)\nocite{Portal_2016}}, a nie zrównoważonego wyniku bieżącego, z czego można wnioskować, że mają większe problemy z wypełnieniem IWZ. W związku z tym założono, że w rozwiązaniu optymalnym $c_{3} + r b_{3} < y_{3}$. 
+
+Dodatkowo można założyć, że $c_{3} > 0$, ponieważ dla $c_{3} = 0$ użyteczność z krańcowego przyrostu wydatków bieżących byłaby nieskończenie wielka. Podobnie, jak w roku czwartym, dla roku trzeciego można także założyć maksymalne możliwe finansowanie inwestycji ze środków unijnych (patrz podrozdział \ref{podrozdz_dopasowywanie}). W związku z tym mnożniki KKT $\mu_{13} = 0$, $\mu_{33} = 0$, natomiast $u_{3} = U_{3}$, zatem $u_{3}$ przestaje być zmienną decyzyjną. Pozostają zatem niewiadome wartości dwóch zmiennych decyzyjnych: $c_{3}$ oraz $i_{3}$, a także jednego mnożnika KKT: $\mu_{53}$. Tym trzem niewiadomym odpowiadają trzy równania. Dwa równania stanowią warunki pierwszego rzędu, a jedno - związane jest ze spełnieniem reguły IWZ z równością. 
+
+W następstwie poczynienia powyższych założeń utworzono funkcję Lagrange'a w postaci:  
+
+{\scriptsize
+\begin{IEEEeqnarray}{rCl}
+\mathcal{L}(\bm{x}, \bm{\lambda}, \bm{\mu}) & = & f(\bm{x}) + \sum_{j=1}^{5} \mu_{j3} g_{j3}(\bm{x}) = \nonumber \\
+& = &  \alpha \ln c_{3} + (1 - \alpha) \ln ( (1-\delta) k_{3} + (1 + \theta) U_{3} + i_{3}) + \nonumber \\
+& + & \beta \alpha \ln (\frac{ \alpha ( \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}} + \frac{y_{4} - r (b_{3} + \theta U_{3} + c_{3} + i_{3} + rb_{3} - y_{3})}{y_{4} + U_{4}}  \right) - (1+r)(b_{3} + \theta U_{3} + c_{3} + i_{3} + rb_{3} - y_{3}))}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}}+ \nonumber \\
+& + & \frac{ \alpha ( y_{4} + (1-\delta)((1-\delta)k_{3} + (1+\theta)U_{3} + i_{3}) + U_{4} ) }{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}}) + \nonumber \\
+& + & \beta (1-\alpha) \ln ((1-\alpha) (1-\delta) ((1-\delta) k_{3} + (1+\theta) U_{3} + i_{3}) + (1-\alpha) U_{4} +\nonumber \\
+ & + & (1 - \alpha) (\frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left(  \frac{y_{2} - c_{2} - r b_{2}}{y_{2} + u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3} + U_{3}} + \frac{y_{4} - r (b_{3} + \theta U_{3} + c_{3} + i_{3} + rb_{3} - y_{3})}{y_{4} + U_{4}} \right) \nonumber \\
+&-& (1+r) (b_{3} + \theta U_{3} + i_{3} + c_{3} + r b_{3} - y_{3}) + y_{4}))  + \nonumber \\
+& + &  \mu_{53} \left( \frac{(\chi + r) \left(b_{3} + \theta U_{3} + i_{3} + c_{3} + r b_{3} - y_{3} \right)}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2} + u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3} + U_{3}} \right) \right). 
+\nonumber
+\end{IEEEeqnarray}
+}
+
+Następnie wyprowadzono dwa warunki pierwszego rzędu, czyli obliczono pochodne funkcji Lagrange'a po $c_{3}$ i $i_{3}$ oraz przyrównano je do zera. Połączenie dwóch równań w jedno umożliwiło wyeliminowanie mnożnika $\mu_{53}$ o nieznanej wartości. Po pewnych przekształceniach wykorzystano równanie na napięty warunek IWZ. Dzięki niemu można było wyznaczyć $c_{3}$ jako funkcję $i_{3}$. Ostatecznie zatem w rachunkach pozostanie jedna zmienna decyzyjna - $i_{3}$ i jedno (skomplikowane) równanie. W celu łatwiejszego wykonania obliczeń, zastąpiono długie i złożone wyrazy (niezależne od zmiennej decyzyjnej $i_{3}$) w poszczególnych ułamkach tego równania, pojedynczymi symbolami pomocniczymi i uzyskano w ten sposób proste równanie. Dalsze przekształcenia prostego równania doprowadziły do uzyskania równania sześciennego. Istnieją trzy możliwe rozwiązania równania sześciennego w dziedzinie liczb zespolonych. Szczegółowe obliczenia zaprezentowano w części \ref{zmudne_rachunki} aneksu.
+
+Ze wszystkich symulacji wynika, że spośród trzech wyżej wymienionych rozwiązań równania sześciennego, tylko jedno (\ref{rozw_jedyne}) należy do zbioru liczb rzeczywistych. Pozostałe należą do zbioru liczb zespolonych i nie mają interpretacji ekonomicznej. Poprawność wyniku została zweryfikowana dzięki zgodności rozwiązania numerycznego z rozwiązaniem (\ref{rozw_jedyne}) wyprowadzonym analitycznie. Numeryczny algorytm optymalizacyjny startujący z arbitralnych (dowolnych) wartości zmiennych wielokrotnie odnajdywał bowiem te same rozwiązania optymalne, co wynikające ze wzoru (\ref{rozw_jedyne}). Z drugiej strony, algorytmy numeryczne mogą znajdywać ekstrema lokalne, a nie globalne. Jeśli jednak rozwiązanie analityczne jest takie samo, to dowodzi to globalności danego ekstremum (przy założeniu danej struktury warunków ograniczających). Porównanie wyników osiąganych za pomocą metody analitycznej i numerycznej znajduje się w części B aneksu.  
+
+\subsection{Numeryczna metoda rozwiązania modelu}
+\label{rozdz_numeryczna_metoda}
+
+Analityczna metoda rozwiązania modelu, zaprezentowana w podrozdziałach \ref{podrozdzial_napiety_IWZ_bez_nadwyzki} - \ref{rozdzial_szescienne} gwarantuje uzyskanie optymalnego wyniku jedynie w pewnym podzbiorze zbioru rozwiązań dopuszczalnych, który cechuje z góry ustalona struktura warunków ograniczających (czyli określony ex ante podział na warunki luźne i napięte). Metoda numeryczna, opisana w niniejszym podrozdziale, jest komplementarna względem analitycznej. Po pierwsze, wykonana tylko dla trzeciego i czwartego roku, pozwala sprawdzić, czy rozwiązując model bez zakładania struktury warunków ograniczających, rozwiązanie wskazywane jako optymalne jest takie samo, co w rozwiązaniu analitycznym. Wprawdzie taka kontrolna weryfikacja nie zapewnia całkowitej pewności, ale jednak gwarantuje bardzo wysokie prawdopodobieństwo otrzymania optymalnego rezultatu. Po drugie, metoda numeryczna umożliwia, w przeciwieństwie do analitycznej, znalezienie rozwiązania dla całej czteroletniej kadencji władz samorządowych.  
+
+Wiarygodność zaproponowanej tu numerycznej metody wynika z tego, że stanowi ona meta-algorytm wykorzystujący jednocześnie dwanaście metod optymalizacji zawartych w pakiecie \textit{optimx} (Nash i Varadhan, 2011 i Nash, 2014)\nocite{Nash_Varadhan_2011}\nocite{Nash_2014} systemu R. W pierwszym kroku tego meta-algorytmu, wykonywane są niezależnie, przy założeniu losowych wartości startowych, algorytmy dwunastu numerycznych metod optymalizacji. Każdy z tych dwunastu algorytmów składa się z od kilku do nawet kilkuset kroków, w zależności od tego, jak szybko uzyskiwana jest zbieżność. Część z tych metod w ogóle nie znajduje dopuszczalnego rozwiązania, ale zazwyczaj przynajmniej jedna z nich jest w stanie uzyskać pewne rozwiązanie. Jednak taki wynik jest przeważnie tylko ekstremum lokalnym. Numeryczne metody optymalizacji są bowiem wrażliwe na wartości startowe i jeżeli algorytm rozpocznie swoje działanie na obszarze odległym od optimum globalnego, to możliwe jest jego ,,utknięcie'' w punkcie stanowiącym ekstremum lokalne. Co więcej, w podsumowaniu pierwszego kroku meta-algorytmu, różne metody wskazują często na różne rozwiązania optymalne, o różnych wartościach funkcji celu, a przecież tylko co najwyżej jedno z nich, tj. generujące najwyższą użyteczność, może być ekstremum globalnym. Dlatego w drugim kroku meta-algorytmu, ponownie wykonuje się dwanaście algorytmów, tym razem z wartością startową będącą rozwiązaniem o najwyższej użyteczności spośród uzyskanych w kroku pierwszym. Kolejne iteracje są wykonywane, dopóki wartość najlepszego rozwiązania, z dwunastu wskazywanych jako optymalne, nie stabilizuje się.     
+
+Dwanaście stosowanych w meta-algorytmie numerycznych metod optymalizacji można podzielić na: niewykorzystujące pochodnych (\textit{nelder-mead, newuoa, bobyqa, nmkb, hjkb}), newtonowskie (\textit{nlm, nlminb}), quasi-newtonowskie (\textit{BFGS, L-BFGS-B, ucminf}) i gradientowe (\textit{CG, spg}). Należy zaznaczyć, że terminologia ta pochodzi z opracowania Nasha i Varadhana (2011, s. 5) i nie jest całkowicie precyzyjna. Wynika to z faktu, że zazwyczaj algorytm optymalizacyjny można uruchomić z podaniem w roli argumentu funkcji gradientu i/lub hesjanu albo bez podawania tych funkcji. W zależności od tego konieczna będzie aproksymacja gradientu i/lub hesjanu lub też nie będzie ona wymagana. W efekcie, metodę można określić mianem quasi-newtonowskiej albo newtonowskiej.     
+
+Metody niewykorzystujące pochodnych są rozwinięciem popularnej metody Neldera - Meada (1965). \nocite{Nelder_Mead_1965} W uproszczeniu, polega ona na stopniowym przekształcaniu sympleksu (w przestrzeni dwuwymiarowej jest to trójkąt, w trójwymiarowej - czworościan itd.) - tak, aby w kolejnej iteracji najgorszy (tj. o najgorszej wartości funkcji celu) punkt zastąpić nowym, specjalnie utworzonym punktem. Dzięki temu sympleks przesuwa się w stronę przeciwną niż najgorszy punkt. Krok przesunięcia wydłuża się, jeżeli nowy punkt staje się najlepszym spośród wierzchołków sympleksu lub skraca, gdy nowy punkt jest lepszy jedynie od dotychczas najgorszego wierzchołka. 
+ 
+Bardziej złożonym algorytmem nie wymagającym pochodnych jest \textit{newuoa} (Powell, 2007)\nocite{Powell_2007}, którego nazwa prawdopodobnie pochodzi od akronimu: ,,NEW Unconstrained Optimization Algorithm'' (nowy algorytm optymalizacji bez ograniczeń). Polega on na utworzeniu, w każdej, $k$-tej iteracji, funkcji $q_{k}$ za pomocą kwadratowej interpolacji funkcji celu $f$ o $n$ zmiennych, a następnie minimalizacji $q_{k }$ w obrębie dopuszczalnego obszaru (ang. trust region), który stopniowo ulega zawężeniu. Interpolacja nie zakłada jednak styczności funkcji $q$ z funkcją $f$ w $n$ punktach, tylko w $m<n$, a dodatkowymi warunkami niezbędnymi do wyznaczenia współczynników funkcji $Q$ są warunki na to, aby macierze drugich pochodnych $q$ w kolejnych iteracjach były możliwie zbliżone (w sensie normy Frobeniusa, czyli pierwiastka z sumy kwadratów wszystkich elementów macierzy).     
+
+Na bazie algorytmu \textit{newuoa}, Powell (2007) utworzył algorytm \textit{bobyqa} (,,Bound Optimization BY Quadratic Approximation'' - optymalizacja z ograniczeniami poprzez aproksymację kwadratową), który różni się od poprzedniego wprowadzonymi do modelu optymalizacyjnego ograniczeniami nałożonymi na zmienne decyzyjne. Uwzględnienie ograniczeń pozwala na uproszczenie i skrócenie pewnych obliczeń. Autorzy pakietu \textit{optimx} zastrzegli (Nash i Varadhan, 2011, s. 4), że dopiero testują, czy \textit{bobyqa} rozwiązuje problemy bez ograniczeń tak skutecznie jak \textit{newuoa}. Dlatego na razie obie metody zostały zawarte w pakiecie.
+
+Kelley (1999, s. 141) zauważył, że algorytm Neldera-Meada ma tendencję do utykania w ekstremum lokalnym. Kryterium detekcji utknięcia, jakie przyjął, polegało na sprawdzeniu, czy wartość funkcji celu w najlepszym wierzchołku poprawia się wystarczająco silnie w kolejnej iteracji. Postęp ów jest porównywany z kwadratową normą gradientu sympleksu pomnożoną przez niewielką stałą. Jeżeli postęp występuje, ale jest niewystarczający, algorytm ulega ukierunkowanemu restartowi (ang. oriented restart). Wszystkie wierzchołki, poza najlepszym, zostają przesunięte o połowę odległości między najlepszym wierzchołkiem a jego najbliższym sąsiadem. Taki zabieg zapewnia też korzystną właściwość sympleksu, tj. ograniczenie wzrostu współczynnika uwarunkowania (ilorazu norm macierzy i jej odwrotności). W pakiecie \textit{optimx} metoda \textit{nmkb} została zaimplementowana za zgodą Kelleya przez Varadhana, który dokonał ,,pewnych nietrywialnych modyfikacji'' (szczegóły w dokumentacji pakietu \textit{dfoptim}\nocite{dfoptim}).
+
+Ostatnim algorytmem niewymagającym obliczania pochodnych jest algorytm Hooka-Jeevesa (1961)\nocite{Hooke_Jeeves_1961}, wprowadzony do pakietu \textit{dfoptim} przez Borchersa również na podstawie algorytmu z książki Kelleya (1999), a następnie wykorzystany w pakiecie \textit{optimx}. Metoda Hooka-Jeevesa wymaga określenia ex ante punktu startowego i macierzy bazy ortogonalnej (może być nią np. macierz jednostkowa). Najpierw sprawdzane są wartości funkcji celu w kolejnych punktach położonych w ustalonej odległości, w kierunkach wyznaczonych przez wektory ww. macierzy oraz w kierunkach im przeciwnych (czyli w wybranych punktach ,,naokoło'' punktu centralnego). Gdy tylko w pewnym punkcie nastąpi poprawa wartości funkcji, to staje się on nowym punktem bazowym. Jednak, wbrew intuicji, nie staje się on nowym centralnym punktem w drugiej rundzie eksploracji punktów. Algorytm Hooka-Jeevesa określa się mianem ,,agresywnego'' (Kelley, 1999, s. 146), gdyż nowym centrum staje się punkt położony w tym samym kierunku, co nowy punkt bazowy, ale dwa razy dalej od poprzedniego punktu centralnego. Dzięki temu ogranicza się częstość ponownego sprawdzania tych samych punktów. Jeżeli w nowej iteracji nie uda się uzyskać poprawy, to nowym centrum staje się dotychczasowy punkt bazowy. Jeżeli powtórnie obniżenie wartości funkcji celu nie będzie możliwe, to skracana jest odległość, zgodnie z którą wyznaczane są punkty ,,naokoło'' punktu centralnego. Algorytm kończy działanie, gdy odległość ta obniży się poniżej ustalonego progu.        
+
+Celem lepszego przybliżenia metod newtonowskich i quasi-newtonowskich, wykorzystujących nie tylko wektor pierwszych, ale także macierz drugich pochodnych zwaną hesjanem, warto zacząć od przedstawienia klasycznej metody Newtona. Zgodnie z twierdzeniem Taylora, funkcję nieliniową $f(x)$ można aproksymować w otoczeniu punktu $x_{c}$ za pomocą następującej funkcji kwadratowej (por. Kelley, 1999, s. 15)\nocite{Keley_1999}:
+
+\begin{equation}
+f(x) \approx m_{c}(x) = f(x_{c}) + \nabla f(x_{c})^{T} (x-x_{c}) + \frac{1}{2}(x-x_{c})^{T} \nabla^{2} f(x_{c}) (x-x_{c}).  \nonumber
+\end{equation} 
+
+Jeżeli $\nabla^{2} f(x_{c})$ jest macierzą dodatnio określoną, to $x_{+}$ stanowi minimum lokalne $f(x)$, gdy $\nabla m_{c} (x_{+}) = 0$.
+
+\begin{equation}
+0 = \nabla m_{c} (x_{+})  = \nabla f(x_{c}) + \nabla^{2} f(x_{c}) (x_{+} - x_{c}) \nonumber
+\end{equation}
+
+Stąd: 
+\begin{equation}
+x_{+} = x_{c} - (\nabla^{2} f(x_{c}))^{-1} \nabla f(x_{c})  \nonumber
+\end{equation}
+\begin{equation}
+\nabla^{2} f(x_{c}) (x_{+} - x_{c}) = -\nabla f(x_{c}).  \nonumber
+\end{equation}
+
+Podstawowym algorytmem służącym do poszukiwania minimum lokalnego jest metoda Newtona:
+
+\begin{enumerate}
+\item Oblicz $\left\| \nabla f(x) \right\|$
+
+\item
+\begin{enumerate}
+\item $\mbox{Dopóki } \left\| \nabla f(x) \right\| > \varepsilon$
+\item $\mbox{Oblicz } \nabla^{2} f(x)$
+\item $\mbox{Rozwiąż } \nabla^{2} f(x) d  = - \nabla f(x)$
+\item Zastąp $x$ przez $x + d$
+\item $\mbox{Oblicz } \nabla f(x)$.
+\end{enumerate}
+
+\end{enumerate}
+
+Istnieje wiele odmian metody Newtona. Wektor $g$ przybliżający gradient $\nabla f$ może być obliczany w kroku (e) ze wzoru analitycznego albo aproksymowany za pomocą skończonych różnic, macierz H przybliżająca hesjan $\nabla^{2} f$ może być kalkulowana w kroku (b) jeszcze na trzeci sposób - metodą BFGS - od nazwisk autorów: Broydena, Fletchera, Goldfarba i Shano (Head, Zerner, 1985)\nocite{BFGS_1985}. W niektórych algorytmach, w celu zaoszczędzenia czasu, kalkulacja gradientu i hesjanu nie odbywa się w każdej iteracji. W pewnych algorytmach nowy $x$ powstaje w kroku (d) z kolei poprzez dodanie do starego $x$ pewnej modyfikacji $d$, tj. $\lambda d$, gdzie $\lambda$ określa długość kroku w kierunku gradientu za pomocą jednej z metod: wyszukiwania liniowego (Kelley, 1999, s. 39-50), dogleg (Dennis, Mei, 1979)\nocite{Dennis_Mei_1979} lub hookstep (Mor\'{e}, 1978)\nocite{More_1978}. Więcej na temat różnych odmian metody Newtona można przeczytać w artykule Schnabela, Koontza i Weissa (1985)\nocite{Schnabel_Koontz_Weiss_1985}. Inną ważną kwestię stanowi sposób rozwiązania układu równań (c). Zazwyczaj stosowana jest w tym celu metoda dekompozycji macierzy Choleskiego, lecz wymaga ona dodatniej określoności macierzy współczynników układu równań. Powstały zatem metody odporne na brak dodatniej określoności $\nabla^{2}f$ - wykorzystują one inne macierze współczynników - należą do nich m.in. dogleg i hookstep. Generalnie, metody polegające na aproksymacji, a nie obliczaniu wprost hesjanu nazywają się quasi-newtonowskimi.       
+
+W pakiecie \textit{optimx} zostały zaimplementowane dwa algorytmy newtonowskie (Nash i Varadhan, 2011, s. 5). Oznacza to, że dopuszczają one podanie funkcji obliczającej hesjan, co umożliwia zastosowanie wprost metody Newtona. Jednak w niniejszej pracy nie skorzystano z tej opcji. Zamiast niej, we wszystkich algorytmach newtonowskich i quasi-newtonowskich zastosowano numeryczne przybliżenia gradientu i hesjanu, czyli w praktyce posługiwano się algorytmami quasi-newtonowskimi.
+
+Pierwszy algorytm, \textit{nlm} (ang. nonlinear minimization) został opracowany na podstawie algorytmu stworzonego przez Dennisa i Schnabela (1983)\nocite{Dennis_Schnabel_1983}, opisanego także w pracy Schnabela, Koontza i Weissa (1985). Procedura \textit{nlm} wykorzystuje przeszukiwanie liniowe w etapie (d) wyżej przytoczonego algorytmu - ,,z kwadratową interpolacją dla pierwszego nawrotu oraz sześcienną interpolacją dla każdego następnego nawrotu w każdej iteracji'' (Schnabel, Koontz, Weiss, 1985, s. 8). W artykule tym można także poznać szczegóły techniczne algorytmu, dotyczące m.in.: kryteriów stopu; długości kroku potrzebnego do numerycznej aproksymacji pochodnych, a także sposobu ich obliczania (w początkowych iteracjach następnikowe, następnie centralne); aproksymacji hesjanu w sytuacji, gdy nie jest on macierzą dodatnio określoną; skalowania zmiennych niezależnych (co sprowadza się np. do podzielenia przez milion wartości tych zmiennych, których rząd wielkości jest bliski miliona, itd.).  
+
+Metoda \textit{BFGS} należy do klasy metod opartych na równaniu siecznej: 
+\begin{equation}
+\label{rownanie_siecznej}
+H_{+} (x_{+} - x_{c}) = \nabla f(x_{+}) - \nabla f(x_{c}). 
+\end{equation}
+
+Wszystkie metody siecznych, w tym \textit{BFGS}, dla optymalizacji jednowymiarowej sprowadzają się do  równania (\ref{sieczna_1D}). Na jego podstawie można stwierdzić, że metoda siecznych przybliża drugą pochodną za pomocą względnego przyrostu $f'(x)$ na odcinku wyznaczonym przez $x$ z poprzednich iteracji ($x_{0}$ i $x_{1}$):
+\begin{equation}
+\label{sieczna_1D}
+x_{2} = x_{1} - \frac{f'(x_{1})(x_{1} - x_{0})}{f'(x_{1}) - f'(x_{0})} =  x_{1} - \frac{f'(x_{1})}{\frac{f'(x_{1}) - f'(x_{0})}{x_{1} - x_{0}}} \approx x_{1} - \frac{f'(x_{1})}{f''(x_{1})}.
+\end{equation}
+
+Równanie dla funkcji wielu zmiennych przedstawia się następująco (Davidon, 1959; Fletcher i Powell, 1963)\nocite{Davidon_1959}\nocite{Fletcher_Powell_1963}:
+\begin{equation}
+\label{DFP}
+H_{+} = H_{c} + \frac{(\nabla f(x_{+}) - \nabla f(x_{c})) (\nabla f(x_{+}) - \nabla f(x_{c}))^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T} (x_{+} - x_{c}) } - \frac{(H_{c}(x_{+} - x_{c}))(H_{c}(x_{+} - x_{c}))^{T}}{(x_{+} - x_{c})^{T}H_{c}(x_{+} - x_{c})}.
+\end{equation}
+
+W celu zbudowania intuicji można zauważyć, że gdyby móc poskracać w równaniu (\ref{DFP}) te same wyrażenia w liczniku i mianowniku (co nie jest dopuszczalne w rachunku macierzowym), to uzyskalibyśmy równanie (\ref{rownanie_siecznej}). 
+
+W pakiecie \textit{optimx} metoda \textit{BFGS} została zmodyfikowana w oparciu o poprawki (m.in. dotyczące eliminacji wyszukiwania liniowego, które wyznacza $x_{+}$) autorstwa Fletchera (1970)\nocite{Fletcher_1970} i Nasha (1979)\nocite{Nash_1979}. 
+
+Z kolei pakiet \textit{nlminb} wykorzystuje tzw. procedury (ang. routines) PORT zakodowane i opisane przez  Gaya (1990)\nocite{Gay_1990}, który z kolei opierał się m.in. na metodzie Davidona zmodyfikowanej  przez Stewarta (1967)\nocite{Stewart_1967}.  
+
+Następny algorytm, \textit{L-BFGS-B}, został opisany przez Byrda i in. (1995)\nocite{Byrd_1995}. Dodane w jego nazwie litery to skróty od ,,limited-memory'' (L) i ,,bounded'' (B). Jest to bowiem algorytm zaprojektowany w celu zmniejszenia wymogów pamięciowych służących do obliczania i przechowywania dodatnio-określonej aproksymacji hesjanu. Ponadto, algorytm ten jest przeznaczony do problemów z warunkami ograniczającymi argumenty funkcji celu. Szkic tej metody można przedstawić następująco: 
+
+\begin{enumerate}
+\item Zatrzymaj, jeżeli test zbieżności jest spełniony. 
+\item Oblicz punkt Cauchy'ego. Punkt ten stanowi minimum kwadratowego modelu minimalizowanej funkcji, wzdłuż gradientu, ale przy założeniu, że $x$ mieści się na odcinku wyznaczonym przez warunki ograniczające. 
+\item Oblicz kierunek przeszukiwania np. metodą gradientu sprzężonego. 
+\item Wykonaj przeszukiwanie liniowe, przy zadanym warunku wymaganego spadku oraz wyznacz długość kroku.
+\item Oblicz gradient w znalezionym punkcie. 
+\item Jeżeli zmiana gradientu spełnia warunek krzywizny, to zaktualizuj listę par korekty - zastępując najstarszą przez najnowszą. Przez listę par korekty należy rozumieć m ostatnich par w postaci: $(s_{i}, y_{i}) = (x_{k+1} - x_{k}, \nabla_{k+1} - \nabla_{k})$
+\item Wyznacz aproksymację hesjanu przy użyciu aktualnej listy par korekty. Można to osiągnąć względnie szybko w sensie złożoności obliczeniowej, z wykorzystaniem odpowiednich wzorów. 
+\item Zwiększ numer iteracji o 1 i wróć do punktu 1. 
+\end{enumerate}
+
+Ostatni quasi-newtonowski algorytm użyty w optymalizacji numerycznej, \textit{ucminf} (Nielsen, 2000)\nocite{Nielsen_2000}, również wykorzystuje metodę BFGS, a także miękkie wyszukiwanie liniowe\footnote{Wyszukiwanie liniowe może być dokładne lub miękkie. Pierwsza metoda polega na dokładnym poszukiwaniu minimum funkcji w zadanym kierunku. Druga metoda polega na odnalezieniu w zadanym kierunku punktu, dla którego wartość funkcji wystarczająco obniża się, a następnie na aktualizacji kierunku. Wyszukiwanie miękkie jest częściej stosowane w praktyce, gdyż wymaga mniejszej liczby operacji, a przy tym zadany kierunek przeszukiwania przeważnie jest tylko kierunkiem w przybliżeniu prowadzącym do ekstremum funkcji.} z wykorzystaniem metody zaufanego obszaru. W przeciwieństwie do wcześniej opisanej metody \textit{BFGS}, \textit{ucminf} aproksymuje odwrotność hesjanu za pomocą wzoru będącego odpowiednikiem równania (\ref{DFP}):
+
+\begin{IEEEeqnarray}{rCl}
+H_{+}^{-1} &=&  \left( I - \frac{(\nabla f(x_{+}) - \nabla f(x_{c}))(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})} \right)^{T}  H_{c}^{-1} \left( I - \frac{(\nabla f(x_{+}) - \nabla f(x_{c}))(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})} \right)^{T} \nonumber \\
+&+& \frac{(x_{+} - x_{c})(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})}. \nonumber
+\end{IEEEeqnarray}
+
+Kolejne metody wymagają obliczania pochodnych funkcji celu, ale nie wymagają kalkulacji macierzy przybliżonego hesjanu. W pierwszym kroku algorytmu \textit{cg} (ang. conjugate gradient - gradient sprzężony) oblicza się gradient funkcji celu w punkcie startowym. W ten sposób wyznacza się kierunek najszybszego spadku wartości funkcji. Za pomocą metody optymalizacji jednowymiarowej funkcji celu (np. ww. metody Newtona), określa się minimum na odcinku położonym wzdłuż owego kierunku. Punkt ten staje się punktem startowym w drugiej iteracji. Ponownie obliczany jest kierunek najszybszego spadku. Jednak począwszy od drugiej iteracji, kierunek, wzdłuż którego wyszukuje się kolejny punkt, stanowi sumę bieżącego kierunku najszybszego spadku oraz pomnożonego przez parametr $\beta$ kierunku z poprzedniej iteracji. Domyślna formuła na $\beta$, w pakiecie \textit{optimx} pochodzi z artykułu Fletchera i Reevesa (1964)\nocite{Fletcher_Reeves_1964} i stanowi iloraz kwadratów norm gradientów z następujących po sobie iteracji. Im większy postęp w optymalizacji, tj. norma gradientu z bieżącej iteracji mniejsza co do modułu od normy z poprzedniej iteracji, tym mniejsza korekta kierunku najszybszego spadku. 
+
+Algorytm \textit{spg} (ang. spectral projected gradient) pochodzi z artykułu Birgina, Mart\'{i}neza i Raydana (2001)\nocite{Birgin_Martinez_Raydan_2001}. Punktem wyjścia tej metody stanowi równanie siecznej (\ref{rownanie_siecznej}) (por. Birgin, Mart\'{i}nez, Raydan i in., 2014)\nocite{Birgin_Martinez_Raydan_2014}. W \textit{spg} zakłada się bardzo prostą postać macierzy $H_{+} = \sigma I$. Równanie siecznej można więc zapisać następująco:
+
+\begin{equation}
+\sigma (x_{+} - x_{c}) \approx \nabla f(x_{+}) - \nabla f(x_{c}). \nonumber
+\end{equation}
+
+Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie minimalizujące sumę kwadratów reszt\footnote{Jest to  równanie odpowiadające ekonometrycznemu estymatorowi klasycznej metody najmniejszych kwadratów: $\hat{\beta} = (X^{T}X)^{-1}(X^{T}y)$. }: 
+
+\begin{equation}
+\sigma = \frac{(x_{+} - x_{c})^{T} (\nabla f(x_{+}) - \nabla f(x_{c})) }{(x_{+} - x_{c})^{T} (x_{+} - x_{c})}. \nonumber
+\end{equation}
+
+Dodatkowo nakłada się ograniczenie: $\sigma_{min} \leq \sigma \leq \sigma_{max}$. Jednocześnie $\sigma$ stanowi tzw. iloraz Rayleigha w odniesieniu do macierzy uśrednionego hesjanu na przedziale $(x_{c}, x_{+})$. Skądinąd wiadomo, że iloraz Rayleigha należy do przedziału pomiędzy minimalną a maksymalną wartością własną uśrednionego hesjanu. Zbiór wszystkich wartości własnych danej macierzy nazywa się spektrum macierzy, co tłumaczy genezę nazwy metody. Ostatecznie zatem w  metodzie \textit{spg}, macierz $\nabla^{2} f(x)$ zostaje zastąpiona przeskalowaną macierzą jednostkową $\sigma I$ w punkcie c) algorytmu Newtona. Zmodyfikowany jest także punkt d), gdzie stosuje się przeszukiwanie liniowe.  
+
+Niektóre z metod optymalizacji omawianych w niniejszym podrozdziale umożliwiają wprowadzenie wprost warunków ograniczających. Mimo to, wszystkie metody optymalizacji stosowanego tutaj metaalgorytmu zastosowano dla funkcji celu bez ograniczeń. Warunki ograniczające wymienione w podrozdziale \ref{zapis_rozwiazania} zostały bowiem uwzględnione w funkcji celu w postaci tzw. składnika kary pomnożonego przez największą co do modułu wartość zmiennej decyzyjnej. Kara przyjmuje wartość zerową, jeżeli żaden z 24 warunków ograniczających (dwanaście na ujemność zmiennych decyzyjnych: $c_{t}, i_{t}, u_{t}, t \in \{1,2,3,4\}$, cztery w postaci $u_{t} > U_{t}$, cztery na reguły nadwyżki bieżącej i cztery na reguły IWZ) nie jest spełniony. Za każdy niespełniony warunek wartość kary rośnie o 9999 (czyli bardzo dużą liczbę w porównaniu z typowymi wartościami funkcji celu). Pomnożenie kary przez największą co do modułu wartość zmiennej decyzyjnej zabezpiecza przed sytuacją, gdy kara wprawdzie nie byłaby zerowa, ale mimo to algorytm wybierałby takie rozwiązanie jako optymalne, gdyż zmienne decyzyjne przyjmowałyby wartości o ogromnym rzędzie wielkości (nie mające interpretacji ekonomicznej). W części aneksu (\ref{aneks_przykladowe_analit}), w sekcji ,,deklaracja funkcji użyteczności'' zaprezentowano funkcję celu ze składnikiem kary dla algorytmu szukającego optymalnego rozwiązania dla trzeciego roku. W tym przypadku kara składa się z dziewięciu warunków ograniczających (m.in. bez ograniczeń na zmienne z pierwszego i drugiego roku). 
+
+\section{Dobór wartości parametrów strukturalnych modelu}
+\label{rozdzial_dane}
+%
+Aby rozwiązać problem optymalizacyjny, przed którym stoi samorząd, należy podstawić wartości liczbowe pod parametry strukturalne: $\alpha$, $\beta$, $\upsilon$, $\theta$, r, $\chi$, $\gamma$, $\delta$ oraz wartości startowe pod zmienne: $b_{t}$, $c_{t}$ i $k_{t}$. W niniejszym rozdziale opisano sposób, w jaki określono wartości średnie parametrów oraz zdefniowano ich rozkłady, które posłużyły następnie do analizy wrażliwości wyników bazowych na zmiany parametryzacji. 
+
+\subsection{Kalibracja parametrów i wartości startowych modelu w oparciu o dane empiryczne dla Polski}
+\label{podrozdz_dopasowywanie}
+
+\subsubsection{Limit dochodów unijnych}
+
+Przeciętny poziom limitu dochodów pochodzących z funduszy unijnych w relacji do dochodów bieżących, $\upsilon$ i przedział, z którego limit ten może przyjmować wartości w analizie wrażliwości, zostały oszacowane na podstawie szeregu czasowego z Banku Danych Lokalnych (BDL). Szereg nosi nazwę ,,finansowanie i współfinansowanie programów i projektów unijnych: dochody razem'', odnosi się  do gmin i miast powiatowych i obejmuje lata 2010-2015. Do 2009 r. Główny Urząd Statystyczny opracowywał szereg o nazwie ,,środki gmin i miast powiatowych z budżetu UE przeznaczone na inwestycje w latach 2006-2009''. Jednak, z uwagi na różnice metodologiczne, zrezygnowano z uwzględniania tego archiwalnego szeregu. 
+
+Tabela \ref{tabela_unijne} zawiera trzy statystyki podsumowujące każdy rok objęty obserwacją - średnią i medianę dochodów unijnych w relacji do dochodów bieżących powiększone o dwa odchylenia standardowe oraz wartość 95 percentyla. Ostatecznie przyjęto domyślną wartość parametru $\upsilon$ w wysokości $25\%$, a na potrzeby analizy wrażliwości losowano $\upsilon$ z rozkładu trójkątnego o wierzchołkach w punktach: $20\%$, $25\%$ i $35\%$. Szerokość przedziału odzwierciedla niepewność towarzyszącą definicji zmiennej oraz zróżnicowanie tej zmiennej w różnych gminach oraz latach. 
+
+\begin{table}[!ht]
+\caption{Dochody przeznaczone na inwestycje unijne w relacji do dochodów ogółem gmin i miast powiatowych}
+\label{tabela_unijne}
+\centering
+\begin{tabular}[c]{l r r r r r r}
+\hline 
+\mbox{rok} & 2010 &	2011 & 2012 &	2013 &	2014	& 2015 \\
+\hline 
+\hline
+\mbox{średnia}  $+ 2 \sigma$ & 	$28,8\%$ & 	$35,0\%$ & 	$27,7\%$ & 	$22,2\%$ & 	$23,1\%$ & 	$23,4\%$   \\
+\mbox{mediana}  $+ 2 \sigma$ & 	$25,3\%$ & 	$31,5\%$ & 	$25,0\%$ & 	$19,9\%$ & 	$20,8\%$ & 	$20,7\%$   \\
+\mbox{95 perc.} & $27,7\%$ & 	$31,7\%$ & 	$26,2\%$ & 	$20,6\%$ & 	$20,2\%$ & 	$23,6\%$   
+\\ \hline
+\end{tabular}
+\\		Źródło: Bank Danych Lokalnych GUS
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+  \caption{Rozkłady: dochodów unijnych w relacji do dochodów bieżących w gminach i miastach powiatowych w latach 2010-2015} 
+\label{unijne_do_zwyklych}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/unijne_do_zwyklych.png}
+Źródło: Bank Danych Lokalnych GUS
+ \end{figure}
+
+\subsubsection{Udział finansowania własnego inwestycji unijnych}
+
+Wartość parametru $\theta$, oznaczającego kwotę finansowania własnego na każdego złotego przypadającego z finansowania unijnego, została określona na podstawie danych przytoczonych przez Sieraka (2015), według którego ,,analiza projektów zamieszonych w bazie SIMIK wykazała w obecnej perspektywie następujący faktyczny poziom dofinansowania środkami unijnymi:
+\begin{itemize}
+\item dla gmin - 58,35\%;
+\item dla powiatów - 64,68\%;
+\item dla województw - 70,26\%;
+\item średnio dla jednostek samorządu terytorialnego - 62,05\%''. 
+\end{itemize}
+Oznacza to, że jako wartość bazową należy przyjąć $\theta = 0,62$. Wtedy bowiem $\frac{1}{\theta + 1} \approx 0,62$ (zbieżność liczb przypadkowa), czyli dla tak określonej wartości $\theta$ poziom dofinansowania środkami unijnymi w modelu jest spójny z poziomem przeciętnym dla JST oraz zwykłą średnią dla gmin i powiatów (województwa wyłączono, gdyż nie są rozpatrywane w niniejszej pracy). Zakładając, że udział finansowania unijnego może się wahać od $50\%$ do $70\%$, to $0,43 < \theta < 1$ - krańce niniejszego przedziału oraz $0,62$ stanowią wierzchołki opisujące rozkład trójkątny, wykorzystywany w analizie wrażliwości. 
+
+Wszystkie następnie omawiane w tym rozdziale parametry, z wyjątkiem $\delta$ i $k$, zostały skalibrowane w oparciu o dane pochodzące z wieloletnich prognoz finansowych jednostek samorządu terytorialnego. Dane te są zamieszczone na stronie Ministerstwa Finansów (www.mf.gov.pl / Działalność / Finanse publiczne / Budżety JST / Sprawozdania budżetowe / Wieloletnia prognoza finansowa JST). Najwcześniejsze pliki pochodzą z 2013 r. i zawierają informacje o wykonaniu budżetów począwszy od roku 2010. Dane za poszczególne lata były pozyskiwane z możliwie najnowszych plików, maksymalnie z pliku pochodzącego z 5 sierpnia 2016 r. Szeregi czasowe za lata 2010-2015 obejmują 2477 gmin i miast powiatowych. Nie zostały uwzględnione jedynie: gmina wiejska Zielona Góra (funkcjonująca do 2014 r.) i gmina Choszczno (brak w danych z 2013 r.), gdyż w przeciwnym razie próba byłaby niezbilansowana.  
+
+\subsubsection{Stopa procentowa i stopa zapadalności długu}
+
+Rozkłady empiryczne parametrów związanych z długiem: stopy procentowej $r$ i odsetka zapadającego długu $\chi$, cechowały się wyraźną asymetrią, więc w celu dopasowania rozkładu teoretycznego wzięto pod uwagę rozkłady: logarytmiczno-normalny i gamma. Rozkłady teoretyczne parametru r szacowano na podstawie rozkładu empirycznego ilorazu wydatków na obsługę długu i kwoty długu z roku poprzedniego, przy czym spośród 11890 historycznie zaobserwowanych wartości, pozostawiono 11735 pochodzących z przedziału $(0, 1)$. Za wartość domyślną $r$ do symulacji przyjęto medianę z ww. przedziału, tj. $0,039$. Z wykresu \ref{histogram_r} wynika, że oba rozkłady teoretyczne charakteryzują się podobnym stopniem dopasowania. Ostatecznie wybrano rozkład gamma ze względu na nieco niższą statystykę testu Kołmogorowa-Smirnowa (KS) (0,047) w porównaniu z rozkładem log-normalnym (0,050).  
+
+\begin{figure}[H]
+\centering
+  \caption{Histogram wydatków na obsługę długu w relacji do poziomu długu z roku poprzedniego gmin i miast powiatowych - tj. stopy procentowej $r$ - w latach 2011-2015 w porównaniu z dopasowanymi rozkładami log-normalnym i gamma} 
+\label{histogram_r}
+		\includegraphics[width=\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_r.png}
+Źródło: MF i obliczenia własne
+ \end{figure}
+
+Wartość p statystyki KS w obu przypadkach była bardzo bliska zeru. Przy każdym konwencjonalnym poziomie istotności należy zatem odrzucić hipotezę, że wartości empiryczne pochodzą z któregoś z powyższych rozkładów teoretycznych.\footnote{Klasyczny test KS zakłada, że rozkład teoretyczny jest z góry ustalony. W wyżej omawianym przypadku założenie to nie zostało spełnione, ponieważ parametry rozkładu teoretycznego były szacowane w oparciu o rozkład empiryczny. W takich sytuacjach wartości p są zawyżone, co sprzyja nieodrzucaniu hipotezy zerowej. Aby uzyskać nieobciążone wartości p, należy przeprowadzić tzw. ,,bootstrapowy'' test KS. Polega on na losowaniu z rozkładu teoretycznego z oszacowanymi parametrami wielu (tutaj przyjęto liczbę 1 tysiąca) prób, o liczebności równej liczebności próby empirycznej. Dla każdej próby losowej wylicza się statystykę testu KS. Następnie oblicza się, ile procent statystyk przyjęło większą wartość niż statystyka odpowiadająca próbie empirycznej. Ów procent stanowi nieobciążone oszacowanie wartości p testu KS. W przypadku parametru r, bootstrapowe wartości p dla rozkładu gamma i log-normalnego wyniosły 0.} Uznano jednak, że rozkład gamma jest wystarczająco podobny dla celów symulacji. 
+
+Rozkłady teoretyczne parametru $\chi$ estymowano w oparciu o rozkład empiryczny spłaty rat kapitałowych kredytów i pożyczek oraz wykupu papierów wartościowych w relacji do kwoty długu z roku poprzedniego. Z 11890 obserwacji (niemal pełna populacja gmin w latach 2011-15) wyeliminowano te, które wykraczały poza przedział $(0, 1)$, po czym zostało 11520 liczb. Mediana, $0,2$, stanowi wartość bazową dla $\chi$ w symulacjach. Ponownie zdecydowano się na wybór rozkładu gamma (statystyka KS równa 0,033), a nie log-normalnego (0,053), patrz wykres \ref{histogram_chi}. Ponownie również bootstrapowe wartości p testu KS wyniosły 0.  
+
+\begin{figure}[H]
+\centering
+  \caption{Histogram spłaty rat kapitałowych kredytów i pożyczek oraz wykupu papierów wartościowych w relacji do poziomu długu z roku poprzedniego gmin i miast powiatowych, $\chi$, w latach 2011-2015 w porównaniu z dopasowanymi rozkładami log-normalnym i gamma} 
+\label{histogram_chi}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_chi.png}
+Źródło: MF i obliczenia własne
+ \end{figure}
+
+Dla porównania, w tabeli \ref{tabela_zadluzenie} można zaobserwować odpowiedniki parametrów r i $\chi$ we wszystkich JST ogółem - zaprezentowane tam wartości nie odbiegają silnie od oszacowanych. 
+
+\begin{table}[!ht]
+\caption{Dane dotyczące zadłużenia JST ogółem w mln zł}
+\label{tabela_zadluzenie}
+\centering
+\begin{tabular}[c]{l r r r r r r r r r}
+\hline 
+rok	&	2007	&	2008	&	2009	&	2010	&	2011	&	2012	&	2013	&	2014	&	2015 \\ \hline
+\hline
+spłata rat	&	7349	&	6452	&	6132	&	7164	&	9615	&	10105	&	11839	&	8001	&	8292	\\
+obsługa długu	&	994	&	1316	&	1400	&	1852	&	2711	&	3490	&	2820	&	2424	&	2021	\\
+zadłużenie	&	25876	&	28775	&	40294	&	55094	&	65756	&	67835	&	69159	&	72110	&	71635	\\ \hline
+$\chi(\mbox{rok})$	&	$28,4\%$	&	$22,4\%$	&	$15,2\%$	&	$13,0\%$	&	$14,6\%$	&	$14,9\%$	&	$17,1\%$	&	$11,1\%$	&	$11,6\%$	\\
+r(rok)	&	$3,8\%$	&	$4,6\%$	&	$3,5\%$	&	$3,4\%$	&	$4,1\%$	&	$5,1\%$	&	$4,1\%$	&	$3,4\%$	&	$2,8\%$  \\ \hline
+\end{tabular}
+Źródło: Sprawozdanie z działalności regionalnych izb obrachunkowych i wykonania budżetu przez jednostki samorządu terytorialnego w 2015 roku (oraz sprawozdania z lat poprzednich) i obliczenia własne
+\end{table}
+
+\subsubsection{Wskaźnik zadłużenia}
+
+Medianowy wskaźnik zadłużenia w całej populacji wyniósł 0,32 i wartość ta została przyjęta jako bazowa dla parametru $b = \frac{b_{t}}{y_{t}}$. Co ciekawe, w iloczynie 2477 gmin i miast powiatowych i 6 lat (2010-2015), zanotowano aż $3,8\%$ przypadków, dla których dług był zerowy. Uznano zatem, że rozkład teoretyczny powinien stanowić mieszankę rozkładu atomowego (0 z prawdopodobieństwem 0,038) i rozkładu ciągłego, który opisze 14280 obserwacji, dla których dług mieści się w przedziale (0, 2) dochodów bieżących. Owym rozkładem ciągłym okazał się gamma, którego odległość z testu KS była mniejsza (0,07) niż rozkładu log-normalnego (0,12). Nieco lepsze dopasowanie rozkładu gamma obrazuje także wykres \ref{histogram_b}. Niestety, wartości p wszystkich testów KS były zerowe lub bardzo zbliżone do zera.    
+
+\begin{figure}[H]
+\centering
+  \caption{Histogram wskaźnika zadłużenia w relacji do dochodów bieżących gmin i miast powiatowych, $b$, w latach 2010-2015 w porównaniu z dopasowanymi rozkładami gamma i log-normalnym} 
+\label{histogram_b}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_b.png}
+Źródło: MF i obliczenia własne
+ \end{figure}
+
+Powyższe rezultaty można porównać ze statystykami opartymi na corocznych ,,Sprawozdaniach z działalności regionalnych izb obrachunkowych i wykonania budżetu przez jednostki samorządu terytorialnego''. Znajdują się tam statystyki łącznego zadłużenia (zobowiązań zaliczanych do długu publicznego) gmin, miasta Warszawy oraz innych miast powiatowych za lata 2010-2015 (tabela \ref{tabela_zadluzenie_gmin_miast}). Wynika z nich, że średnie zadłużenie ogółem ($43\% - 49\%$) jest nieco wyższe niż domyślna wartość parametru ($32 \%$). Zjawisko to można tłumaczyć wpływem wyższych wskaźników zadłużenia w większych miastach na średnią ważoną i brakiem tego wpływu na medianę.   
+
+\begin{table}[!ht]
+\caption{Dane dotyczące zadłużenia gmin i miast powiatowych w mln zł}
+\label{tabela_zadluzenie_gmin_miast}
+\centering
+\begin{tabular}[c]{l r r r r r r}
+\hline 
+zadłużenie JST	&	2010	&	2011	&	2012	&	2013	&	2014	&	2015	\\ \hline \hline
+gminy	&	21.930	&	25.990	&	26.168	&	25.772	&	26.463	&	25.429	\\
+Warszawa	&	5.291	&	5.966	&	5.696	&	5.925	&	6.038	&	5.858	\\
+miasta powiaty	&	18.146	&	22.108	&	23.883	&	24.959	&	26.409	&	27.352	\\ \hline
+razem	&	45.367	&	54.065	&	55.747	&	56.656	&	58.910	&	58.639	\\ 
+dochody	&	105.555	&	109.885	&	115.370	&	118.806	&	124.723	&	128.392	\\ \hline
+wskaźnik $b$	&	0,43	&	0,49	&	0,48	&	0,48	&	0,47	&	0,46	\\ 
+\hline
+\end{tabular}
+ \vspace{1ex}
+
+     \raggedright{Źródło: Sprawozdania z działalności RIO i wykonania budżetu przez JST 2011-2015 oraz Bank Danych Lokalnych GUS}
+\end{table}
+
+\subsubsection{Dynamika dochodów bieżących}
+
+\begin{figure}
+\centering
+  \caption{Histogram dynamiki dochodów bieżących gmin i miast powiatowych w latach 2011-2015 w porównaniu z dopasowanymi rozkładami t-Studenta i normalnego} 
+\label{histogram_gamma}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_gamma.png}
+Źródło: MF i obliczenia własne
+ \end{figure}
+
+Następnym parametrem wykorzystywanym w symulacjach jest parametr $\gamma$ - dynamika dochodów bieżących. Mediana rozkładu empirycznego wyniosła 0,044, co stanowi wartość domyślną w symulacjach.     
+
+Na powyższym histogramie można zaobserwować, że rozkład normalny dopasowany za pomocą metody największej wiarygodności znacząco różni się od rozkładu empirycznego. Efektywność MNW została obniżona na skutek występowania obserwacji odstających. Dlatego pod uwagę wzięto także inny rozkład normalny - o tej samej wartości oczekiwanej, co pierwotny, ale o mniejszym odchyleniu standardowym (0,05 zamiast 0,07). Wprawdzie wartości p zarówno z klasycznego i bootstrapowego testu KS dla obu rozkładów normalnych wynoszą odpowiednio prawie zero i zero, ale odległość KS jest 4-krotnie mniejsza w przypadku rozkładu z ekspercko dobranym odchyleniem standardowym. Tak czy inaczej, z histogramu parametru $\gamma$ wynika, że nawet ów drugi rozkład normalny gorzej od t-Studenta opisuje ogony rozkładu empirycznego. Tę obserwację potwierdzają wyniki testu KS: wartości p dla rozkładu t-Studenta wynoszą odpowiednio 0,346 i 0,338. W związku z tym w symulacjach użyto właśnie rozkładu t-Studenta.  
+
+\subsubsection{Wskaźnik wydatków bieżących}
+
+\begin{figure}
+\centering
+  \caption{Histogram wydatków bieżących bez kosztów obsługi długu gmin i miast powiatowych w relacji do dochodów bieżących, $c$, w latach 2010-2015 w porównaniu z dopasowanymi rozkładami t-Studenta i normalnym} 
+\label{histogram_c}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_c.png}
+Źródło: MF i obliczenia własne
+ \end{figure}
+
+Mimo, że wydatki bieżące stanowią zmienną decyzyjną, w celu uzyskania rozwiązania analitycznego dla roku trzeciego, potrzebne są ich wartości dla roku pierwszego i drugiego. Dlatego także ta kategoria musi być - przynajmniej w części symulacji - generowana z rozkładu. Rozkład empiryczny $c$ został otrzymany poprzez odjęcie kosztów obsługi długu od wydatków bieżących i podzielenie przez dochody bieżące ($\frac{c_{t}}{y_{t}}$). Test KS i wizualna ocena histogramu z nałożonymi wykresami rozkładów teoretycznych ponownie wskazują na rozkład t-Studenta. Wartość p klasycznego testu KS wyniosła bowiem dla tego rozkładu 0,0002 (blisko 0 dla rozkładu normalnego), a bootstrapowego - 0,001 (0 dla normalnego). Wartość medianowa wyniosła 0,90.  
+
+\subsubsection{Wskaźnik wartości infrastruktury}
+
+Następnym analizowanym parametrem jest $k = \frac{k_{t}}{y_{t}}$, czyli wartość brutto środków trwałych w relacji do dochodów bieżących. Podstawowy problem związany z tą kategorią stanowi niejednorodność danych udostępnianych przez Bank Danych Lokalnych. Obecnie publikowana jest wartość brutto środków trwałych w gospodarce narodowej (zawierającej także sektor prywatny), tylko na szczeblu województw, w przeliczeniu na jednego mieszkańca. Tak zdefiniowana kategoria nie odpowiada zatem zmiennej wykorzystywanej w modelu opisywanym w niniejszej pracy. Wykorzystano więc o wiele bardziej odpowiedni szereg czasowy, tj. środki trwałe jednostek i zakładów budżetowych gmin, pogrupowanych w powiaty. Jednak był on opracowywany przez BDL jedynie do 2011 r. Ze względu na to, że mianownik parametru $k$ stanowią dochody bieżące, do jego obliczenia niezbędne są dochody unijne. Niestety, szereg ,,finansowanie i współfinansowanie programów i projektów unijnych'' jest publikowany w BDL dopiero od 2010 r. Oznacza to, że dysponowano szeregami jednocześnie licznika i mianownika na szczeblu gmin wyłącznie za lata 2010-2011. 
+
+Na podstawie różnych kategorii z Banku Danych Lokalnych można pośrednio wnioskować o wzrostowym trendzie zmiennej $k$. Po pierwsze, w latach 2005-2008 średnia wartość środków trwałych jednostek i zakładów budżetowych gmin pogrupowanych w powiaty, w relacji do dochodów ogółem (czyli zawierających dochody unijne) oscylowała wokół 1,7, a następnie szybko wzrosła do 1,97 w 2011 r. Po drugie, średnia omawianego tutaj parametru $k$ (czyli tym razem mianownik stanowiły dochody bieżące) wzrosła z 2,00 w 2010 r. do 2,15 w 2011 r. W $85 \%$ powiatów wskaźnik ten był wyższy w 2011 r. niż w roku poprzednim. Po trzecie, dynamika środków trwałych w województwach w gospodarce narodowej, w latach 2008-2014 była wyższa od dynamiki dochodów własnych JST, a także od nominalnego tempa wzrostu PKB. Przy założeniu względnie stabilnej liczby ludności, implikuje to, że relacja środków trwałych do dochodów publicznych i prywatnych także rosła. Wnioskowanie na podstawie powyższych obserwacji nie jest ścisłe (obserwacja 1. ignoruje wahania dochodów unijnych, obserwacja 2. dotyczy tylko dwóch lat, obserwacja 3. - województw, sektora prywatnego oraz centralnego podsektora publicznego). Powyższe obserwacje mogą jednak stanowić podstawę do wysunięcia hipotezy o stopniowym wzroście $k$.  Ów wzrostowy trend środków trwałych w relacji do dochodów bieżących sprawia, że rozkład parametru $k$ nie jest stały w czasie. Pomimo tego, w dalszej części pracy wykorzystano rozkład z lat 2010-2011, gdyż ma on na tyle dużą wariancję (obserwacje odstające pochodzą spoza przedziału $1,0 - 3,0$, patrz wykres \ref{histogram_k}), że powinien obejmować także większość hipotetycznego rozkładu szacowanego dla lat po 2011 r.
+
+Do rozkładu empirycznego $k$ rozważano dopasowanie dwóch teoretycznych rozkładów: t-Studenta i normalnego. Empiryczne poziomy istotności wynikające ze zwykłego testu KS wyniosły odpowiednio: 0,614 i 0,078 i tylko nieznacznie różniły się od otrzymanych w bootstrapowym teście KS, tj. 0,606 i 0,072. Wyniki te przesądziły o wykorzystaniu rozkładu t-Studenta w analizie wrażliwości oraz przyjęciu 2,06 jako wartości bazowej dla $k$.  Dopasowanie obu wykresów do rozkładu empirycznego można zaobserwować na wykresach histogramu oraz kwantylowych. 
+
+\begin{figure}[H]
+\centering
+  \caption{Histogram wartości środków trwałych w relacji do dochodów bieżących jednostek i zakładów budżetowych gmin i miast powiatowych pogrupowanych w powiaty, $k$, w latach 2010-2011 w porównaniu z dopasowanymi rozkładami t-Studenta oraz normalnym} 
+\label{histogram_k}
+		\includegraphics[width=1.00\textwidth]{C:/Dysk/Nowe/JST/Wykresy/histogram_k.png}
+Źródło: Bank Danych Lokalnych GUS 
+ \end{figure}
+
+\subsubsection{Stopa deprecjacji infrastruktury}
+
+Najtrudniejszym do skalibrowania rozkładem, ze względu na brak odpowiednich danych, był rozkład parametru $\delta$. W celu uzyskania rozkładu teoretycznego, poczyniono silne założenie, że wartości parametrów $i$ (wydatków majątkowych w relacji do dochodów bieżących), $k$ i $\gamma$ są równe wartościom długookresowym z modelu o nieskończonym horyzoncie czasowym opisanym w części D aneksu. Wykorzystano także wyprowadzone w aneksie równanie (\ref{eq_delta}): $ \delta = \frac{i}{k} - \gamma$.
+
+Rozkład parametru $\delta$ uzyskano, stosując podobną procedurę, co w wypadku parametrów: $r, \chi, b,$ $\gamma, c, k$. Do tego parametru dopasowano rozkład gamma(kształt: 2.218; skala: 9.709) oraz wartość bazową równą wartości medianowej 0,19. Następnie wylosowano 100 tysięcy trójek i, k i $\gamma$ z rozkładów teoretycznych i każdej z trójek przypisano odpowiednią wartość $\delta$, zgodnie z ww. wzorem (\ref{eq_delta}). Medianą z tak uzyskanego rozkładu $\delta$ była liczba 0,059. Ponieważ parametr $\delta$ często przyjmował wartości ujemne, w celu dopasowania rozkładu gamma, który przypisuje zerowe prawdopodobieństwo liczbom ujemnym, każdą wartość $\delta$ powiększono o 0,15. Ostatecznie, rozkład $\delta$ stanowi rozkład gamma (kształt: 4,760; skala: 21,213) pomniejszony o wspomniane 0,15 - tak, aby wartości ujemne miały niezerowe prawdopodobieństwo wystąpienia.   
+
+\subsection{Analiza struktury warunków ograniczających}
+\label{podrozdz_struktura}
+
+Po skalibrowaniu rozkładów teoretycznych dla wszystkich parametrów modelu, z wyjątkiem $\alpha$ i $\beta$, wygenerowano 7200 symulacji modelu ograniczonego do lat 3-4 w celu zbadania struktur warunków ograniczających (czyli zbadania, które warunki były luźne, a które napięte) w rozwiązaniach optymalnych. Wartości większości parametrów (tj. niebehawioralnych) losowano z rozkładów teoretycznych. W zakresie parametrów behawioralnych przyjęto na tym etapie podejście agnostyczne - losowano $\alpha$ z rozkładu jednostajnego na przedziale $[0,1; 0,9]$, zaś $\beta$ - z rozkładu jednostajnego na przedziale $[0; 1]$. W związku z tak dowolnym określeniem wartości parametrów behawioralnych, należy traktować owe symulacje jako wstępne. 
+
+Każdy z 200 zestawów wylosowanych parametrów zreplikowano 36-krotnie (stąd łączna liczba 7200) - tak, aby uzyskać wszystkie kombinacje: $u_{3}$ równe zero, równe limitowi lub równe innej kwocie pomiędzy ww. skrajnymi liczbami, $i_{3}$ równe zero lub liczbie dodatniej oraz te same opcje dla ww. zmiennych z roku czwartego (łącznie: $3 \cdot 2 \cdot 3 \cdot 2 = 36$ kombinacji). Następnie obliczono użyteczność dla każdego z 36 scenariuszy i wybrano ten o najwyższej użyteczności. Ostatecznie uzyskano wartości optymalne zmiennych decyzyjnych, optymalną strukturę warunków ograniczających i użyteczność dla 200 zestawów wylosowanych parametrów. Do tych wyników odnoszą się wszystkie zaprezentowane w tym podrozdziale statystyki opisowe.
+
+\begin{table}[!ht]
+\caption{Częstość występowania różnych optymalnych wartości zmiennych decyzyjnych}
+\label{tabela_optymalne_zmienne}
+\centering
+\begin{tabular}[c]{l l | l l | l l}
+\hline 
+zmienna & częstość & zmienna & częstość & zmienna & częstość  \\
+\hline 
+\hline
+$i_{3}^{*} = 0$ & $32,5\%$ & $i_{3}^{*} > 0$ & $67,5\%$ & & \\ 
+$u_{3}^{*} = 0$ & $32,5\%$ & $0 < u_{3}^{*} < U_{3}$ & $19,5\%$ & $u_{3}^{*} = U_{3}$ & $48\%$ \\
+$i_{4}^{*} = 0$ & $51,5\%$ & $i_{4}^{*} > 0$ & $48,5\%$ & & \\
+$u_{4}^{*} = 0$ & $5\%$ & $0 < u_{4}^{*} < U_{4}$ & $23,5\%$ & $u_{4}^{*} = U_{4}$ & $71,5\%$ \\
+\hline
+\end{tabular}
+\\		Źródło: obliczenia własne
+\end{table}
+
+Z tabeli \ref{tabela_optymalne_zmienne} wynika, że inwestycje unijne przeważnie powinny być realizowane na maksymalnym poziomie, natomiast inwestycje zwykłe - niespodziewanie często powinny być zerowe. Należy jednak mieć na uwadze, że wyniki te były podyktowane specyficznymi wartościami $\alpha$ bliskimi 0,9 i/lub $\beta$ bliskimi 0, co wpływało na niską użyteczność z infrastruktury i w efekcie - zaniżanie inwestycji.
+
+\begin{table}[!ht]
+\caption{Zestawy najpopularniejszych wartości optymalnych zmiennych decyzyjnych}
+\label{tabela_zestawy_optymalnych_zmiennych}
+\centering
+\begin{tabular}[c]{l | l l l l | l}
+\hline 
+poz. & $u_{3}^{*}$ & $i_{3}^{*}$  & $u_{4}^{*}$  & $i_{4}^{*}$ & częstość \\
+\hline 
+\hline
+1 &$=0$ & $>0$ & $=U_{4}$ & $>0$ & $19,5\%$ \\ 
+2 &$=U_{3}$ & $>0$ & $=U_{4}$ & $>0$ & $17,5\%$ \\ 
+3 &$=U_{3}$ & $>0$ & $=U_{4}$ & $=0$ & $10,5\%$ \\ 
+4 &$=U_{3}$ & $=0$ & $>0$ & $=0$ & $7\%$ \\
+5 &$> 0$ & $=0$ & $=U_{4}$ & $=0$ & $6,5\%$ \\ 
+6 &$=U_{3}$ & $=0$ & $=U_{4}$ & $=0$ & $5\%$ \\ 
+7 &$=0$ & $>0$ & $=U_{4}$ & $=0$ & $4\%$ \\ 
+8 &$=0$ & $=0$ & $>0$ & $=0$ & $3\%$ \\
+9 &$>0$ & $=0$ & $>0$ & $=0$ & $3\%$ \\ 
+10 &$=U_{3}$ & $>0$ & $>0$ & $=0$ & $3\%$ \\
+\hline
+\end{tabular}
+\\		Źródło: obliczenia własne
+\end{table}
+
+Tabela \ref{tabela_zestawy_optymalnych_zmiennych} prezentuje 10 najpopularniejszych kombinacji optymalnych wartości zmiennych decyzyjnych. Łącznie odpowiadają one za $79\%$ przypadków. Warto wspomnieć, że drugi najczęściej występujący wariant (z niewielką stratą do najczęściej występującego) został rozwiązany w sposób analityczny w niniejszej pracy.
+
+Warunek IWZ jest prawie zawsze napięty. W $3,5\%$ przypadków dla roku trzeciego, luz w warunku wynosi między 0,07 a 0,0001. Wtedy $\alpha$ przyjmuje wysokie wartości, około 0,8. Mowa tu jednak o implikacji, a nie równoważności, gdyż często dla wysokich $\alpha$ warunek IWZ także bywa napięty. W pozostałych przypadkach luz nie przekracza 0,0001, co jest w praktyce nieodróżnialne od zera. Warunek IWZ dla roku czwartego jest napięty zawsze. Z kolei warunek na zrównoważony wynik bieżący (ZWB) jest napięty rzadko. W trzecim roku zdarza się to w $9\%$ przypadków, wówczas $\alpha$ jest wysoka, wydatki bieżące - wysokie, a inwestycje, zwłaszcza zwykłe - niskie. ZWB w czwartym roku napięty jest w $6\%$ przypadków, wtedy $\alpha$ jest bardzo wysoka, a inwestycje przeważnie zerowe. Podsumowując, założenie o napiętości IWZ i braku napiętości ZWB ma potwierdzenie w wynikach wstępnych symulacji.
+
+W $19\%$ przypadków odchylenie między wartościami użyteczności z rozwiązania numerycznego i analitycznego nie przekraczało 0,0001. Podobnie często, w $17\%$ przypadków, optymalna wartość żadnej z sześciu zmiennych decyzyjnych (oprócz podanych w tabelach - dodatkowo $c^{*}_{3}$ i $c^{*}_{4}$) nie odchyla się od optymalnej wartości uzyskanej w rozwiązaniu analitycznym o więcej niż 0,02 (jednostkę stanowią dochody bieżące samorządu z danego roku). W $14\%$ przypadków odchylenie to nie przekracza 0,01. Odnotowane odstępstwa są przede wszystkim konsekwencją niespełnienia ograniczeń przyjętych jakodane w rozwiązaniu analitycznym dla dużego odsetka wariantów parametryzacji. 
+
+Jeżeli jednak założyć strukturę warunków ograniczających odpowiadającą strukturze rozwiązań analitycznych, czyli inwestycje unijne w trzecim i czwartym roku na maksymalnym poziomie oraz dodatnie inwestycje zwykłe w obu tych latach ($17,5\%$ przypadków), to zbieżność rozwiązań uzyskanych metodami numeryczną i analityczną staje się dużo większa. W $86\%$ odchylenie między użytecznościami z obu metod nie przekracza 0,0001. W $75\%$ optymalna wartość żadnej z 6 zmiennych nie odchyla się o bardziej od optymalnej wartości uzyskanej w rozwiązaniu analitycznym niż 0,02, natomiast w $64\%$ - o bardziej niż 0,01. Generalnie oznacza to dużą zbieżność wyników osiąganych za pomocą obu metod. Odnotowane odstępstwa są konsekwencją niedoskonałości meta-algorytmu numerycznego, który nie odnajduje ekstremów globalnych, a jedynie ekstrema lokalne. Warto w tym miejscu podkreślić, że na meta-algorytm składają się niedoskonałe metody optymalizacji, których wyniki mogą być poprawne bądź nie w zależności od startowych wartości zmiennych (patrz części A i C.2 aneksu). Ta obserwacja pokazuje ponadto, jaka korzyść płynie z uzyskania rozwiązania analitycznego.  
+
+\subsection{Kalibracja wartości parametrów behawioralnych $\alpha$ i $\beta$}
+\label{podrozdz_kalibrowanie}
+
+Parametry: $\alpha$, opisujący preferencje względem wydatków bieżących w porównaniu z infrastrukturą, i $\beta$, dyskontujący przyszłą użyteczność, różnią się od pozostałych parametrów modelu. Są one bowiem parametrami behawioralnymi, nieobserwowalnymi i dlatego nie można odczytać ich rozkładów empirycznych z danych. Teoretycznie każdy wójt, burmistrz czy prezydent mógłby ustalić dowolne wartości $\alpha \in (0, 1)$ oraz $\beta > 0$, a następnie uzyskać z modelu optymalne wartości wydatków bieżących i inwestycyjnych. W podrozdziale \ref{rozdzial_model_dwuletni} ograniczono się jednak do takich $\alpha$ i $\beta$, zgodnie z którymi struktura warunków ograniczających w optimum jest taka jak założona w rozdziale \ref{rozwiazanie_modelu}, czyli przede wszystkim: w 3 i 4 roku wykorzystuje się całą dopuszczalną kwotę środków unijnych, napięta jest reguła IWZ oraz realizuje się niezerowe wydatki bieżące i inwestycyjne. Aby ograniczyć możliwość, że rozwiązanie uzyskane metodą KKT stanowi tylko ekstremum lokalne, a nie globalne, model rozwiązywano także za pomocą metod numerycznych. Jeżeli rozwiązania uzyskane za pomocą tych metod różniły się, tj. użyteczność mogła być wyższa przy innej strukturze warunków ograniczających niż założona, wówczas ($\alpha, \beta$) prowadzące do takich rozwiązań były wyłączane ze zbioru rozważanych wartości.   
+
+Zadanie optymalizacyjne rozwiązano dla wszystkich możliwych par $(\alpha, \beta) \in \mathcal{A} \times \mathcal{B}$, gdzie $\alpha \in$ $\{0,1; 0,2,$ $ ..., 0,9\}$, zaś $\beta \in \{0,1; 0,2; ...; 1,0\}$. Pozostałym parametrom przypisano natomiast wartości bazowe podane w poprzednim podrozdziale. Z iloczynu kartezjańskiego $\mathcal{A} \times \mathcal{B}$ wyodrębniono następnie podzbiór, który prowadził do rozwiązań optymalnych o strukturze ograniczeń zgodnej z założeniami (punkty 2, 3, 6 i 7 spośród wymienionych poniżej). Z owego podzbioru, jedynie wartości parametrów podane w punktach 6 i 7 prowadziły do rozwiązań optymalnych zbliżonych do empirycznych, tj. istotnie wyższych wydatków bieżących niż inwestycyjnych. Ostatecznie zatem zawężono poszukiwania do obszaru zaprezentowanego w tabelach \ref{optymalne_3} i \ref{optymalne_4} i wybrano domyślną wartość $\alpha$ równą 0,4 oraz $\beta$ w wysokości 0,1. Wartości te wykorzystywano w symulacjach o z góry ustalonych wartościach $\alpha$ i $\beta$.   
+
+\begin{enumerate}[label={\arabic*)}]
+\item $\alpha = 0,1, \beta \neq 0,2 \Rightarrow u_{3}^{*}=0 \Rightarrow \mbox{zła struktura rozwiązania}$ 
+\item $\alpha = 0,1, \beta = 0,2 \Rightarrow c_{3}^{*}, i_{3}^{*}, c_{4}^{*}, i_{4}^{*} > 0; u_{3}^{*} = U_{3}; u_{4}^{*} = U_{4} \\ \Rightarrow\mbox{dobra struktura rozwiązania, nierealistyczne wyniki}$
+\item $\alpha = 0,2, \beta \in \{0,1; 0,3; 0,4; 0,5; 0,6\} \Rightarrow c_{3}^{*}, i_{3}^{*}, c_{4}^{*}, i_{4}^{*} > 0; u_{3}^{*} = U_{3}; u_{4}^{*} = U_{4} \\ \Rightarrow \mbox{dobra struktura rozwiązania, nierealistyczne wyniki}$
+\item $\alpha = 0,2, \beta = 0,2 \Rightarrow u_{3}^{*} < U_{3} \Rightarrow \mbox{zła struktura rozwiązania}$ 
+\item $\alpha = 0,2, \beta \in [0,7, 1,0] \Rightarrow u_{3}^{*}=0 \Rightarrow \mbox{zła struktura rozwiązania}$ 
+\item $\alpha = 0,3 \Rightarrow c_{3}^{*}, i_{3}^{*}, c_{4}^{*}, i_{4}^{*} > 0; u_{3}^{*} = U_{3}; u_{4}^{*} = U_{4} \Rightarrow   \mbox{dobra struktura rozwiązania}$
+\item $\alpha = 0,4, \beta \in [0,1, 0,4] \Rightarrow c_{3}^{*}, i_{3}^{*}, c_{4}^{*}, i_{4}^{*} > 0; u_{3}^{*} = U_{3}^{*}; u_{4}^{*} = u_{4}^{*}; c_{3}^{*} > i_{3}^{*}; c_{4}^{*} > i_{4}^{*} \\ \Rightarrow   \mbox{dobra struktura rozwiązania, wyniki zbliżone do wartości występujących w danych}$
+\item $\alpha = 0,4, \beta \in [0,5, 1] \Rightarrow i_{4}^{*} < 0 \\ \Rightarrow \mbox{jeden warunek niespełnony, brak interpretacji ekonomicznej}$
+\item $\alpha \geq 0,5 \Rightarrow i_{4}^{*} < 0 \Rightarrow \mbox{jeden warunek niespełnony, brak interpretacji ekonomicznej}$
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+  \caption{Rozwiązania optymalne dla trzeciego roku w zależności od $\alpha$ i $\beta$} 
+\label{optymalne_3}
+		\includegraphics[trim=0cm 6cm 0cm 1cm, clip=true, width=1.35\textwidth]{C:/Dysk/Nowe/JST/Wykresy/c3_i3.pdf}
+		Źródło: obliczenia własne
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+  \caption{Rozwiązania optymalne dla czwartego roku w zależności od $\alpha$ i $\beta$} 
+\label{optymalne_4}
+		\includegraphics[trim=0cm 6cm 0cm 1cm, clip=true, width=1.35\textwidth]{C:/Dysk/Nowe/JST/Wykresy/c4_i4.pdf}
+		Źródło: obliczenia własne
+\end{figure}
+
+Wartości $\alpha$ i $\beta$ były ostatnimi potrzebnymi do numerycznego rozwiązania modelu. Wszystkie wartości domyślne oraz rozkłady służące do analizy wrażliwości zostały zawarte w tabeli \ref{tabela_parametry}. 
+
+\begin{table}[!ht]
+\caption{Rozkłady wartości parametrów modelu}
+\label{tabela_parametry}
+\centering
+\begin{tabular}[c]{l r l l}
+\hline 
+\mbox{parametr} & domyśl. & rozkład do analizy wrażliwości & źródło \\
+\hline 
+\hline
+$\alpha$ & 0.4 & brak & własne \\
+$\beta$ & 0.1 & brak & własne \\
+$\upsilon$ & $0.25$ & trójkątny (0,2; 0,25; 0,35) & BDL \\
+$\theta $ & 0,62 & trójkątny (0,43; 0,62; 1) & Sierak\nocite{Sierak_2015} \\
+r  & 0,039 & gamma (kształt: 6,417 ; skala: 152,5) & MF \\
+$\chi$ & 0,2  & gamma (kształt: 2,325 ; skala: 9,608) & MF \\
+$\gamma$ & 0,044 & t-Studenta (położenie: 0,044; skala: 0,039; st. sw.: 2,919) & MF \\
+$\delta$ & 0,059 & -0,15 + gamma(kształt: 4,760; skala: 21,213) & $\delta = \frac{i}{k} - \gamma$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\caption{Rozkłady wartości startowych zmiennych modelu}
+\label{tabela_startowe}
+\centering
+\begin{tabular}[c]{l r l l}
+\hline 
+\mbox{zmienna} & domyślnie & rozkład do analizy wrażliwości & źródło \\
+\hline 
+\hline
+$b$ & 0,32 & 0 ($3,8\%$) lub gamma (kształt: 2,405; skala: 6,984)  & MF \\
+$c$ & 0,90 & t-Studenta (położenie: 0,90; skala: 0,045; st. sw.: 4,52) & MF \\
+$k$ & 2,06 & t-Studenta (położenie: 2,06; skala: 0,36; st. sw.: 6,58) & BDL \\
+\hline
+\end{tabular}
+\end{table}
+
+Podsumowując rozdział siódmy, należy stwierdzić, że niektóre omawiane w nim wyniki nie były zgodne z oczekiwaniami. Niespodziewanie często, w symulacjach z losowymi wartościami parametru preferencji $\alpha$ i czynnika dyskontowego $\beta$, optymalny poziom inwestycji okazywał się zerowy. Ponieważ rozkładów nieobserwowalnych parametrów $\alpha$ i $\beta$ nie da się oszacować na podstawie danych empirycznych, można założyć takie ich wartości, które implikują optymalne wartości zmiennych decyzyjnych zbliżone do empirycznych. Co więcej, można przyjąć wartości, które implikują strukturę warunków ograniczających zgodną z założoną w rozwiązaniu analitycznym. Tak skalibrowana wartość $\beta$ okazała się jednak na tyle niska, że oznacza niespotykaną w literaturze krótkowzroczność modelowanego decydenta. 
+
+Ostatecznie, w następnym rozdziale, wykorzystywano skalibrowane rozkłady parametrów strukturalnych i wartości startowych, zaprezentowane w tabelach \ref{tabela_parametry} i \ref{tabela_startowe}. Z kolei w odniesieniu do parametrów behawioralnych, postępowano na dwa sposoby - losowano je z rozkładów jednostajnych (,,agnostycznych'') albo przyjmowano stałe wartości uzyskane w podrozdziale \ref{podrozdz_kalibrowanie}. 
+ 
+\section{Rozwiązanie numeryczne modelu oraz analiza wrażliwości optymalnych poziomów wydatków bieżących i inwestycyjnych}
+\label{analiza_wrazliwosci}
+
+Niniejszy rozdział przedstawia rozwiązanie numeryczne pełnej, czterookresowej wersji modelu oraz opisuje wpływ wartości parametrów strukturalnych i behawioralnych modelu na optymalne wartości zmiennych decyzyjnych: wydatków bieżących $\frac{c_{t}^{*}}{y_{t}}$ oraz inwestycyjnych zwykłych $\frac{i_{t}^{*}}{y_{t}}$. Koncepcja obu podrozdziałów jest taka sama: polega na wylosowaniu wielu zestawów wartości parametrów i znalezieniu dla każdego zestawu optymalnych wartości zmiennych decyzyjnych. Następnie oszacowano liniowe metamodele\footnote{Przez metamodel rozumie się tu model, którego parametry estymowane są w oparciu o dane wygenerowane w procesie symulacji, a nie rzeczywiste dane empiryczne. Nie służy on więc weryfikacji zależności obserwowanych w danych, lecz wychwyceniu cech symulowanego procesu, trudnych do bezpośredniego dostrzeżenia ze względu na jego dużą złożoność.} ekonometryczne, w których zmienną objaśnianą była jedna ze zmiennych decyzyjnych, z konkretnego roku, a objaśniającymi - wartości parametrów. 
+
+Należy zastrzec, że przyjęto liniową specyfikację modeli, mimo że w rzeczywistości efekty mogą być nieliniowe (a czasem wręcz niemonotoniczne), co widać w rozwiązaniach analitycznych modelu. Oszacowanie modeli liniowych pozwala znaleźć efekty przeciętne w całej przestrzeni parametrów (nie tylko lokalne wokół bazowych wartości parametrów), ale nie wychwyci nieliniowości. Przeanalizowanie pełnego wpływu ewentualnych zmian wartości wybranych parametrów w przypadku konkretnej gminy jest możliwe w oparciu o wykorzystywane tutaj narzędzia, ale wykracza poza zakres niniejszej rozprawy.
+
+Warto też zaznaczyć, iż zrezygnowano z podawania statystycznej istotności zmiennych objaśniających w modelach. Wynika to z faktu, że w praktyce możliwe jest wygenerowanie tak dużej liczby obserwacji, aby uczynić każdy parametr istotnym (wszak każdy parametr znajdował się w rozwiązaniu analitycznym). Dlatego w niniejszym rozdziale uwagę skupiono na sile i kierunku wpływu poszczególnych parametrów. W rezultacie, pod uwagę brano oszacowania standaryzowanych współczynników regresji (równych zwykłym współczynnikom pomnożonym przez odchylenie standardowe danej zmiennej objaśniającej), a nie zwykłych współczynników. Łatwiej bowiem porównywać wpływ różnych parametrów, zakładając ich wzrost o jedno odchylenie standardowe, a nie o jednostkę.
+
+Pierwszy podrozdział ogranicza się do modelu dwóch ostatnich lat kadencji władz samorządowych oraz do założonych wartości parametrów behawioralnych i struktury warunków ograniczających w rozwiązaniu optymalnym. Dzięki temu rozwiązanie metodą numeryczną mogło zostać sprawdzone za pomocą metody analitycznej. Drugi podrozdział nie zawiera powyższych ograniczeń. Dotyczy on pełnego modelu czteroletniego, nie zakłada ani określonych wartości parametrów behawioralnych, ani struktury warunków ograniczających. Jednak w tym przypadku rozwiązanie można uzyskać jedynie metodą numeryczną. W celach porównawczych, przeprowadzono też symulacje w oparciu o model czteroletni o z góry ustalonych wartościach parametrów behawioralnych.    
+
+\subsection{Wyniki analizy wrażliwości dla scenariusza rozwiązanego analitycznie z ustalonymi: strukturą warunków ograniczających oraz $\alpha$ i $\beta$}
+\label{rozdzial_model_dwuletni}
+
+W celu wykonania analizy wrażliwości dla modelu dwuletniego, wylosowano 2247 zestawy wartości parametrów z rozkładów teoretycznych zaprezentowanych w tabeli \ref{tabela_startowe}, przyjmując wartość parametru preferencji $\alpha = 0,4$ i czynnika dyskontowego $\beta = 0,1$. Następnie pozostawiono dokładnie tysiąc zestawów, w których optymalne wartości zmiennych decyzyjnych były takie same według metody analitycznej (warunków KKT) oraz metody numerycznej (meta-algorytmu optymalizacyjnego). W kolejnym kroku, klasyczną metodą najmniejszych kwadratów, oszacowano liniowe modele ekonometryczne w oparciu o tysiąc zestawów liczb. W modelach tych zmiennymi objaśniającymi były wartości parametrów strukturalnych, a objaśnianymi - optymalne wartości kolejno: $\frac{c_{3}^{*}}{y_{3}}, \frac{c_{4}^{*}}{y_{4}}, \frac{i_{3}^{*}}{y_{3}} \mbox{i} \frac{i_{4}^{*}}{y_{4}}$, czyli optymalnych wydatki bieżących albo optymalnych inwestycji zwykłych w relacji do dochodów bieżących w roku odpowiednio trzecim i czwartym.  
+
+Oszacowania standaryzowanych współczynników stojących przy zmiennych objaśniających ze wszystkich modeli zostały zebrane w tabeli \ref{optymalne_2_lata}.
+
+\begin{table}[!ht]
+  \caption{Oszacowania standaryzowanych współczynników modeli opisujących optymalne wartości zmiennych decyzyjnych dla modelu dwuletniego z określoną strukturą warunków ograniczających oraz $\alpha$ i $\beta$} 
+\label{optymalne_2_lata}
+\centering
+\begin{tabular}[c]{r r r r r r r r r}
+\hline 
+	&	$\frac{c_{3}^{*}}{y_{3}}$	&	$\frac{c_{4}^{*}}{y_{4}}$	&	$\frac{i_{3}^{*}}{y_{3}}$	&	$\frac{i_{4}^{*}}{y_{4}}$	\\
+\hline 
+\hline
+$\gamma$	&	-0,004	&	-0,015	&	0,044	&	0,099	\\
+$\delta$	&	-0,026	&	-0,057	&	0,057	&	0,153	\\
+$\theta$	&	0,000	&	-0,001	&	-0,034	&	-0,034	\\
+$r$	&	0,004	&	0,000	&	-0,091	&	-0,034	\\
+$\chi$	&	0,045	&	0,039	&	-0,385	&	-0,152	\\
+$b$	&	-0,033	&	-0,016	&	-0,185	&	0,052	\\
+$c$	&	-0,022	&	0,002	&	-0,131	&	0,094	\\
+$k$	&	0,048	&	0,026	&	-0,102	&	-0,063	\\
+$\upsilon$	&	0,004	&	0,006	&	-0,030	&	-0,039	\\
+\hline
+$R^2$	&	0,887	&	0,771	&	0,912	&	0,817	\\
+\end{tabular}
+\\		Źródło: obliczenia własne
+\end{table}
+
+
+Z wyżej przedstawionych modeli płynie wiele istotnych wniosków dla polityki gmin i miast powiatowych. 
+
+Wydatki bieżące w relacji do dochodów bieżących w pierwszym i drugim roku (c = $\frac{c_{1}}{y_{1}}$ = $\frac{c_{2}}{y_{2}}$) wpływają: umiarkowanie negatywnie na $\frac{c_{3}^{*}}{y_{3}}$, nieznacznie na $\frac{c_{4}^{*}}{y_{4}}$ , silnie negatywnie na $\frac{i_{3}^{*}}{y_{3}}$ oraz silnie pozytywnie na $\frac{i_{4}^{*}}{y_{4}}$. Najprawdopodobniej wyższe wydatki bieżące w przeszłości, poprzez małą przestrzeń w IWZ, ograniczają wydatki ogółem w 3 roku, ale oszczędności te mogą zostać, przynajmniej częściowo, wykorzystane na wzrost wydatków w 4 roku. 
+
+Dynamika dochodów bieżących  ($\gamma$) wpływa ujemnie na wydatki bieżące $\frac{c_{3}^{*}}{y_{3}}$ oraz $\frac{c_{4}^{*}}{y_{4}}$, natomiast dodatnio - na wydatki inwestycyjne $\frac{i_{3}^{*}}{y_{3}}$ oraz $\frac{i_{4}^{*}}{y_{4}}$.  Być może działa tu zasada zapobiegliwości. Ponadprzeciętnie wysoki wzrost dochodów należy przeznaczyć na inwestycje, które zwiększają użyteczność także w przyszłości, natomiast wydatki bieżące działają antycyklicznie, jako automatyczny stabilizator - w dobrych czasach rosną wolniej niż baza dochodowa, a w złych - szybciej. Należy podkreślić, że zmienne objaśniane stanowią kategorie w relacji do dochodów bieżących, zatem szybsza dynamika dochodów w roku t, $\gamma_{t}$ powinna pośrednio zwiększyć optymalne wartości liczników ($c_{t}^{*}$, $i_{t}^{*}$) oraz bezpośrednio - mianowników ($y_{t}$), więc końcowy efekt nie był oczywisty ex ante.
+
+Zgodnie z rozwiązaniami analitycznymi (\ref{eq_c4_wariant4}) i (\ref{eq_i4_wariant4}), wpływ stopy procentowej $r$ i poziomu zadłużenia $b$ na obie kategorie wydatków optymalnych $c_{4}^{*}$ i $i_{4}^{*}$ jest ujemny. Wnioski z analizy wrażliwości są jednak nieco inne. Wpływ stopy procentowej $r$ na $\frac{c_{4}^{*}}{y_{4}}$ jest neutralny, a długu $b$ na $\frac{i_{4}^{*}}{y_{4}}$ - dodatni. Tę ostatnią, nieoczekiwaną zależność można wytłumaczyć tym, że początkowy stan zadłużenia $b$ ujemnie oddziałuje na $c_{3}^{*}$ oraz $i_{3}^{*}$, co obniża poziom długu $b_{4}$ i stwarza przestrzeń na inwestycje w ostatnim roku $i_{4}^{*}$. Poza tym, w rozwiązaniu analitycznym uwzględniony jest wpływ $\frac{b_{4}}{y_{4} + U_{4}} \approx \frac{b_{4}}{y_{4}} \approx b$, zaś w metamodelach opisywanych w niniejszym podrozdziale - $\frac{b_{3}}{y_{3}}$.
+
+Jako zastanawiający należy ocenić również wpływ stopy zapadalności długu $\chi$. Jest on dodatni w odniesieniu do wydatków bieżących $\frac{c_{t}^{*}}{y_{t}}$, a ujemny - do inwestycji $\frac{i_{t}^{*}}{y_{t}}$. Biorąc pod uwagę IWZ, wydawać by się mogło, że wyższa stopa zapadalności $\chi$ powoduje wyższe koszty obsługi długu (lewa strona nierówności (\ref{regula243})), więc wymaga większej przestrzeni fiskalnej (prawa strona), którą mogą zapewnić niższe wydatki bieżące. Widocznie mechanizm wpływu parametru $\chi$ jest jednak bardziej złożony. Wyższa stopa zapadalności długu implikuje niższe wydatki ogółem (potwierdzają to wielokrotnie większe co do modułu oszacowania w modelach opisujących inwestycje niż wydatki bieżące), aby maksymalnie zredukować deficyt, a w konsekwencji dług i dzięki temu ograniczyć w przyszłych latach wydatki na spłatę długu, które z perspektywy funkcji użyteczności są czystą stratą. Krótko mówiąc, wysoka stopa zapadalności długu premiuje niskie zadłużenie. Efekt ten zadziałałby niezależnie od obowiązywania IWZ. Z kolei niski poziom długu wpływa na zmniejszenie wielkości lewej strony nierówności w regule fiskalnej, co pozwala na odpowiedni wzrost wydatków bieżących do momentu spełnienia reguły.
+
+Poziom infrastruktury $k = \frac{k_{3}}{y_{3}}$ i limit dochodów unijnych $\upsilon$ oddziałują dodatnio na wydatki bieżące $\frac{c^{*}_{t}}{y_{t}}$ oraz ujemnie na inwestycyjne $\frac{i^{*}_{t}}{y_{t}}$. Ta konkluzja wysnuta z rozwiązania analitycznego została potwierdzona przez oszacowania metamodeli. Zgadza się ona także z intuicją - potrzeba mniej inwestycji zwykłych $i$, jeżeli infrastruktura $k$ jest już rozwinięta lub jeżeli można uzyskać większe finansowanie ze środków unijnych $\upsilon$. Zgodny z oczekiwaniami jest również wpływ wysokości stopy deprecjacji infrastruktury $\delta$. Im jest ona większa, tym należy więcej inwestować, aby odbudować poziom infrastruktury $k_{t}$, a przez to - trzeba realizować niższe wydatki bieżące $c^{*}_{t}$. Z kolei konieczność ponoszenia większego wkładu własnego w finansowanie inwestycji unijnych $\theta$ implikuje niższe kwoty inwestycji $\frac{i_{t}^{*}}{y_{t}}$, ale nie ma wpływu na kwoty wydatków bieżących $\frac{c_{t}^{*}}{y_{t}}$. 
+
+Ostatnią wartą rozważenia kwestią jest siła wpływu poszczególnych parametrów na wartości zmiennych decyzyjnych, tzn. na który parametr szczególną uwagę powinni zwrócić decydenci. 
+
+Na inwestycje zwykłe $\frac{i^{*}_{t}}{y_{t}}$, szczególnie w 3 roku, najsilniej oddziałuje stopa zapadalności długu $\chi$. W 3 roku dużą rolę odgrywają także startowe wartości zadłużenia $b$ i wydatków bieżących $c$, które mają, zgodnie z intuicją, mniejsze znaczenie w kontekście roku 4. W ostatnim roku znaczenia nabiera natomiast stopa deprecjacji infrastruktury $\delta$. 
+
+W odniesieniu do wydatków bieżących $\frac{c^{*}_{t}}{y_{t}}$, miary przeciętnego wpływu są co do modułu niższe i mniej zróżnicowane. Największe znaczenie ma również stopa zapadalności długu $\chi$. Podobnie jak w przypadku inwestycji, w trzecim (lecz nie czwartym) roku istotną rolę odgrywały wartości startowe parametrów: $b$, $c$ i $k$. Natomiast w czwartym roku stosunkowo silny wpływ wywarła stopa deprecjacji infrastruktury $\delta$.
+
+Parametry związane z inwestycjami unijnymi ($\theta$ i $\upsilon$) mają bardzo małe znaczenie w przypadku wszystkich czterech zmiennych objaśnianych. Nie dziwi to, gdyż w założonej strukturze warunków ograniczających, inwestycje unijne opiewają na maksymalną kwotę $u^{*}_{3} = U_{3}$ i $u^{*}_{4} = U_{4}$. 
+
+\subsection{Rozwiązanie numeryczne pełnego modelu oraz wyniki analizy wrażliwości}
+\label{rozdzial_model_czteroletni}
+
+Z analizy przeprowadzonej w podrozdziale \ref{podrozdz_struktura} wynikało, że struktura warunków ograniczających przyjęta w rozwiązaniu analitycznym i założona w podrozdziale \ref{rozdzial_model_dwuletni} niekoniecznie musi być optymalna - będzie tak tylko przy pewnych, dość szczególnych założeniach co do wartości  parametru preferencji $\alpha$ i czynnika dyskontowego $\beta$. Dlatego w niniejszej części pracy zrezygnowano z narzucania struktury warunków ograniczających oraz przyjmowania określonych wartości $\alpha$ i $\beta$. Takie podejście ma swoją cenę - niemożność zweryfikowania wyników metody numerycznej za pomocą metody analitycznej.  
+
+Przy założeniu domyślnych wartości parametrów, tj. zamieszczonych w tabeli \ref{tabela_parametry} i \ref{tabela_startowe}, optymalne wartości zmiennych decyzyjnych są następujące:   
+
+\begin{table}[!ht]
+\caption{Optymalne wartości zmiennych decyzyjnych w modelu czteroletnim, dla domyślnych wartości parametrów}
+\label{optymalne_4_lata_centralne}
+\centering
+\begin{tabular}[c]{l l l l}
+\hline 
+\mbox{rok} & $c^{*}$ &  $u^{*}$ &  $i^{*}$ \\
+\hline 
+\hline
+1 & 0,71 & 0,25 & 0,46 \\
+2 & 0,80 & 0,26 & 0,26 \\  
+3 & 0,71 & 0,25 & 0,50 \\ 
+4 & 0,83 & 0,16 & 0,14 \\
+\hline
+\end{tabular}
+\\ Źródło: obliczenia własne
+\end{table}
+
+W trzech pierwszych latach inwestycje unijne kształtują się na poziomie bliskim limitowi $u^{*}_{t} \approx U_{t}$. Można również zauważyć, że na przemian występują lata z wyższymi i niższymi inwestycjami zwykłymi $i^{*}_{t}$. W ostatnim roku inwestycje są najniższe - dlatego, że mają wpływ na użyteczność czerpaną z infrastruktury $k_{t}$ tylko w jednym roku, a nie rozkładają się na odpowiednio dłuższy okres, jak w przypadku inwestycji z lat poprzednich.   
+
+W celu oszacowania wpływu parametrów strukturalnych i behawioralnych na wartości optymalne zmiennych decyzyjnych w latach 1-4, wylosowano tysiąc zestawów parametrów strukturalnych i, w przeciwieństwie do poprzedniego podrozdziału, także behawioralnych: $\alpha$ z rozkładu jednostajnego na odcinku $[0,1; 0,9]$ i $\beta$ z rozkładu jednostajnego na odcinku $[0,1]$. Następnie oszacowano klasyczną metodą najmniejszych kwadratów osiem metamodeli ekonometrycznych - dla zmiennych objaśnianych: $\frac{c^{*}_{t}}{y_{t}}$ oraz $\frac{i^{*}_{t}}{y_{t}}$, gdzie $t \in \{1,2,3,4\}$. Oszacowania współczynników stojących przy zmiennych objaśniających ze wszystkich modeli zostały zebrane w tabeli \ref{optymalne_4_lata}.
+
+\begin{table}[!ht]
+  \caption{Oszacowania standaryzowanych współczynników metamodeli opisujących optymalne wartości zmiennych decyzyjnych dla modelu czteroletniego z endogeniczną strukturą warunków ograniczających oraz losowymi $\alpha$ i $\beta$} 
+\label{optymalne_4_lata}
+\centering
+\begin{tabular}[c]{r r r r r r r r r}
+\hline 
+	&	$\frac{c_{1}^{*}}{y_{1}}$	&	$\frac{c_{2}^{*}}{y_{2}}$	&	$\frac{c_{3}^{*}}{y_{3}}$ &	$\frac{c_{4}^{*}}{y_{4}}$	&	$\frac{i_{1}^{*}}{y_{1}}$	&	$\frac{i_{2}^{*}}{y_{2}}$	 &	$\frac{i_{3}^{*}}{y_{3}}$	&	$\frac{i_{4}^{*}}{y_{4}}$	\\
+\hline 
+\hline
+$\alpha$	&	0,230	&	0,154	&	0,115	&	0,137	&	-0,648	&	-0,336	&	-0,165	&	-0,026	\\
+$\beta$	&	-0,036	&	-0,028	&	0,011	&	0,055	&	0,008	&	0,073	&	0,014	&	-0,047	\\
+$\gamma$	&	-0,008	&	0,000	&	0,010	&	0,001	&	0,108	&	0,081	&	0,044	&	0,020	\\
+$\delta$	&	-0,005	&	-0,015	&	-0,017	&	-0,020	&	0,050	&	0,037	&	0,038	&	0,030	\\
+$\theta$	&	-0,003	&	-0,007	&	-0,009	&	-0,007	&	-0,005	&	-0,010	&	0,004	&	-0,008	\\
+$r$	&	-0,005	&	-0,013	&	-0,014	&	-0,010	&	-0,094	&	-0,023	&	-0,005	&	-0,009	\\
+$\chi$	&	-0,014	&	-0,006	&	-0,006	&	-0,001	&	-0,397	&	-0,104	&	-0,053	&	-0,036	\\
+$b$	&	-0,060	&	-0,014	&	-0,003	&	-0,027	&	-0,079	&	0,009	&	0,013	&	-0,007	\\
+$c$	&	-0,026	&	0,022	&	0,021	&	-0,009	&	-0,077	&	0,029	&	0,016	&	-0,002	\\
+$k$	&	0,032	&	0,017	&	0,012	&	0,023	&	-0,086	&	-0,031	&	-0,014	&	-0,011	\\
+$\upsilon$	&	0,003	&	0,006	&	0,006	&	0,000	&	-0,021	&	-0,035	&	-0,029	&	-0,009	\\
+\hline
+$R^2$	&	0,873	&	0,713	&	0,508	&	0,540	&	0,605	&	0,540	&	0,222	&	0,067	\\
+\end{tabular}
+\\		Źródło: obliczenia własne
+\end{table}
+
+Z modeli objaśniających optymalne wartości wydatków bieżących w kolejnych czterech latach  kadencji władz samorządowych $\frac{c^{*}_{t}}{y_{t}}$ można wyciągnąć następujące wnioski. 
+
+Zmienne objaśniane zależą dodatnio od parametru preferencji $\alpha$, co było do przewidzenia na podstawie samej definicji tego parametru. Parametr ten cechuje ponadto największa siła wpływu. Równie oczywista jest zaobserwowana dodatnia zależność między startowym poziomem infrastruktury $k$ a poziomem wydatków bieżących $\frac{c^{*}_{t}}{y_{t}}$ - bogata infrastruktura nie wymaga wysokich nakładów inwestycyjnych. Odwrotnie przedstawia się sytuacja w związku ze stopą deprecjacji infrastruktury $\delta$ - im wyższa, tym potrzeba większych inwestycji (odtworzeniowych), co ogranicza fundusze na  $\frac{c^{*}_{t}}{y_{t}}$.        
+
+Zgodnie z oczekiwaniami, wyższy dług $b$ i stopa procentowa $r$ prowadziły przeważnie do zmniejszenia $\frac{c^{*}_{t}}{y_{t}}$. To samo dotyczyło stopy zapadalności długu $\chi$, co stanowi odwrotną obserwację niż w poprzednim podrozdziale. Warto jednak zaznaczyć, że wpływ $\chi$ był zasadniczo słaby. 
+
+Czynnik dyskontowy $\beta$ z kolei wpływa na $\frac{c_{t}^{*}}{y_{t}}$ ujemnie w dwóch pierwszych latach, następnie zależność ta staje się dodatnia. Jest to najbardziej wpływowy parametr, po parametrze preferencji $\alpha$, w odniesieniu do wydatków bieżących $\frac{c^{*}_{t}}{y_{t}}$. Im większa wielkość $\beta$, tym decydenta cechuje większa dalekowzroczność. W pierwszym i drugim roku, dalekowzroczny decydent może wpłynąć na użyteczność z przyszłych lat jedynie za pomocą inwestycji $i^{*}_{1}$ i $i^{*}_{2}$, a więc zwiększa je, co wypiera aktualne wydatki bieżące $c^{*}_{1}$ i $c^{*}_{2}$. W ostatnim roku $\beta$ nie różnicuje już stosunku do $c^{*}_{4}$ i $i^{*}_{4}$, gdyż inwestycje $i^{*}_{4}$ mogą wpłynąć na poziom infrastruktury $k_{5}$, czyli tylko z jednego roku wchodzącego w zakres funkcji użyteczności. Pod tym względem inwestycje z 4 roku $i^{*}_{4}$ przypominają wydatki bieżące $c^{*}_{t}$ z każdego roku. 
+
+Oszacowanie stojące przy parametrze $c$ także zmienia znak - z ujemnego na dodatni, a w czwartym roku wynosi prawie zero. Najpierw wyższe wydatki bieżące $c$ poniesione w latach poprzedzających modelowaną kadencję zacieśniają przestrzeń fiskalną, czyli wymuszają oszczędności, które w późniejszych latach można wykorzystać na zwiększone wydatki bieżące $\frac{c^{*}_{t}}{y_{t}}$. Podobna obserwacja została zresztą poczyniona także w poprzednim podrozdziale.
+
+W odniesieniu do dynamiki dochodów bieżących $\gamma$, wpływ tej zmiennej na $\frac{c^{*}_{t}}{y_{t}}$ okazał się być bardzo niewielki, co trochę osłabia obserwacje poczynione w poprzednim podrozdziale (acykliczność zamiast antycykliczności w odniesieniu do $\frac{c_{t}}{y_{t}}$)
+
+Ponownie parametry dotyczące inwestycji unijnych: $\theta$ i $\upsilon$ uzyskały oszacowania niewiele odbiegające od zera. Oszacowania parametrów w przypadku $\upsilon$ były zawsze ujemne, co można wytłumaczyć efektem substytucji - większe wydatki na inwestycje unijne $u^{*}_{t}$ są rekompensowane spadkiem kwot przeznaczanych na inwestycje zwykłe $i^{*}_{t}$.
+
+Część obserwacji poczynionych w oparciu o oszacowania modeli opisujących inwestycje zwykłe $\frac{i^{*}_{t}}{y_{t}}$ pokrywa się z obserwacjami odnoszącymi się do modeli wydatków bieżących $\frac{c^{*}_{t}}{y_{t}}$. Parametr preferencji $\alpha$ wpływa ujemnie na wielkość zmiennych objaśnianych, gdyż bezpośrednio premiuje wydatki bieżące $\frac{c^{*}_{t}}{y_{t}}$, zwiększane kosztem inwestycji $\frac{i^{*}_{t}}{y_{t}}$. 
+
+Wysokość stopy deprecjacji $\delta$ wywiera dodatni wpływ na poziom inwestycji $\frac{i^{*}_{t}}{y_{t}}$, ponieważ szybsza deprecjacja wymaga zwiększonych nakładów inwestycyjnych na odtworzenie infrastruktury. Zgodnie z oczekiwaniami, wystąpiło również  ujemne oddziaływanie stopy procentowej $r$ i stopy zapadalności długu $\chi$ na inwestycje $\frac{i^{*}_{t}}{y_{t}}$. Zwiększone wydatki związane z długiem powodują bowiem zawężenie przestrzeni finansowej. Warto zauważyć, że $\chi$ jest drugim w kolejności najbardziej wpływowym parametrem w odniesieniu do inwestycji $\frac{i^{*}_{t}}{y_{t}}$.    
+
+Trzy parametry: $k$, $b$ i $c$ dotyczą wartości startowych modelu. W związku z tym ich wpływ na zmienne objaśniane maleje w czasie. Początkowy poziom infrastruktury $k$ wpływa ujemnie na inwestycje $\frac{i^{*}_{t}}{y_{t}}$. Wartość zadłużenia $b$ również wpływa na spadek inwestycji, ale już jedynie w pierwszym i czwartym roku. Wpływ wydatków bieżących w okresie przed modelowaną kadencją $c$ kształtuje się podobnie jak $b$.
+
+Zależności związane z dwoma parametrami: $\gamma$ i $\beta$ zasługują na szczególną uwagę. Po pierwsze, oszacowania przy dynamice dochodów bieżących $\gamma$ okazały się dość wysokie (trzeci najbardziej wpływowy parametr w modelach opisujących inwestycje) i dodatnie. Oznacza to, że poziom inwestycji $i^{*}_{t}$ powinien rosnąć szybciej niż dochody bieżące $y_{t}$, co potwierdza zaobserwowany już efekt zapobiegliwości. Z kolei $\beta$ wpływa na dodatnio, z wyjątkiem ostatniego roku, na wysokość inwestycji, co zostało już objaśnione wcześniej w niniejszym podrozdziale na przykładzie dalekowzrocznego decydenta.  
+
+Poniżej zaprezentowano oszacowania z modeli opartych na tysiącu zestawów wylosowanych parametrów strukturalnych, przy założeniu, że $\alpha = 0,4$, a $\beta = 0,1$ (co, należy podkreślić, jest bardzo niską wartością w porównaniu do występujących zwykle w literaturze). Z jednej strony, określenie stałych wartości parametrów behawioralnych mogło przyczynić się do zawężenia analizy do bardziej realistycznych, wiarygodnych scenariuszy. Z drugiej strony, taka analiza mogła pominąć część istotnych przypadków. Liczby z tabeli \ref{optymalne_4_lata_stale_alfa_beta} mogą zatem posłużyć do oceny wrażliwości wyników analizy na poczynione założenia odnośnie do $\alpha$ i $\beta$. 
+
+\begin{table}[!ht]
+  \caption{Oszacowania standaryzowanych współczynników modeli opisujących optymalne wartości zmiennych decyzyjnych dla modelu czteroletniego z endogeniczną strukturą warunków ograniczających oraz ustalonymi $\alpha = 0,4$ i $\beta = 0,1$} 
+\label{optymalne_4_lata_stale_alfa_beta}
+\centering
+\begin{tabular}[c]{r r r r r r r r r}
+\hline 
+	&	$\frac{c_{1}^{*}}{y_{1}}$	&	$\frac{c_{2}^{*}}{y_{2}}$	&	$\frac{c_{3}^{*}}{y_{3}}$ &	$\frac{c_{4}^{*}}{y_{4}}$	&	$\frac{i_{1}^{*}}{y_{1}}$	&	$\frac{i_{2}^{*}}{y_{2}}$	 &	$\frac{i_{3}^{*}}{y_{3}}$	&	$\frac{i_{4}^{*}}{y_{4}}$	\\
+\hline 
+\hline
+$\gamma$	&	-0,009	&	0,012	&	0,036	&	0,017	&	0,025	&	0,032	&	-0,017	&	-0,026	\\
+$\delta$	&	-0,023	&	-0,013	&	-0,007	&	-0,023	&	0,011	&	0,039	&	0,012	&	0,010	\\
+$\theta$	&	-0,007	&	-0,012	&	-0,010	&	-0,017	&	0,015	&	-0,004	&	-0,004	&	0,013	\\
+$r$	&	0,002	&	-0,008	&	-0,007	&	-0,011	&	-0,016	&	-0,020	&	-0,014	&	-0,014	\\
+$\chi$	&	0,028	&	-0,010	&	-0,004	&	0,012	&	-0,009	&	-0,060	&	-0,035	&	-0,008	\\
+$b$	&	-0,064	&	-0,012	&	0,005	&	-0,022	&	-0,018	&	0,030	&	-0,010	&	-0,017	\\
+$c$	&	-0,031	&	0,029	&	0,033	&	-0,016	&	-0,012	&	0,023	&	0,007	&	-0,011	\\
+$k$	&	0,045	&	0,004	&	0,010	&	0,028	&	-0,005	&	-0,010	&	-0,009	&	-0,004	\\
+$\upsilon$	&	0,001	&	-0,011	&	-0,021	&	-0,008	&	-0,010	&	0,001	&	0,016	&	-0,004	\\
+\hline
+$R^2$	&	0,731	&	0,178	&	0,188	&	0,161	&	0,019	&	0,136	&	0,037	&	0,022	\\
+\end{tabular}
+\\		Źródło: obliczenia własne
+\end{table}
+
+Z tabeli \ref{optymalne_4_lata_stale_alfa_beta} wynika, iż zawężenie się do domyślnych wartości parametrów behawioralnych może skutkować innymi wnioskami formułowanymi w odniesieniu do parametrów strukturalnych. Warto zauważyć, że w dwóch ostatnich latach inwestycje $i^{*}_{t}$ nie rosną szybciej niż dochody bieżące $y_{t}$. Można domniemywać, że bardzo niski poziom $\beta$ spowodował, że szczególnie na koniec kadencji inwestycje $i^{*}_{t}$ nie odgrywają istotnego znaczenia. Szybsza dynamika dochodów $\gamma$ zwiększa zatem wydatki bieżące $c^{*}_{t}$. Osłabł także dodatni wpływ poziomu infrastruktury $k$ na $\frac{c^{*}_{t}}{y_{t}}$. Ponownie niewielką rolę odgrywają parametry związane z finansowaniem inwestycji unijnych $\theta$ i $\upsilon$. 
+
+Siły wpływu poszczególnych parametrów w modelach pozbawionych $\alpha$ i $\beta$ wśród regresorów charakteryzują się mniejszym zróżnicowaniem. W przypadku wydatków bieżących $\frac{c^{*}_{t}}{y_{t}}$ nieznacznie największy wpływ wywierają wartości startowe: $b$, $c$ i $k$. W odniesieniu zaś do inwestycji zwykłych $\frac{i^{*}_{t}}{y_{t}}$, zróżnicowanie jest nieco większe, ale niższe w porównaniu z modelem o zmiennych wartościach parametrów behawioralnych. Najbardziej wpływowe parametry to $\chi$ i $\gamma$.  
+
+\newpage
+\section*{Podsumowanie części II}
+\addcontentsline{toc}{section}{\protect\numberline{}Podsumowanie części II}%
+
+W pracy postawiono hipotezę, że optymalna polityka finansowa gmin i miast powiatowych uwzględnia wiele czynników:
+
+\begin{enumerate}[label={(\alph*)}]
+\item Dodatni wpływ na optymalny poziom wydatków bieżących w relacji do dochodów bieżących samorządów ma wzrost: wskaźnika wartości infrastruktury oraz limitu dofinansowania unijnego.
+\item Ujemny wpływ na optymalny poziom wydatków bieżących w relacji do dochodów bieżących samorządów ma wzrost: czynnika dyskontowego, współczynnika deprecjacji infrastruktury, udziału dochodów własnych w inwestycjach unijnych, stopy procentowej, stopy zapadalności długu, wskaźnika zadłużenia oraz wskaźnika wydatków bieżących z lat poprzednich.
+\item Dodatni wpływ na optymalny poziom zwykłych (tj. nie współfinansowanych ze środków UE) wydatków inwestycyjnych w relacji do dochodów bieżących samorządów ma wzrost: czynnika dyskontowego, współczynnika deprecjacji infrastruktury oraz udziału dochodów własnych w inwestycjach unijnych. 
+\item Ujemny wpływ na optymalny poziom zwykłych wydatków inwestycyjnych w relacji do dochodów bieżących samorządów ma wzrost: stopy procentowej, stopy zapadalności długu, wskaźnika zadłużenia, wskaźnika wydatków bieżących z lat poprzednich, wskaźnika wartości infrastruktury oraz limitu dofinansowania unijnego.
+\end{enumerate}
+
+Potwierdzono hipotezę (2a) w zakresie tego, że większa wartość infrastruktury powoduje zwiększenie wydatków bieżących (gdyż inwestycje stają się wówczas mniej potrzebne). Nie można było natomiast potwierdzić takiej hipotezy w odniesieniu do maksymalnego limitu środków unijnych.  
+
+Odnośnie do hipotezy (2b) pokazano, iż wzrost: stopy deprecjacji infrastruktury, zadłużenia w relacji do dochodów bieżących i, w mniejszym stopniu, udziału współfinansowania inwestycji unijnych wpływa negatywnie na poziom wydatków bieżących w relacji do dochodów bieżących. Oddziaływanie stopy procentowej zaś okazało się być, w zależności od modelu, ujemne lub neutralne. Zwiększenie czynnika dyskontowego wywiera różny efekt na wydatki bieżące w zależności od okresu. Na początku, im bardziej dalekowzroczny decydent, tym bardziej troszczy się o użyteczność z przyszłości, a może ją poprawić w bieżącym momencie tylko za pomocą inwestycji, które ograniczają przestrzeń na wydatki bieżące. W ostatnim roku modelowanego okresu, użyteczność z infrastruktury wliczana jest do użyteczności tylko raz, podobnie jak wydatki bieżące, dlatego inwestycje przestają być tak istotne. 
+
+Nie można uogólnić obserwacji na temat oddziaływania wzrostu stopy zapadalności długu, gdyż w zależności od przyjętych założeń i roku kadencji, wpływ tego parametru może być dodatni, ujemny lub zerowy. To samo dotyczy dynamiki dochodów bieżących (przy czym tutaj trudno było postawić hipotezę na temat wpływu tej zmiennej z uwagi na jednoczesne oddziaływanie jej na licznik i mianownik zmiennej objaśnianej). Zasadniczo ten ostatni parametr nie ma silnego wpływu na optymalne wartości zmiennych decyzyjnych. Nieoczekiwany efekt zaobserwowano w odniesieniu do wskaźnika wydatków bieżących poniesionych w okresie poprzedzającym modelowany zakres czasowy kadencji. Wyższe przeszłe wydatki ograniczają przestrzeń na wydatki na początku badanego okresu, ale w kolejnym roku następuje efekt kompensacji, tj. uprzednie oszczędności umożliwiają większe wydatki w porównaniu ze scenariuszem bez oszczędności. 
+
+Stwierdzono także, że zgodnie z hipotezą (2c), dodatni wpływ na inwestycje zwykłe w relacji do dochodów bieżących ma wzrost stopy deprecjacji infrastruktury oraz czynnika dyskontowego (z wyjątkiem ostatniego roku). Wpływ parametru współfinansowania inwestycji unijnych jest zaś w przybliżeniu neutralny. 
+
+Potwierdzona została też hipoteza (2d) w zakresie ujemnego wpływu na inwestycje zwykłe w relacji do dochodów bieżących wzrostu: stopy procentowej, stopy zapadalności zadłużenia i wskaźnika infrastruktury. Pozytywnie zweryfikowano też hipotezę o ujemnym wpływie wzrostu limitu dochodów unijnych. 
+
+W przypadku wskaźnika zadłużenia można ponownie doszukać się efektu kompensacji. Ujemny wpływ występuje na początku okresu (w trzecim roku w modelu dwuletnim oraz w pierwszym roku w modelu czteroletnim), następnie wpływ staje się dodatni, a w przypadku modelu czteroletniego - na koniec okresu - ponownie ujemny, ale bliski neutralnemu. Efekt kompensacji, podobny jak opisany powyżej, dla wskaźnika wydatków bieżących z lat przeszłych jako zmiennej objaśniającej i optymalnych inwestycji zwykłych w roli zmiennej objaśnianej okazał się silniejszy niż w przypadku optymalnych wydatków bieżących w roli zmiennej objaśnianej. Po początkowym ujemnym oddziaływaniu na wielkość inwestycji zwykłych, następowało silne odbicie. 
+
+Wyższa dynamika dochodów bieżących wpływa generalnie na wzrost wskaźnika inwestycji, przy czym zależność ta jest silniejsza na początku okresu, co wynika z tzw. efektu zapobiegliwości. Optymalny poziom wydatków inwestycyjnych w relacji do dochodów bieżących w czasie co do zasady maleje, co jest konsekwencją przyjętej funkcji użyteczności, która premiuje inwestycje poczynione we wcześniejszym okresie, gdyż poprawiona w ten sposób infrastruktura jest uwzględniana wielokrotnie w użyteczności.  
 
 
 ```{r, echo = FALSE, eval=TRUE}
