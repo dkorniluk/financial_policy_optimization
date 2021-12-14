@@ -1,3 +1,10 @@
+---
+title: "Optimization of financial policy"
+author: "Dominik Korniluk, PhD"
+output: rmarkdown::github_document
+---
+
+
 ## Optimization
 
 ```{r, echo = FALSE, eval=TRUE}
