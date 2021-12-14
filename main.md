@@ -1,6 +1,11 @@
+## Optimization
+
+```{r, echo = FALSE, eval=TRUE}
 library(nleqslv)
 library(optimx)
+```
 
+```{r, echo=FALSE, eval=TRUE}
 szescienne1<-function(a,b,c,d){
   h<-as.complex(as.complex(27*(a^2)*(d^2) + (4*(b^3) - (18*a*b*c))*d + (4*a*(c^3)) - (b^2 * c^2))^(1/2))
   i<-(2*3^(3/2))*a^2
@@ -602,3 +607,4 @@ for (iter in 1:n_iter){
 }
 setwd("C:\\Dysk\\Nowe\\JST\\Skrypty w R\\Wyniki październik 2017")
 write.csv(macierz, "wyniki9.csv")
+```
