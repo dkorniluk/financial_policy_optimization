@@ -1,5 +1,4 @@
-\subsection{Numeryczna metoda rozwiązania modelu}
-\label{rozdz_numeryczna_metoda}
+## Numeryczna metoda rozwiązania modelu
 
 Analityczna metoda rozwiązania modelu, zaprezentowana w podrozdziałach \ref{podrozdzial_napiety_IWZ_bez_nadwyzki} - \ref{rozdzial_szescienne} gwarantuje uzyskanie optymalnego wyniku jedynie w pewnym podzbiorze zbioru rozwiązań dopuszczalnych, który cechuje z góry ustalona struktura warunków ograniczających (czyli określony ex ante podział na warunki luźne i napięte). Metoda numeryczna, opisana w niniejszym podrozdziale, jest komplementarna względem analitycznej. Po pierwsze, wykonana tylko dla trzeciego i czwartego roku, pozwala sprawdzić, czy rozwiązując model bez zakładania struktury warunków ograniczających, rozwiązanie wskazywane jako optymalne jest takie samo, co w rozwiązaniu analitycznym. Wprawdzie taka kontrolna weryfikacja nie zapewnia całkowitej pewności, ale jednak gwarantuje bardzo wysokie prawdopodobieństwo otrzymania optymalnego rezultatu. Po drugie, metoda numeryczna umożliwia, w przeciwieństwie do analitycznej, znalezienie rozwiązania dla~całej czteroletniej kadencji władz samorządowych.  
 
@@ -120,3 +119,67 @@ Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie mi
 Dodatkowo nakłada się ograniczenie: $\sigma_{min} \leq \sigma \leq \sigma_{max}$. Jednocześnie $\sigma$ stanowi tzw. iloraz Rayleigha w odniesieniu do macierzy uśrednionego hesjanu na przedziale $(x_{c}, x_{+})$. Skądinąd wiadomo, że iloraz Rayleigha należy do przedziału pomiędzy minimalną a maksymalną wartością własną uśrednionego hesjanu. Zbiór wszystkich wartości własnych danej macierzy nazywa się spektrum macierzy, co tłumaczy genezę nazwy metody. Ostatecznie zatem w  metodzie \textit{spg}, macierz $\nabla^{2} f(x)$ zostaje zastąpiona przeskalowaną macierzą jednostkową $\sigma I$ w punkcie c) algorytmu Newtona. Zmodyfikowany jest także punkt d), gdzie stosuje się przeszukiwanie liniowe.  
 
 Niektóre z metod optymalizacji omawianych w niniejszym podrozdziale umożliwiają wprowadzenie wprost warunków ograniczających. Mimo to, wszystkie metody optymalizacji stosowanego tutaj metaalgorytmu zastosowano dla funkcji celu bez ograniczeń. Warunki ograniczające wymienione w podrozdziale \ref{zapis_rozwiazania} zostały bowiem uwzględnione w funkcji celu w postaci tzw. składnika kary pomnożonego przez największą co do modułu wartość zmiennej decyzyjnej. Kara przyjmuje wartość zerową, jeżeli żaden z 24 warunków ograniczających (dwanaście na ujemność zmiennych decyzyjnych: $c_{t},~i_{t},~u_{t}, t \in \{1,2,3,4\}$, cztery w postaci $u_{t} > U_{t}$, cztery na reguły nadwyżki bieżącej i cztery na reguły IWZ) nie jest spełniony. Za każdy niespełniony warunek wartość kary rośnie o 9999 (czyli bardzo dużą liczbę w porównaniu z typowymi wartościami funkcji celu). Pomnożenie kary przez największą co do modułu wartość zmiennej decyzyjnej zabezpiecza przed sytuacją, gdy kara wprawdzie nie byłaby zerowa, ale mimo to algorytm wybierałby takie rozwiązanie jako optymalne, gdyż zmienne decyzyjne przyjmowałyby wartości o~ogromnym rzędzie wielkości (nie mające interpretacji ekonomicznej). W części aneksu (\ref{aneks_przykladowe_analit}), w~sekcji ,,deklaracja funkcji użyteczności'' zaprezentowano funkcję celu ze składnikiem kary dla~algorytmu szukającego optymalnego rozwiązania dla trzeciego roku. W tym przypadku kara składa się z dziewięciu warunków ograniczających (m.in. bez ograniczeń na zmienne z pierwszego i drugiego roku). 
+
+```{r, echo = FALSE, eval=FALSE}
+############################################
+# Rozwiązanie metodami iteracyjnymi        #
+############################################
+
+metody<-c("BFGS", "CG", "Nelder-Mead", "L-BFGS-B", "nlm", "nlminb", "spg", "ucminf", "newuoa", "bobyqa", "nmkb", "hjkb")
+
+uz<-0*c(1:12)
+
+roz<-function(rozw){
+  wsp<-as.matrix(coef(optimx (rozw, uzyt, method=metody)))
+  uz<-apply(wsp, 1, uzyt)
+  rozw2<-wsp[which.min(uz),]
+  #print(summary(optimx (rozw, uzyt, method=metody)))
+  return(as.vector(rozw2))
+}
+
+konw<-function(rozw){
+  maks<-uzyt(rozw)
+  rozw2<-rozw
+  zatrzymaj<-0
+  while (zatrzymaj==0){
+    rozw2<-roz(rozw2)
+    if ((uzyt(rozw2) - maks)>-0.0001){
+      zatrzymaj<-1
+      #print(summary(optimx (rozw2, uzyt, method=metody)))
+    }
+    maks<-uzyt(rozw2)
+  }
+  return(roz(rozw2))
+}
+
+p<-0*c(1:3)
+rozw<-c(0.6, 0.1, 0.1)
+p<-konw(rozw)
+
+p[1]->c3
+p[2]->u3
+p[3]->i3
+
+u4<-U4
+c4<-(
+  (((alpha*(y5+u5)/(chi+r)*1/3)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+   *(y3-c3 - r*b3)/(y3+u3))
+  +(((alpha*(y5+u5)/(chi+r)*1/3)
+     /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+    *(((y2-c2 - r*b2)/(y2+u2))+((y4 - r*(b3 + theta*u3 + i3 + c3 + r*b3 - y3))/(y4+u4))))
+  -(alpha*((1+r)*(b3+theta*u3 + c3 + i3 + r*b3 - y3))
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+  +(alpha*(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + u4)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+)
+k4<-(1-delta)*k3+(1+theta)*u3+i3
+k5<-(
+  (1-alpha)*(1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + (1-alpha)*u4 + 
+    (1-alpha)*((y5+u5)/(chi+r)/3*((y2-c2-r*b2)/(y2+u2) + (y3- c3-r*b3)/(y3+u3) + (y4 -r*b4)/(y4+u4)) 
+               -     (1+r)*(b3+ theta*u3 + i3 + c3 + r*b3 - y3) + y4)
+)
+i4<-k5-(1-delta)*k4-(1+theta)*u4
+z3<-(1+theta)*u3 + i3 + c3 + r*b3 - u3 - y3
+b4<-b3+z3
+```
