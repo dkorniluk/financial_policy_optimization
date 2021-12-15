@@ -1,4 +1,4 @@
-\subsection{Ograniczenia budżetowe}
+## Ograniczenia budżetowe
   
 JST podlegają w każdym roku ograniczeniu budżetowemu (wg terminologii Kornaia - twardemu). Założono, że suma wydatków i rozchodów równa się sumie dochodów i przychodów z zaciągniętych pożyczek i wyemitowanych obligacji. Jednak, zgodnie z art. 217 ust. 2 pkt 5-6 ustawy o finansach publicznych, deficyt budżetu JST może być dodatkowo sfinansowany przychodami pochodzącymi m.in. z: nadwyżki budżetu JST z lat ubiegłych lub wolnych środków jako nadwyżki środków pieniężnych na rachunku bieżącym budżetu JST, wynikających z rozliczeń wyemitowanych papierów wartościowych, kredytów i pożyczek z lat ubiegłych. 
 
