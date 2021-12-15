@@ -1,5 +1,4 @@
-# financial_policy_optimization
-Optimization of the Financial Policy of the Polish Local Governments
+# Optimization of the Financial Policy of the Polish Local Governments
 
 Fiscal policy in Poland can be examined from two perspectives, the governmental central and social security subsectors and the local government subsector. Expenditures of those subsectors play an important role in the Polish economy, since they constitute together almost half of the gross domestic product. The aim of this dissertation was to assess the impact of fiscal rules on fiscal policy, including fiscal stability, in the general government (GG) sector, accounting for the specific features of its subsectors.
 
