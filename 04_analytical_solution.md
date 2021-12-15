@@ -344,3 +344,161 @@ W następstwie poczynienia powyższych założeń utworzono funkcję Lagrange'a 
 Następnie wyprowadzono dwa warunki pierwszego rzędu, czyli obliczono pochodne funkcji Lagrange'a po $c_{3}$ i $i_{3}$ oraz przyrównano je do zera. Połączenie dwóch równań w jedno umożliwiło wyeliminowanie mnożnika $\mu_{53}$ o nieznanej wartości. Po pewnych przekształceniach wykorzystano równanie na napięty warunek IWZ. Dzięki niemu można było wyznaczyć $c_{3}$ jako funkcję $i_{3}$. Ostatecznie zatem w rachunkach pozostanie jedna zmienna decyzyjna - $i_{3}$ i jedno (skomplikowane) równanie. W celu łatwiejszego wykonania obliczeń, zastąpiono długie i złożone wyrazy (niezależne od zmiennej decyzyjnej $i_{3}$) w poszczególnych ułamkach tego równania, pojedynczymi symbolami pomocniczymi i uzyskano w ten sposób proste równanie. Dalsze przekształcenia prostego równania doprowadziły do uzyskania równania sześciennego. Istnieją trzy możliwe rozwiązania równania sześciennego w dziedzinie liczb zespolonych. Szczegółowe obliczenia zaprezentowano w części \ref{zmudne_rachunki} aneksu.
 
 Ze wszystkich symulacji wynika, że spośród trzech wyżej wymienionych rozwiązań równania sześciennego, tylko jedno (\ref{rozw_jedyne}) należy do zbioru liczb rzeczywistych. Pozostałe należą do zbioru liczb zespolonych i nie mają interpretacji ekonomicznej. Poprawność wyniku została zweryfikowana dzięki zgodności rozwiązania numerycznego z rozwiązaniem (\ref{rozw_jedyne}) wyprowadzonym analitycznie. Numeryczny algorytm optymalizacyjny startujący z arbitralnych (dowolnych) wartości zmiennych wielokrotnie odnajdywał bowiem te~same rozwiązania optymalne, co wynikające ze wzoru (\ref{rozw_jedyne}). Z drugiej strony, algorytmy numeryczne mogą znajdywać ekstrema lokalne, a nie globalne. Jeśli jednak rozwiązanie analityczne jest takie samo, to dowodzi to globalności danego ekstremum (przy założeniu danej struktury warunków ograniczających). Porównanie wyników osiąganych za pomocą metody analitycznej i numerycznej znajduje się w części B aneksu.  
+
+```{r, echo = FALSE, eval=FALSE}
+############################################
+# Rozwiązanie metodą Karusha-Kuhna-Tuckera #
+############################################
+
+phi0<-(-1-r)
+phi1<-(-(y5+u5)/((chi+r)*3*(y3+u3)) -(1+r))
+phi2<-((y5+u5)/(chi+r)/3*((y2-c2-r*b2)/(y2+u2) + (y3-r*b3)/(y3+u3)) - (1+r)*(b3+ theta*u3+r*b3-y3) + y4)
+phi3<-(-3*(y3+u3)*(chi+r)/(1+3*(y3+u3)*(chi+r)/(y4+u4))/(y4+u4))
+phi4<-(
+  -3*(y3+u3)/(1+3*(y3+u3)*(chi+r)/(y4+u4))
+  *(((chi+r)*(b3+ theta*u3 + r*b3 - y3))/(y4+u4) 
+    - 1/3*((y1-c1-r*b1)/(y1+u1) + (y2-c2-r*b2)/(y2+u2)) - 1/3*(y3-r*b3)/(y3+u3))
+)
+phi5<-(alpha*(((y4+u4)*(3*(y3+u3)))/((chi+r)*(3*(y3+u3))+y4+u4)))
+phi6<-(alpha*beta*
+         ((((-(y5+u5)/(chi+r)/3*(1/(y3+u3) + r/(y4+u4))) - (1+r))*(((y4+u4)*(3*(y3+u3)))/((chi+r)*(3*(y3+u3))+y4+u4))) - (-(y5+u5)/(chi+r)/3*(r/(y4+u4)) -delta - r)*((y4+u4)/(chi+r))))
+phi7<-((-delta-r) - ((y5+u5)/(chi+r)/3*(phi3/(y3+u3) + r*(1+phi3)/(y4+U4))) - (1+r)*phi3)
+phi8<-(
+  ((y5+u5)/(chi+r)/3)
+  * ((y3-phi4-r*b3)/(y3+u3)+((y2-c2-r*b2)/(y2+u2))+((y4 - r*(b3 + theta*u3 + phi4 + r*b3 - y3))/(y4+u4)))
+  -(((1+r)*(b3+theta*u3 + phi4 + r*b3 - y3)))
+  +(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3) + u4)
+)
+phi9<-(
+  beta*(1-alpha)*(1-alpha)*(((-(y5+u5)/(chi+r)/3*(1/(y3+u3) + r/(y4+u4))-(1+r)))*(((y4+u4)*(3*(y3+u3)))/((chi+r)*(3*(y3+u3))+y4+u4)) - (-(y5+u5)/(chi+r)/3*(r/(y4+u4)) -delta-r)*((y4+u4)/(chi+r)))
+)
+phi10<-((1-delta)*(1-alpha)) + (1-alpha)*(phi0 + phi3*phi1) - r*(1+phi3)*(1-alpha)*((y5+u5)/(chi+r)/3)/(y4+u4)
+phi11<-(
+  (1-delta)*((1-delta)*k3 + (1+theta)*u3)
+  +((1-alpha)*(phi4*phi1 + phi2 + (y5+u5)*(y4-r*(b3 + theta*u3 + phi4 +r*b3 - y3))/(chi+r)/3/(y4+u4)) 
+    - alpha*(1-delta)*((1-delta)*k3 + (1+theta)*u3) - (theta+alpha)*u4) 
+  + (1+theta)*u4
+)
+phi12<-((1-alpha)*((y4+u4)/(chi+r)))
+phi13<-((1-delta)*k3 + (1+theta)*u3)
+
+par_a<-(
+  (phi5*phi7+phi3*phi6)*phi10 +
+    (phi9 - phi10*phi12)*phi3*phi7
+)
+par_b<-(
+  (phi5*phi8 + phi4*phi6)*phi10 +
+    (phi5*phi7+phi3*phi6)*(phi10*phi13 + phi11) +
+    (phi9*phi13 - phi11*phi12)*phi3*phi7 +
+    (phi9 - phi10*phi12)*(phi3*phi8 + phi4*phi7) 
+)
+par_c<-(
+  (phi5*phi8 + phi4*phi6)*(phi10*phi13 + phi11) +
+    (phi9*phi13 - phi11*phi12)*(phi3*phi8 + phi4*phi7) +
+    (phi9 - phi10*phi12)*phi4*phi8 +
+    (phi5*phi7+phi3*phi6)*phi11*phi13
+)
+par_d<-(
+  (phi5*phi8 + phi4*phi6)*phi11*phi13 +
+    (phi9*phi13 - phi11*phi12)*phi4*phi8
+)
+
+############################################
+#   Rozwiązanie  poprawne                  #
+############################################
+
+
+x<-szescienne1(par_a, par_b, par_c, par_d)
+#x
+
+i3<-as.numeric(x)
+u3<-U3
+u4<-U4
+
+
+############################################
+# Znając i3 oraz napięty IWZ, szukamy c3   #
+############################################
+
+rozw_c<-function(rozw2){
+  return( ((y4+u4)/(chi+r)/
+             3*((y1-c1-r*b1)/(y1+u1) + (y2-c2-r*b2)/(y2+u2) + (y3-rozw2-r*b3)/(y3+u3)))
+          - b3 - (1+theta)*u3 - i3 - r*b3 + u3 + y3 - rozw2)
+}
+
+c3<-c(nleqslv(c(0.5), rozw_c)$x)
+z3<-(1+theta)*u3 + i3 + c3 + r*b3 - u3 - y3
+b4<-b3+z3
+
+c4<-(
+  (((alpha*(y5+u5)/(chi+r)*1/3)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+   *(y3-c3 - r*b3)/(y3+u3))
+  +(((alpha*(y5+u5)/(chi+r)*1/3)
+     /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+    *(((y2-c2 - r*b2)/(y2+u2))+((y4 - r*(b3 + theta*u3 + i3 + c3 + r*b3 - y3))/(y4+u4))))
+  -(alpha*((1+r)*(b3+theta*u3 + c3 + i3 + r*b3 - y3))
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+  +(alpha*(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + u4)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+)
+
+#c4<-(
+#alpha*(phi +(y5+u5)/(chi+r)*1/3*((y4 - r*(b3 + theta*u3 + i3 + c3 + r*b3 - y3))/(y4+u4)) + (1-delta)*k4 + u4 )
+#/(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4))
+#  )
+
+k4<-(1-delta)*k3+(1+theta)*u3+i3
+k5<-(
+  (1-alpha)*(1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + (1-alpha)*u4 + 
+    (1-alpha)*((y5+u5)/(chi+r)/3*((y2-c2-r*b2)/(y2+u2) + (y3- c3-r*b3)/(y3+u3) + (y4 -r*b4)/(y4+u4)) 
+               -     (1+r)*(b3+ theta*u3 + i3 + c3 + r*b3 - y3) + y4)
+)
+i4<-k5-(1-delta)*k4-(1+theta)*u4
+
+# cat(c3, u3, i3)
+# cat(c4, u4, i4)
+
+######################################################
+#   Sprawdzenie                                      #
+######################################################
+
+ phi5/(i3*phi3 + phi4) + phi6/(i3*phi7 + phi8) + phi9/(i3*phi10 + phi11) - phi12/(i3 + phi13)
+
+
+############################################
+# Sprawdzenie z warunkami I rzędu          #
+############################################
+
+lewa<-(
+  +(alpha/c3) 
+  +(alpha*beta*
+      ((-(y5+u5)/(chi+r)/3*(1/(y3+u3) + r/(y4+u4))) - (1+r))
+    /(
+      ((y5+u5)/(chi+r)/3)
+      * ((y3-c3-r*b3)/(y3+u3)+((y2-c2-r*b2)/(y2+u2))+((y4-r*b4)/(y4+u4)))
+      -(((1+r)*(b3+theta*u3 + c3 + i3 + r*b3 - y3)))
+      +(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + u4)
+    )
+  ) 
+  +beta*(1-alpha)*(1-alpha)*(-(y5+u5)/(chi+r)/3*((1/(y3+u3)) + (r/(y4+u4)))-(1+r))/k5
+)  
+
+prawa<-(
+  +(1-alpha)/k4 
+  +(beta*alpha*(-(y5+u5)/(chi+r)/3*(r/(y4+u4)) -delta - r))
+  /(
+    ((y5+u5)/(chi+r)/3)
+    * ((y3-c3-r*b3)/(y3+u3)+((y2-c2-r*b2)/(y2+u2))+((y4-r*b4)/(y4+u4)))
+    -(((1+r)*(b3+theta*u3 + c3 + i3 + r*b3 - y3)))
+    +(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + u4)
+  )
+  +beta*(1-alpha)*(1-alpha)*(-(y5+u5)/(chi+r)/3*(r/(y4+u4)) -delta -r)/k5
+)
+pomo<-(
+  -lewa/((chi+r)/(y4+u4) + 1/(3*(y3+u3)))
+  +prawa/((chi+r)/(y4+u4))
+)
+
+pomo
+```
