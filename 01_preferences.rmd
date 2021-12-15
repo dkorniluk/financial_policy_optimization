@@ -1,3 +1,9 @@
+---
+title: "Optimization of financial policy"
+author: "Dominik Korniluk, PhD"
+output: rmarkdown::github_document
+---
+
 # Wprowadzenie
 
 Celem bieżącej części rozprawy jest sformułowanie optymalnej polityki finansowej samorządów w zakresie wydatków bieżących oraz inwestycyjnych gmin i miast powiatowych w ciągu czteroletniej kadencji władz samorządowych. Zgodnie z ustaleniami zawartymi w powiązanej literaturze, przyjęto założenie, że optymalna polityka powinna uwzględniać regułę zrównoważonego wyniku bieżącego i indywidualny wskaźnik zadłużenia. Powinna też zależeć od: parametrów określających preferencje samorządów, stopy procentowej, zapadalności długu, tempa wzrostu dochodów bieżących, stopy amortyzacji, początkowych wskaźników zadłużenia, wydatków bieżących oraz poziomu infrastruktury, a także limitu funduszy przeznaczonych na inwestycje unijne i udziału środków unijnych w finansowaniu inwestycji.    
