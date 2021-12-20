@@ -6,9 +6,9 @@ Warunki konieczne, które musi spełniać rozwiązanie optymalne modelu, wynikaj
 
 Rozważmy problem optymalizacyjny:
 
-<img src="https://render.githubusercontent.com/render/math?math=\min f(\bm{x})">
-p.w. <img src="https://render.githubusercontent.com/render/math?math=\bm{h}(\bm{x}) = \bm{0},">
-<img src="https://render.githubusercontent.com/render/math?math=\bm{g}(\bm{x}) \leq \bm{0},">
+<img src="https://render.githubusercontent.com/render/math?math=\min f(x)">
+p.w. <img src="https://render.githubusercontent.com/render/math?math=h(x) = 0,">
+<img src="https://render.githubusercontent.com/render/math?math=g(x) \leq 0,">
 
 gdzie <img src="https://render.githubusercontent.com/render/math?math=f: \mathbb{R}^{n} \rightarrow \mathbb{R},  \bm{h}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, \bm{g}: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}">.
 
