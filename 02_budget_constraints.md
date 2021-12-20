@@ -30,3 +30,5 @@ Zmiennymi decyzyjnymi w tym modelu są szeregi czasowe: wydatków bieżących, i
 <img src="https://render.githubusercontent.com/render/math?math=u_{t} \geq 0">. 
 
 <img src="https://render.githubusercontent.com/render/math?math=i_{t} \geq 0">. 
+
++
