@@ -24,6 +24,6 @@ Inwestycje powodują przyrost infrastruktury <img src="https://render.githubuser
 <img src="https://render.githubusercontent.com/render/math?math=k_{t} = k_{t-1}(1-\delta) + (1+\theta)u_{t-1} + i_{t-1}">. 
 
 Zmiennymi decyzyjnymi w tym modelu są szeregi czasowe: wydatków bieżących, inwestycji unijnych i zwykłych, a także kwoty zaciągniętego długu. Wszystkie te zmienne, oprócz ostatniej, mogą przyjmować tylko wartości nieujemne:  
-<img src="https://render.githubusercontent.com/render/math?math= c_{t} \geq 0">. 
-<img src="https://render.githubusercontent.com/render/math?math= u_{t} \geq 0">. 
-<img src="https://render.githubusercontent.com/render/math?math= i_{t} \geq 0">. 
+<img src="https://render.githubusercontent.com/render/math?math=c_{t} >= 0">. 
+<img src="https://render.githubusercontent.com/render/math?math=u_{t} \geq 0">. 
+<img src="https://render.githubusercontent.com/render/math?math=i_{t} \geq 0">. 
