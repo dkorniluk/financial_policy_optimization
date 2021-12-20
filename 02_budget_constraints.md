@@ -21,7 +21,7 @@ Wydatki mogą być finansowane z dochodów bieżących, unijnych lub zaciągnię
 
 Inwestycje powodują przyrost infrastruktury <img src="https://render.githubusercontent.com/render/math?math=k_{t}">, która ulega corocznej deprecjacji o frakcję \delta. Parametr ten obejmuje także wpływ inflacji, tj. opisuje zmianę nominalnej wartości infrastruktury wynikającą m.in. ze zmian cen. Warto zauważyć, że w pierwszej kolejności optymalną decyzją wydaje się realizowanie inwestycji unijnych, gdyż są one częściowo finansowane ze środków zewnętrznych (W większości przypadków rzeczywiście tak powinno być, ale nie jest to pewne ze względu na występowanie dochodów unijnych w mianownikach indywidualnego wskaźnika zadłużenia (IWZ, szczegóły kilka akapitów niżej). Nie można wykluczyć, że w pewnych wyjątkowych sytuacjach korzystne mogłoby być zmniejszenie w danym roku (inne rozłożenie w czasie) inwestycji unijnych, a w konsekwencji: zmniejszenie dochodów unijnych, zmniejszenie mianownika IWZ i wreszcie - zwiększenie przestrzeni fiskalnej.). Nie jest jednak wykluczone, że optymalny łączny poziom inwestycji powinien przekroczyć <img src="https://render.githubusercontent.com/render/math?math=(1+\theta)u_{t}"> i wówczas jedynym wyjściem jest realizowanie również bardziej kosztownych inwestycji zwykłych:
 
-<img src="https://render.githubusercontent.com/render/math?math=k_{t} = k_{t-1}(1-\delta) + (1+\theta)u_{t-1} + i_{t-1}">. 
+<img src="https://render.githubusercontent.com/render/math?math=k_{t} = k_{t-1}(1-\delta)+(1+\theta)u_{t-1} + i_{t-1}">. 
 
 Zmiennymi decyzyjnymi w tym modelu są szeregi czasowe: wydatków bieżących, inwestycji unijnych i zwykłych, a także kwoty zaciągniętego długu. Wszystkie te zmienne, oprócz ostatniej, mogą przyjmować tylko wartości nieujemne:  
 
@@ -29,4 +29,4 @@ Zmiennymi decyzyjnymi w tym modelu są szeregi czasowe: wydatków bieżących, i
 
 <img src="https://render.githubusercontent.com/render/math?math=u_{t} \geq 0">. 
 
-<img src="https://render.githubusercontent.com/render/math?math=i_{t\+} \geq 0">. 
+<img src="https://render.githubusercontent.com/render/math?math=i_{t} \geq 0">. 
