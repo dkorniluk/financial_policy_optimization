@@ -13,7 +13,7 @@ Założono dwa źródła dochodów: bieżące i kapitałowe unijne (dalej, w skr
 
 <img src="https://render.githubusercontent.com/render/math?math=b_{t+1} = b_{0} + \sum_{\tau=0}^{t} z_{\tau}">. 
 
-Wydatki mogą być przeznaczone na cztery cele. Z góry ustalone są odsetki od zadłużenia w wysokości iloczynu stałej stopy procentowej i długu $r b_{t}$. Decyzji podlega kwota przeznaczona na wydatki bieżące $c_{t}$ (wszystkie oprócz odsetek i wydatków majątkowych), a także inwestycje zwykłe $i_{t}$ oraz unijne $(1+\theta)u_{t}$. Współczynnik $\theta > 0$ reprezentuje część finansowania inwestycji ze środków własnych JST (tzw. współfinansowanie). 
+Wydatki mogą być przeznaczone na cztery cele. Z góry ustalone są odsetki od zadłużenia w wysokości iloczynu stałej stopy procentowej i długu <img src="https://render.githubusercontent.com/render/math?math=r b_{t}">. Decyzji podlega kwota przeznaczona na wydatki bieżące <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> (wszystkie oprócz odsetek i wydatków majątkowych), a także inwestycje zwykłe <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> oraz unijne <img src="https://render.githubusercontent.com/render/math?math=(1+\theta)u_{t}">. Współczynnik <img src="https://render.githubusercontent.com/render/math?math=\theta > 0"> reprezentuje część finansowania inwestycji ze środków własnych JST (tzw. współfinansowanie). 
 
 Wydatki mogą być finansowane z dochodów bieżących, unijnych lub zaciągniętych pożyczek. Podsumowując, ograniczenie budżetowe JST przedstawia się następująco: 
 
@@ -24,6 +24,9 @@ Inwestycje powodują przyrost infrastruktury <img src="https://render.githubuser
 <img src="https://render.githubusercontent.com/render/math?math=k_{t} = k_{t-1}(1-\delta) + (1+\theta)u_{t-1} + i_{t-1}">. 
 
 Zmiennymi decyzyjnymi w tym modelu są szeregi czasowe: wydatków bieżących, inwestycji unijnych i zwykłych, a także kwoty zaciągniętego długu. Wszystkie te zmienne, oprócz ostatniej, mogą przyjmować tylko wartości nieujemne:  
-<img src="https://render.githubusercontent.com/render/math?math=c_{t} >= 0">. 
+
+<img src="https://render.githubusercontent.com/render/math?math=c_{t} \geq 0">. 
+
 <img src="https://render.githubusercontent.com/render/math?math=u_{t} \geq 0">. 
+
 <img src="https://render.githubusercontent.com/render/math?math=i_{t} \geq 0">. 
