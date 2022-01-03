@@ -44,8 +44,9 @@ Model decyzyjny władz samorządowych z warunkami w postaci KKT należy zapisać
 
 <img src="https://render.githubusercontent.com/render/math?math=g_{5t}(x): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{6t}(x): c_{t} %2B rb_{t} - y_{t} \leq  0
-\mbox{dane: } b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}.">
+<img src="https://render.githubusercontent.com/render/math?math=g_{6t}(x): c_{t} %2B rb_{t} - y_{t} \leq  0">
+
+dane: <img src="https://render.githubusercontent.com/render/math?math=b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}.">
 
 Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: <img src="https://render.githubusercontent.com/render/math?math=x^{*} = [c_{1}^{*}~c_{2}^{*}~c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},"> spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(x) %2B \lambda h(x) %2B \mu g(x)$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
 
