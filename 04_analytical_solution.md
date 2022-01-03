@@ -12,7 +12,7 @@ p.w. <img src="https://render.githubusercontent.com/render/math?math=h(x) = 0,">
 
 gdzie <img src="https://render.githubusercontent.com/render/math?math=f: \mathbb{R}^{n} \rightarrow \mathbb{R},  h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}">.
 
-Niech:  $J(\bm{x}^{*}) = \left\{j : g_{j}(\bm{x}^{*}) = 0 \right\}$. Niech $\bm{x}^{*}$ będzie punktem regularnym, tzn. takim, że wektory:
+Niech:  <img src="https://render.githubusercontent.com/render/math?math=J(\bm{x}^{*}) = \left\{j : g_{j}(\bm{x}^{*}) = 0 \right\}">. Niech $\bm{x}^{*}$ będzie punktem regularnym, tzn. takim, że wektory:
 $$\nabla h_{i}(\bm{x^{*}}), \nabla g_{j}(\bm{x^{*}}), 1 \leq i \leq m, j \in J(\bm{x^{*}})$$
 są liniowo niezależne. $C^{1}$ oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły\footnote{Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)\.
 
