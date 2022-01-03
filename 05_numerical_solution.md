@@ -133,24 +133,24 @@ p[3]->i3
 
 u4<-U4
 c4<-(
-  (((alpha*(y5%2Bu5)/(chi%2Br)*1/3)
-    /(1%2B 1/3*((y5%2Bu5)/(chi%2Br))/(y4%2Bu4)))
-   *(y3-c3 - r*b3)/(y3%2Bu3))
-  %2B(((alpha*(y5%2Bu5)/(chi%2Br)*1/3)
-     /(1%2B 1/3*((y5%2Bu5)/(chi%2Br))/(y4%2Bu4)))
-    *(((y2-c2 - r*b2)/(y2%2Bu2))%2B((y4 - r*(b3 %2B theta*u3 %2B i3 %2B c3 %2B r*b3 - y3))/(y4%2Bu4))))
-  -(alpha*((1%2Br)*(b3%2Btheta*u3 %2B c3 %2B i3 %2B r*b3 - y3))
-    /(1%2B 1/3*((y5%2Bu5)/(chi%2Br))/(y4%2Bu4)))
-  %2B(alpha*(y4 %2B (1-delta)*((1-delta)*k3 %2B (1%2Btheta)*u3 %2B i3) %2B u4)
-    /(1%2B 1/3*((y5%2Bu5)/(chi%2Br))/(y4%2Bu4)))
+  (((alpha*(y5+u5)/(chi+r)*1/3)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+   *(y3-c3 - r*b3)/(y3+u3))
+  +(((alpha*(y5+u5)/(chi+r)*1/3)
+     /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+    *(((y2-c2 - r*b2)/(y2+u2))+((y4 - r*(b3 + theta*u3 + i3 + c3 + r*b3 - y3))/(y4+u4))))
+  -(alpha*((1+r)*(b3+theta*u3 + c3 + i3 + r*b3 - y3))
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
+  +(alpha*(y4 + (1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + u4)
+    /(1+ 1/3*((y5+u5)/(chi+r))/(y4+u4)))
 )
-k4<-(1-delta)*k3%2B(1%2Btheta)*u3%2Bi3
+k4<-(1-delta)*k3+(1+theta)*u3+i3
 k5<-(
-  (1-alpha)*(1-delta)*((1-delta)*k3 %2B (1%2Btheta)*u3 %2B i3) %2B (1-alpha)*u4 %2B 
-    (1-alpha)*((y5%2Bu5)/(chi%2Br)/3*((y2-c2-r*b2)/(y2%2Bu2) %2B (y3- c3-r*b3)/(y3%2Bu3) %2B (y4 -r*b4)/(y4%2Bu4)) 
-               -     (1%2Br)*(b3%2B theta*u3 %2B i3 %2B c3 %2B r*b3 - y3) %2B y4)
+  (1-alpha)*(1-delta)*((1-delta)*k3 + (1+theta)*u3 + i3) + (1-alpha)*u4 + 
+    (1-alpha)*((y5+u5)/(chi+r)/3*((y2-c2-r*b2)/(y2+u2) + (y3- c3-r*b3)/(y3+u3) + (y4 -r*b4)/(y4+u4)) 
+               -     (1+r)*(b3+ theta*u3 + i3 + c3 + r*b3 - y3) + y4)
 )
-i4<-k5-(1-delta)*k4-(1%2Btheta)*u4
-z3<-(1%2Btheta)*u3 %2B i3 %2B c3 %2B r*b3 - u3 - y3
-b4<-b3%2Bz3
+i4<-k5-(1-delta)*k4-(1+theta)*u4
+z3<-(1+theta)*u3 + i3 + c3 + r*b3 - u3 - y3
+b4<-b3+z3
 ```
