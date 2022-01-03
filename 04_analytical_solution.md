@@ -12,42 +12,42 @@ p.w. <img src="https://render.githubusercontent.com/render/math?math=h(x) = 0,">
 
 gdzie <img src="https://render.githubusercontent.com/render/math?math=f: \mathbb{R}^{n} \rightarrow \mathbb{R},  h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}">.
 
-Niech:  <img src="https://render.githubusercontent.com/render/math?math=J(\bm{x}^{*}) = \left\{j : g_{j}(\bm{x}^{*}) = 0 \right\}">. Niech <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*}"> będzie punktem regularnym, tzn. takim, że wektory:
-<img src="https://render.githubusercontent.com/render/math?math=\nabla h_{i}(\bm{x^{*}}), \nabla g_{j}(\bm{x^{*}}), 1 \leq i \leq m, j \in J(\bm{x^{*}})">
+Niech:  <img src="https://render.githubusercontent.com/render/math?math=J(x^{*}) = \left\{j : g_{j}(x^{*}) = 0 \right\}">. Niech <img src="https://render.githubusercontent.com/render/math?math=x^{*}"> będzie punktem regularnym, tzn. takim, że wektory:
+<img src="https://render.githubusercontent.com/render/math?math=\nabla h_{i}(x^{*}, \nabla g_{j}(x^{*}, 1 \leq i \leq m, j \in J(x^{*}">
 są liniowo niezależne. <img src="https://render.githubusercontent.com/render/math?math=C^{1}"> oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły (Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)).
 
-Niech <img src="https://render.githubusercontent.com/render/math?math=f, \bm{h}, \bm{g} \in C^{1}">. Niech <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*}"> będzie punktem regularnym, stanowiącym ekstremum lokalne f, pod warunkiem że <img src="https://render.githubusercontent.com/render/math?math=\bm{h(x)} = \bm{0}">, <img src="https://render.githubusercontent.com/render/math?math=\bm{g(x)} \leq \bm{0}">. Wtedy istnieje <img src="https://render.githubusercontent.com/render/math?math=\bm{\lambda}^{*} \in \mathbb{R}^{m}"> (tzw. wektor mnożników Lagrange'a) i <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*} \in \mathbb{R}^{p}"> (tzw. wektor mnożników KKT), takie że:
+Niech <img src="https://render.githubusercontent.com/render/math?math=f, h, g \in C^{1}">. Niech <img src="https://render.githubusercontent.com/render/math?math=x^{*}"> będzie punktem regularnym, stanowiącym ekstremum lokalne f, pod warunkiem że <img src="https://render.githubusercontent.com/render/math?math=h(x) = 0">, <img src="https://render.githubusercontent.com/render/math?math=g(x) \leq 0">. Wtedy istnieje <img src="https://render.githubusercontent.com/render/math?math=\lambda^{*} \in \mathbb{R}^{m}"> (tzw. wektor mnożników Lagrange'a) i <img src="https://render.githubusercontent.com/render/math?math=\mu^{*} \in \mathbb{R}^{p}"> (tzw. wektor mnożników KKT), takie że:
 
-* <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*} \geq \bm{0}">;
-* <img src="https://render.githubusercontent.com/render/math?math=Df(\bm{x}^{*}) %2B \bm{\lambda}^{*T}D \bm{h}(\bm{x}^{*}) %2B \bm {\mu}^{*T}D \bm{g}(\bm{x}^{*}) = \bm{0}^{T} ">;
-* <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*T} \bm{g}(\bm{x}^{*}) = 0">.
+* <img src="https://render.githubusercontent.com/render/math?math=\mu^{*} \geq 0">;
+* <img src="https://render.githubusercontent.com/render/math?math=Df(x^{*}) %2B \lambda^{*T}D h(x^{*}) %2B \mu^{*T}D g(x^{*}) = 0^{T} ">;
+* <img src="https://render.githubusercontent.com/render/math?math=\mu^{*T} g(x^{*}) = 0">.
 
 Dowód można znaleźć np. we wspomnianym podręczniku do optymalizacji autorstwa Chonga i Żaka (2001, s. 399-401).
 
 Model decyzyjny władz samorządowych z warunkami w postaci KKT należy zapisać w następujący sposób:
 
-<img src="https://render.githubusercontent.com/render/math?math=\max_{\{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}}  f(\bm{x}) =  \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} %2B \left(1 - \alpha \right) \ln k_{t%2B1} \right)">
+<img src="https://render.githubusercontent.com/render/math?math=\max_{\{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}}  f(x) =  \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} %2B \left(1 - \alpha \right) \ln k_{t%2B1} \right)">
 
 <img src="https://render.githubusercontent.com/render/math?math=\mbox{p.w. } \forall t \in {1, 2, 3, 4}">
 
-<img src="https://render.githubusercontent.com/render/math?math=h_{1t}(\bm{x}): \theta u_{t} %2B i_{t} %2B c_{t} %2B r b_{t} - y_{t} - z_{t} = 0">
-<img src="https://render.githubusercontent.com/render/math?math=h_{2t}(\bm{x}): b_{t%2B1} - b_{1} - \sum_{\tau=1}^{t} z_{\tau} = 0">
-<img src="https://render.githubusercontent.com/render/math?math=h_{3t}(\bm{x}): k_{t%2B1} - (1-\delta)k_{t} - i_{t} - (1%2B\theta)u_{t} = 0"> 
+<img src="https://render.githubusercontent.com/render/math?math=h_{1t}(x): \theta u_{t} %2B i_{t} %2B c_{t} %2B r b_{t} - y_{t} - z_{t} = 0">
+<img src="https://render.githubusercontent.com/render/math?math=h_{2t}(x): b_{t%2B1} - b_{1} - \sum_{\tau=1}^{t} z_{\tau} = 0">
+<img src="https://render.githubusercontent.com/render/math?math=h_{3t}(x): k_{t%2B1} - (1-\delta)k_{t} - i_{t} - (1%2B\theta)u_{t} = 0"> 
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{1t}(\bm{x}): -u_{t} \leq 0">
+<img src="https://render.githubusercontent.com/render/math?math=g_{1t}(x): -u_{t} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{2t}(\bm{x}): u_{t} - U_{t} \leq 0">
+<img src="https://render.githubusercontent.com/render/math?math=g_{2t}(x): u_{t} - U_{t} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{3t}(\bm{x}): -c_{t} \leq 0">
+<img src="https://render.githubusercontent.com/render/math?math=g_{3t}(x): -c_{t} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{4t}(\bm{x}): -i_{t} \leq 0">
+<img src="https://render.githubusercontent.com/render/math?math=g_{4t}(x): -i_{t} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{5t}(\bm{x}): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0 ">
+<img src="https://render.githubusercontent.com/render/math?math=g_{5t}(x): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0 ">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{6t}(\bm{x}): c_{t} %2B rb_{t} - y_{t} \leq  0
+<img src="https://render.githubusercontent.com/render/math?math=g_{6t}(x): c_{t} %2B rb_{t} - y_{t} \leq  0
 \mbox{dane: } b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}.">
 
-Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*} = [c_{1}^{*}~c_{2}^{*}~c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},"> spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(\bm{x}) %2B \bm{\lambda} h(\bm{x}) %2B \bm{\mu} g(\bm{x})$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
+Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: <img src="https://render.githubusercontent.com/render/math?math=x^{*} = [c_{1}^{*}~c_{2}^{*}~c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},"> spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(x) %2B \lambda h(x) %2B \mu g(x)$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
 
 Warunki Kuhna-Tuckera są warunkami koniecznymi tylko wtedy, gdy spełnione są warunki tzw. kwalifikowalności\footnote{Szczegółową dyskusję na ten temat można znaleźć np. w podręczniku do ekonomii matematycznej Chianga (1994).}. Mogą istnieć bowiem rozwiązania optymalne, które nie spełniają warunków KKT, ale musiałyby one znajdować się w specyficznie określonych punktach brzegowych. W przykładzie z podrozdziału \ref{rozdzial_szescienne} pokazano, że rozwiązanie analityczne modelu może sprowadzać się do znalezienia, przy ustalonej strukturze warunków ograniczających, optymalnego poziomu inwestycji zwykłych ($i_{t}^{*}$). O poziomie tym założono w omawianym przykładzie, że nie jest zerowy, a zatem z góry przyjęto, że nie może znaleźć się w punkcie brzegowym. 
 
@@ -57,7 +57,7 @@ Wyznaczenie pełnego rozwiązania analitycznego takiego modelu jest niewykonalne
  
 ## Analityczne rozwiązanie dla czwartego roku z napiętym warunkiem IWZ
 
-Uprośćmy teraz problem, znajdując ,,na skróty'' optymalne wartości dla zmiennych z roku czwartego. W tym celu warunek $h_{14}(\bm{x})$ należy przekształcić do postaci:
+Uprośćmy teraz problem, znajdując ,,na skróty'' optymalne wartości dla zmiennych z roku czwartego. W tym celu warunek $h_{14}(x)$ należy przekształcić do postaci:
 
 \begin{IEEEeqnarray}{rCl}
 \theta u_{4} %2B i_{4} %2B c_{4}   & = &  z_{4} %2B y_{4} - rb_{4}. \nonumber
@@ -249,7 +249,7 @@ Optymalny poziom wydatków bieżących zależy dodatnio od: parametru $\alpha$ o
 
 Po znalezieniu optymalnych wartości zmiennych decyzyjnych z roku czwartego, można przejść do poszukiwania rozwiązań dla roku trzeciego. W tym celu problem decyzyjny został najpierw przeformułowany w warunkach roku trzeciego, a następnie rozwiązany za pomocą warunków KKT. Funkcja celu tego problemu ma następującą postać: 
 \begin{equation}
-\max_{c_{3}, u_{3}, i_{3}, z_{3}}  f(\bm{x_{3}}) = \beta^{3} \left( \alpha \ln c_{3} %2B (1 - \alpha) \ln k_{4} \right) %2B \beta^{4} \left( \alpha \ln c_{4}^{*} %2B (1-\alpha) \ln k_{5}^{*} \right).  \nonumber
+\max_{c_{3}, u_{3}, i_{3}, z_{3}}  f(x_{3}) = \beta^{3} \left( \alpha \ln c_{3} %2B (1 - \alpha) \ln k_{4} \right) %2B \beta^{4} \left( \alpha \ln c_{4}^{*} %2B (1-\alpha) \ln k_{5}^{*} \right).  \nonumber
 \end{equation}
  
 Zakłada się, że w czwartym roku realizowany jest wariant czwarty z podrozdziału \ref{podrozdzial_napiety_IWZ_bez_nadwyzki}, t.j. z inwestycjami unijnymi na maksymalnym poziomie. Wariant ten wydaje się być najbardziej realistyczny, gdyż z symulacji opisanych w podrozdziale \ref{podrozdz_struktura} wynika, że w zdecydowanej większości przypadków taki wariant jest optymalny. Ponadto, można domniemywać, że inwestycje w czwartym roku mogą być wyjątkowo wysokie z uwagi na ignorowanie przez decydentów przyszłego zadłużenia oraz IWZ dotyczących przyszłych lat. Wartość funkcji można dla uproszczenia podzielić przez $\beta^{3}$:
@@ -257,7 +257,7 @@ Zakłada się, że w czwartym roku realizowany jest wariant czwarty z podrozdzia
 {\footnotesize
 \begin{equation}
 \begin{split}
-f(\bm{x_{3}}) & = \alpha \ln c_{3} %2B (1 - \alpha) \ln ((1-\delta) k_{3} %2B (1%2B\theta) u_{3} %2B i_{3}) %2B \\
+f(x_{3}) & = \alpha \ln c_{3} %2B (1 - \alpha) \ln ((1-\delta) k_{3} %2B (1%2B\theta) u_{3} %2B i_{3}) %2B \\
 &%2B \beta \alpha \ln \left( \frac{\alpha \left(  \frac{y_{5} %2B U_{5}}{\chi%2B r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} %2B u_{\tau}} %2B \frac{y_{4} - r b_{4}}{y_{4} %2B U_{4}}  \right) - (1%2Br) b_{4} %2B y_{4} %2B (1-\delta)((1-\delta)k_{3} %2B (1%2B\theta)u_{3} %2B i_{3}) %2B U_{4} \right) }{1 %2B \frac{1}{3} \frac{y_{5} %2B U_{5}}{\chi %2B r} \frac{1}{y_{4} %2B U_{4}}}  \right) %2B 
 \\
 &%2B \beta  (1-\alpha) \ln ( (1-\alpha) (1-\delta) ((1-\delta) k_{3} %2B (1%2B\theta) u_{3} %2B i_{3}) %2B (1%2B\theta) U_{4} %2B\\
@@ -271,24 +271,24 @@ f(\bm{x_{3}}) & = \alpha \ln c_{3} %2B (1 - \alpha) \ln ((1-\delta) k_{3} %2B (1
 \\
 & & \nonumber
 \\
-h_{13}(\bm{x_{3}}): \theta u_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3} - z_{3} & = & 0
+h_{13}(x_{3}): \theta u_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3} - z_{3} & = & 0
 \label{h13}
 \\
-h_{23}(\bm{x_{3}}): b_{4} - b_{3} - z_{3} & = & 0
+h_{23}(x_{3}): b_{4} - b_{3} - z_{3} & = & 0
 \label{h23}
 \\
-g_{13}(\bm{x}_{3}): -u_{3} & \leq & 0 \nonumber
+g_{13}(x_{3}): -u_{3} & \leq & 0 \nonumber
 \\
-g_{23}(\bm{x_{3}}): u_{3} - U_{3} & \leq & 0 \nonumber
+g_{23}(x_{3}): u_{3} - U_{3} & \leq & 0 \nonumber
 \\
-g_{33}(\bm{x}_{3}): -c_{3} & \leq & 0 \nonumber
+g_{33}(x_{3}): -c_{3} & \leq & 0 \nonumber
 \\
-g_{43}(\bm{x}_{3}): -i_{3} & \leq & 0 \nonumber
+g_{43}(x_{3}): -i_{3} & \leq & 0 \nonumber
 \\
-g_{53}(\bm{x}_{3}): \frac{(\chi %2B r) b_{4}}{y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2}%2Bu_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3}%2Bu_{3}} \right)  & \leq & 0 
+g_{53}(x_{3}): \frac{(\chi %2B r) b_{4}}{y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2}%2Bu_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3}%2Bu_{3}} \right)  & \leq & 0 
 \label{g53}
 \\
-g_{63}(\bm{x}_{3}): c_{3} %2B r b_{3} - y_{3} & \leq & 0. \label{g63}
+g_{63}(x_{3}): c_{3} %2B r b_{3} - y_{3} & \leq & 0. \label{g63}
 \end{IEEEeqnarray}
 
 Powyższy problem można uprościć poprzez wyeliminowanie zmiennych $b_{4}$ i $z_{3}$, których wartości mogą zostać obliczone rezydualnie, po znalezieniu optymalnych wartości pozostałych zmiennych decyzyjnych $u_{3}$, $i_{3}$ i $c_{3}$: 
@@ -306,7 +306,7 @@ Dzięki powyższym przekształceniom, problem ogranicza się do trzech zmiennych
 
 {\footnotesize
 \begin{equation}
-g_{53}(\bm{x}): \frac{(\chi %2B r) \left(b_{3} %2B \theta u_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3} \right)}{y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2}%2Bu_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3}%2Bu_{3}} \right) \leq  0. 
+g_{53}(x): \frac{(\chi %2B r) \left(b_{3} %2B \theta u_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3} \right)}{y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2}%2Bu_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3}%2Bu_{3}} \right) \leq  0. 
 \nonumber
 \end{equation}
 }
@@ -321,7 +321,7 @@ W następstwie poczynienia powyższych założeń utworzono funkcję Lagrange'a 
 
 {\scriptsize
 \begin{IEEEeqnarray}{rCl}
-\mathcal{L}(\bm{x}, \bm{\lambda}, \bm{\mu}) & = & f(\bm{x}) %2B \sum_{j=1}^{5} \mu_{j3} g_{j3}(\bm{x}) = \nonumber \\
+\mathcal{L}(x, \lambda, \mu) & = & f(x) %2B \sum_{j=1}^{5} \mu_{j3} g_{j3}(x) = \nonumber \\
 & = &  \alpha \ln c_{3} %2B (1 - \alpha) \ln ( (1-\delta) k_{3} %2B (1 %2B \theta) U_{3} %2B i_{3}) %2B \nonumber \\
 & %2B & \beta \alpha \ln (\frac{ \alpha ( \frac{y_{5} %2B U_{5}}{\chi%2B r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} %2B u_{\tau}} %2B \frac{y_{4} - r (b_{3} %2B \theta U_{3} %2B c_{3} %2B i_{3} %2B rb_{3} - y_{3})}{y_{4} %2B U_{4}}  \right) - (1%2Br)(b_{3} %2B \theta U_{3} %2B c_{3} %2B i_{3} %2B rb_{3} - y_{3}))}{1 %2B \frac{1}{3} \frac{y_{5} %2B U_{5}}{\chi %2B r} \frac{1}{y_{4} %2B U_{4}}}%2B \nonumber \\
 & %2B & \frac{ \alpha ( y_{4} %2B (1-\delta)((1-\delta)k_{3} %2B (1%2B\theta)U_{3} %2B i_{3}) %2B U_{4} ) }{1 %2B \frac{1}{3} \frac{y_{5} %2B U_{5}}{\chi %2B r} \frac{1}{y_{4} %2B U_{4}}}) %2B \nonumber \\
