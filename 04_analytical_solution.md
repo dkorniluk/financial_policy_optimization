@@ -320,7 +320,7 @@ Dodatkowo można założyć, że $c_{3} > 0$, ponieważ dla $c_{3} = 0$ użytecz
 
 W następstwie poczynienia powyższych założeń utworzono funkcję Lagrange'a w postaci:  
 
-<img src="https://render.githubusercontent.com/render/math?math=<img src="https://render.githubusercontent.com/render/math?math=L(x, \lambda, \mu)   =   f(x) %2B \sum_{j=1}^{5} \mu_{j3} g_{j3}(x) =   \\
+<img src="https://render.githubusercontent.com/render/math?math=L(x, \lambda, \mu)   =   f(x) %2B \sum_{j=1}^{5} \mu_{j3} g_{j3}(x) =   \\
   =    \alpha \ln c_{3} %2B (1 - \alpha) \ln ( (1-\delta) k_{3} %2B (1 %2B \theta) U_{3} %2B i_{3}) %2B   \\
   %2B   \beta \alpha \ln (\frac{ \alpha ( \frac{y_{5} %2B U_{5}}{\chi%2B r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} %2B u_{\tau}} %2B \frac{y_{4} - r (b_{3} %2B \theta U_{3} %2B c_{3} %2B i_{3} %2B rb_{3} - y_{3})}{y_{4} %2B U_{4}}  \right) - (1%2Br)(b_{3} %2B \theta U_{3} %2B c_{3} %2B i_{3} %2B rb_{3} - y_{3}))}{1 %2B \frac{1}{3} \frac{y_{5} %2B U_{5}}{\chi %2B r} \frac{1}{y_{4} %2B U_{4}}}%2B   \\
   %2B   \frac{ \alpha ( y_{4} %2B (1-\delta)((1-\delta)k_{3} %2B (1%2B\theta)U_{3} %2B i_{3}) %2B U_{4} ) }{1 %2B \frac{1}{3} \frac{y_{5} %2B U_{5}}{\chi %2B r} \frac{1}{y_{4} %2B U_{4}}}) %2B   \\
