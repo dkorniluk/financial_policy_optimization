@@ -83,7 +83,7 @@ Algorytm \textit{spg} (ang. spectral projected gradient) pochodzi z artykułu Bi
 
 <img src="https://render.githubusercontent.com/render/math?math=\sigma (x_{%2B} - x_{c}) \approx \nabla f(x_{%2B}) - \nabla f(x_{c})">.
 
-Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie minimalizujące sumę kwadratów reszt\footnote{Jest to  równanie odpowiadające ekonometrycznemu estymatorowi klasycznej metody najmniejszych kwadratów: $\hat{\beta} = (X^{T}X)^{-1}(X^{T}y)$. }: 
+Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie minimalizujące sumę kwadratów reszt. Jest to  równanie odpowiadające ekonometrycznemu estymatorowi klasycznej metody najmniejszych kwadratów: <img src="https://render.githubusercontent.com/render/math?math=\hat{\beta} = (X^{T}X)^{-1}(X^{T}y)">.: 
 
 <img src="https://render.githubusercontent.com/render/math?math=\sigma = \frac{(x_{%2B} - x_{c})^{T} (\nabla f(x_{%2B}) - \nabla f(x_{c})) }{(x_{%2B} - x_{c})^{T} (x_{%2B} - x_{c})}">.
 
