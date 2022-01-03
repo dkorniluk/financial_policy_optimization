@@ -12,50 +12,43 @@ p.w. <img src="https://render.githubusercontent.com/render/math?math=h(x) = 0,">
 
 gdzie <img src="https://render.githubusercontent.com/render/math?math=f: \mathbb{R}^{n} \rightarrow \mathbb{R},  h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}">.
 
-Niech:  <img src="https://render.githubusercontent.com/render/math?math=J(\bm{x}^{*}) = \left\{j : g_{j}(\bm{x}^{*}) = 0 \right\}">. Niech $\bm{x}^{*}$ będzie punktem regularnym, tzn. takim, że wektory:
-$$\nabla h_{i}(\bm{x^{*}}), \nabla g_{j}(\bm{x^{*}}), 1 \leq i \leq m, j \in J(\bm{x^{*}})$$
-są liniowo niezależne. $C^{1}$ oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły\footnote{Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)\.
+Niech:  <img src="https://render.githubusercontent.com/render/math?math=J(\bm{x}^{*}) = \left\{j : g_{j}(\bm{x}^{*}) = 0 \right\}">. Niech <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*}"> będzie punktem regularnym, tzn. takim, że wektory:
+<img src="https://render.githubusercontent.com/render/math?math=\nabla h_{i}(\bm{x^{*}}), \nabla g_{j}(\bm{x^{*}}), 1 \leq i \leq m, j \in J(\bm{x^{*}})">
+są liniowo niezależne. <img src="https://render.githubusercontent.com/render/math?math=C^{1}"> oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły (Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)).
 
-Niech $f, \bm{h}, \bm{g} \in C^{1}$. Niech $\bm{x}^{*}$ będzie punktem regularnym, stanowiącym ekstremum lokalne $f$, pod warunkiem że $\bm{h(x)} = \bm{0}$, $\bm{g(x)} \leq \bm{0}$. Wtedy istnieje $\bm{\lambda}^{*} \in \mathbb{R}^{m}$ (tzw. wektor mnożników Lagrange'a) i $\bm{\mu}^{*} \in \mathbb{R}^{p}$ (tzw. wektor mnożników KKT), takie że:
-\begin{enumerate}
-\item $\bm{\mu}^{*} \geq \bm{0}$;
-\item $ Df(\bm{x}^{*}) %2B \bm{\lambda}^{*T}D \bm{h}(\bm{x}^{*}) %2B \bm {\mu}^{*T}D \bm{g}(\bm{x}^{*}) = \bm{0}^{T} $;
-\item $\bm{\mu}^{*T} \bm{g}(\bm{x}^{*}) = 0$.
-\end{enumerate}
+Niech <img src="https://render.githubusercontent.com/render/math?math=f, \bm{h}, \bm{g} \in C^{1}">. Niech <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*}"> będzie punktem regularnym, stanowiącym ekstremum lokalne f, pod warunkiem że <img src="https://render.githubusercontent.com/render/math?math=\bm{h(x)} = \bm{0}">, <img src="https://render.githubusercontent.com/render/math?math=\bm{g(x)} \leq \bm{0}">. Wtedy istnieje <img src="https://render.githubusercontent.com/render/math?math=\bm{\lambda}^{*} \in \mathbb{R}^{m}"> (tzw. wektor mnożników Lagrange'a) i <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*} \in \mathbb{R}^{p}"> (tzw. wektor mnożników KKT), takie że:
+
+* <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*} \geq \bm{0}">;
+* <img src="https://render.githubusercontent.com/render/math?math=Df(\bm{x}^{*}) %2B \bm{\lambda}^{*T}D \bm{h}(\bm{x}^{*}) %2B \bm {\mu}^{*T}D \bm{g}(\bm{x}^{*}) = \bm{0}^{T} ">;
+* <img src="https://render.githubusercontent.com/render/math?math=\bm{\mu}^{*T} \bm{g}(\bm{x}^{*}) = 0">.
 
 Dowód można znaleźć np. we wspomnianym podręczniku do optymalizacji autorstwa Chonga i Żaka (2001, s. 399-401).
 
 Model decyzyjny władz samorządowych z warunkami w postaci KKT należy zapisać w następujący sposób:
 
-\begin{equation}
-\label{problem_maks}
-\max_{\{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}}  f(\bm{x}) =  \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} %2B \left(1 - \alpha \right) \ln k_{t%2B1} \right)
-\end{equation}
+<img src="https://render.githubusercontent.com/render/math?math=\max_{\{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}}  f(\bm{x}) =  \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} %2B \left(1 - \alpha \right) \ln k_{t%2B1} \right)">
 
-$\mbox{p.w. } \forall t \in {1, 2, 3, 4}$
-\begin{IEEEeqnarray}{lCl}
-h_{1t}(\bm{x}): \theta u_{t} %2B i_{t} %2B c_{t} %2B r b_{t} - y_{t} - z_{t} & = 0\nonumber \\
-h_{2t}(\bm{x}): b_{t%2B1} - b_{1} - \sum_{\tau=1}^{t} z_{\tau} & = & 0  \nonumber \\
-h_{3t}(\bm{x}): k_{t%2B1} - (1-\delta)k_{t} - i_{t} - (1%2B\theta)u_{t} & = & 0 
-\nonumber \\
-g_{1t}(\bm{x}): -u_{t} & \leq & 0
-\nonumber \\
-g_{2t}(\bm{x}): u_{t} - U_{t} & \leq & 0
-\nonumber \\
-g_{3t}(\bm{x}): -c_{t} & \leq & 0 
-\nonumber \\
-g_{4t}(\bm{x}): -i_{t} & \leq & 0
-\nonumber \\
-g_{5t}(\bm{x}): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} & \leq & 0 
-\label{IWZ}
-\\
-g_{6t}(\bm{x}): c_{t} %2B rb_{t} - y_{t} & \leq &  0
-\label{regula_bez_nadwyzki}
-\\
-\mbox{dane: } b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}. & & \nonumber
-\end{IEEEeqnarray}
+<img src="https://render.githubusercontent.com/render/math?math=\mbox{p.w. } \forall t \in {1, 2, 3, 4}">
 
-Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: $$\bm{x}^{*} = [c_{1}^{*} c_{2}^{*} c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},$$ spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(\bm{x}) %2B \bm{\lambda} h(\bm{x}) %2B \bm{\mu} g(\bm{x})$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
+<img src="https://render.githubusercontent.com/render/math?math=h_{1t}(\bm{x}): \theta u_{t} %2B i_{t} %2B c_{t} %2B r b_{t} - y_{t} - z_{t} = 0">
+<img src="https://render.githubusercontent.com/render/math?math=h_{2t}(\bm{x}): b_{t%2B1} - b_{1} - \sum_{\tau=1}^{t} z_{\tau} = 0">
+<img src="https://render.githubusercontent.com/render/math?math=h_{3t}(\bm{x}): k_{t%2B1} - (1-\delta)k_{t} - i_{t} - (1%2B\theta)u_{t} = 0"> 
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{1t}(\bm{x}): -u_{t} \leq 0">
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{2t}(\bm{x}): u_{t} - U_{t} \leq 0">
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{3t}(\bm{x}): -c_{t} \leq 0">
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{4t}(\bm{x}): -i_{t} \leq 0">
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{5t}(\bm{x}): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0 ">
+
+<img src="https://render.githubusercontent.com/render/math?math=g_{6t}(\bm{x}): c_{t} %2B rb_{t} - y_{t} \leq  0
+\mbox{dane: } b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}. ">
+
+
+Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: <img src="https://render.githubusercontent.com/render/math?math=\bm{x}^{*} = [c_{1}^{*} c_{2}^{*} c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},"> spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(\bm{x}) %2B \bm{\lambda} h(\bm{x}) %2B \bm{\mu} g(\bm{x})$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
 
 Warunki Kuhna-Tuckera są warunkami koniecznymi tylko wtedy, gdy spełnione są warunki tzw. kwalifikowalności\footnote{Szczegółową dyskusję na ten temat można znaleźć np. w podręczniku do ekonomii matematycznej Chianga (1994).}. Mogą istnieć bowiem rozwiązania optymalne, które nie spełniają warunków KKT, ale musiałyby one znajdować się w specyficznie określonych punktach brzegowych. W przykładzie z podrozdziału \ref{rozdzial_szescienne} pokazano, że rozwiązanie analityczne modelu może sprowadzać się do znalezienia, przy ustalonej strukturze warunków ograniczających, optymalnego poziomu inwestycji zwykłych ($i_{t}^{*}$). O poziomie tym założono w omawianym przykładzie, że nie jest zerowy, a zatem z góry przyjęto, że nie może znaleźć się w punkcie brzegowym. 
 
