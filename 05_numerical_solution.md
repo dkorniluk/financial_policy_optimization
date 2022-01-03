@@ -33,11 +33,11 @@ Podstawowym algorytmem służącym do poszukiwania minimum lokalnego jest metoda
 
 Oblicz <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\|">
 
- * Dopóki <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\| > \varepsilon">
- * Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x)">
- * Rozwiąż <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x) d  = - \nabla f(x)">
- * Zastąp <img src="https://render.githubusercontent.com/render/math?math=x"> przez <img src="https://render.githubusercontent.com/render/math?math=x %2B d">
- * Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla f(x)">.
+ * (a) Dopóki <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\| > \varepsilon">
+ * (b) Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x)">
+ * (c) Rozwiąż <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x) d  = - \nabla f(x)">
+ * (d) Zastąp <img src="https://render.githubusercontent.com/render/math?math=x"> przez <img src="https://render.githubusercontent.com/render/math?math=x %2B d">
+ * (e) Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla f(x)">.
 
 Istnieje wiele odmian metody Newtona. Wektor $g$ przybliżający gradient $\nabla f$ może być obliczany w kroku (e) ze wzoru analitycznego albo aproksymowany za pomocą skończonych różnic, macierz H przybliżająca hesjan $\nabla^{2} f$ może być kalkulowana w kroku (b) jeszcze na trzeci sposób - metodą BFGS - od nazwisk autorów: Broydena, Fletchera, Goldfarba i Shano (Head, Zerner, 1985)\nocite{BFGS_1985}. W niektórych algorytmach, w celu zaoszczędzenia czasu, kalkulacja gradientu i hesjanu nie odbywa się w każdej iteracji. W pewnych algorytmach nowy $x$ powstaje w kroku (d) z kolei poprzez dodanie do starego $x$ pewnej modyfikacji $d$, tj. $\lambda d$, gdzie $\lambda$ określa długość kroku w kierunku gradientu za pomocą jednej z metod: wyszukiwania liniowego (Kelley, 1999, s. 39-50), dogleg (Dennis, Mei, 1979)\nocite{Dennis_Mei_1979} lub hookstep (Mor\'{e}, 1978)\nocite{More_1978}. Więcej na temat różnych odmian metody Newtona można przeczytać w artykule Schnabela, Koontza i Weissa (1985)\nocite{Schnabel_Koontz_Weiss_1985}. Inną ważną kwestię stanowi sposób rozwiązania układu równań (c). Zazwyczaj stosowana jest w tym celu metoda dekompozycji macierzy Choleskiego, lecz wymaga ona dodatniej określoności macierzy współczynników układu równań. Powstały zatem metody odporne na brak dodatniej określoności $\nabla^{2}f$ - wykorzystują one inne macierze współczynników - należą do nich m.in. dogleg i hookstep. Generalnie, metody polegające na aproksymacji, a nie obliczaniu wprost hesjanu nazywają się quasi-newtonowskimi.       
 
