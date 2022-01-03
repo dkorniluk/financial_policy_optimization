@@ -42,7 +42,7 @@ Model decyzyjny władz samorządowych z warunkami w postaci KKT należy zapisać
 
 <img src="https://render.githubusercontent.com/render/math?math=g_{4t}(x): -i_{t} \leq 0">
 
-<img src="https://render.githubusercontent.com/render/math?math=g_{5t}(x): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0 ">
+<img src="https://render.githubusercontent.com/render/math?math=g_{5t}(x): \frac{(\chi %2B r) b_{t%2B1}}{y_{t%2B1} %2B u_{t%2B1}} - \frac{1}{3} \sum_{\tau=t-2}^{t} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} %2B u_{\tau}} \leq 0">
 
 <img src="https://render.githubusercontent.com/render/math?math=g_{6t}(x): c_{t} %2B rb_{t} - y_{t} \leq  0
 \mbox{dane: } b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}.">
