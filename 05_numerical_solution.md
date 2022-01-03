@@ -31,7 +31,7 @@ Stąd:
 
 Podstawowym algorytmem służącym do poszukiwania minimum lokalnego jest metoda Newtona:
 
-* Oblicz <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\|">
+Oblicz <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\|">
 
  * Dopóki <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\| > \varepsilon">
  * Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x)">
