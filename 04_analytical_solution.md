@@ -328,7 +328,7 @@ W następstwie poczynienia powyższych założeń utworzono funkcję Lagrange'a 
 <img src="https://render.githubusercontent.com/render/math?math=%2B (1 - \alpha) (\frac{y_{5} %2B U_{5}}{\chi%2B r} \frac{1}{3} \left(  \frac{y_{2} - c_{2} - r b_{2}}{y_{2} %2B u_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3} %2B U_{3}} %2B \frac{y_{4} - r (b_{3} %2B \theta U_{3} %2B c_{3} %2B i_{3} %2B rb_{3} - y_{3})}{y_{4} %2B U_{4}} \right)">
 <img src="https://render.githubusercontent.com/render/math?math=-  (1 %2B r) (b_{3} %2B \theta U_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3}) %2B y_{4})) %2B">  
 
-<img src="https://render.githubusercontent.com/render/math?math=%2B mu_{53}">.
+<img src="https://render.githubusercontent.com/render/math?math=%2B \mu_{53} \left( \frac{(\chi %2B r)}{y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2} %2B u_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3} %2B U_{3}} \right)">.
 
 <img src="https://render.githubusercontent.com/render/math?math=%2B mu_{53} \left( \frac{(\chi %2B r) \left(b_{3} %2B \theta U_{3} %2B i_{3} %2B c_{3} %2B r b_{3} - y_{3} \right)} 
 {y_{4} %2B U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} %2B u_{1}} %2B \frac{y_{2} - c_{2} - r b_{2}}{y_{2} %2B u_{2}} %2B \frac{y_{3} - c_{3} - r b_{3}}{y_{3} %2B U_{3}} \right) \right)">.
