@@ -18,26 +18,26 @@ Ostatnim algorytmem niewymagającym obliczania pochodnych jest algorytm Hooka-Je
 
 Celem lepszego przybliżenia metod newtonowskich i quasi-newtonowskich, wykorzystujących nie tylko wektor pierwszych, ale także macierz drugich pochodnych zwaną hesjanem, warto zacząć od przedstawienia klasycznej metody Newtona. Zgodnie z twierdzeniem Taylora, funkcję nieliniową $f(x)$ można aproksymować w otoczeniu punktu $x_{c}$ za pomocą następującej funkcji kwadratowej (por. Kelley, 1999, s. 15)\nocite{Keley_1999}:
 
-<img src="https://render.githubusercontent.com/render/math?math=f(x) \approx m_{c}(x) = f(x_{c}) %2B \nabla f(x_{c})^{T} (x-x_{c}) %2B \frac{1}{2}(x-x_{c})^{T} \nabla^{2} f(x_{c}) (x-x_{c})">.
+$f(x) \approx m_{c}(x) = f(x_{c}) + \nabla f(x_{c})^{T} (x-x_{c}) + \frac{1}{2}(x-x_{c})^{T} \nabla^{2} f(x_{c}) (x-x_{c})$.
 
-Jeżeli <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x_{c})"> jest macierzą dodatnio określoną, to <img src="https://render.githubusercontent.com/render/math?math=x_{%2B}"> stanowi minimum lokalne <img src="https://render.githubusercontent.com/render/math?math=f(x)">, gdy <img src="https://render.githubusercontent.com/render/math?math=\nabla m_{c} (x_{%2B}) = 0">.
+Jeżeli $\nabla^{2} f(x_{c})$ jest macierzą dodatnio określoną, to $x_{+}$ stanowi minimum lokalne $f(x)$, gdy $\nabla m_{c} (x_{+}) = 0$.
 
-<img src="https://render.githubusercontent.com/render/math?math=0 = \nabla m_{c} (x_{%2B})  = \nabla f(x_{c}) %2B \nabla^{2} f(x_{c}) (x_{%2B} - x_{c})">
+$0 = \nabla m_{c} (x_{+})  = \nabla f(x_{c}) + \nabla^{2} f(x_{c}) (x_{+} - x_{c})$
 
 Stąd: 
-<img src="https://render.githubusercontent.com/render/math?math=x_{%2B} = x_{c} - (\nabla^{2} f(x_{c}))^{-1} \nabla f(x_{c})"> 
+$x_{+} = x_{c} - (\nabla^{2} f(x_{c}))^{-1} \nabla f(x_{c})$ 
 
-<img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x_{c}) (x_{%2B} - x_{c}) = -\nabla f(x_{c})">. 
+$\nabla^{2} f(x_{c}) (x_{+} - x_{c}) = -\nabla f(x_{c})$. 
 
 Podstawowym algorytmem służącym do poszukiwania minimum lokalnego jest metoda Newtona:
 
-Oblicz <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\|">
+Oblicz $\left\| \nabla f(x) \right\|$
 
- * (a) Dopóki <img src="https://render.githubusercontent.com/render/math?math=\left\| \nabla f(x) \right\| > \varepsilon">
- * (b) Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x)">
- * (c) Rozwiąż <img src="https://render.githubusercontent.com/render/math?math=\nabla^{2} f(x) d  = - \nabla f(x)">
- * (d) Zastąp <img src="https://render.githubusercontent.com/render/math?math=x"> przez <img src="https://render.githubusercontent.com/render/math?math=x %2B d">
- * (e) Oblicz <img src="https://render.githubusercontent.com/render/math?math=\nabla f(x)">.
+ * (a) Dopóki $\left\| \nabla f(x) \right\| > \varepsilon$
+ * (b) Oblicz $\nabla^{2} f(x)$
+ * (c) Rozwiąż $\nabla^{2} f(x) d  = - \nabla f(x)$
+ * (d) Zastąp $x$ przez $x + d$
+ * (e) Oblicz $\nabla f(x)$.
 
 Istnieje wiele odmian metody Newtona. Wektor $g$ przybliżający gradient $\nabla f$ może być obliczany w kroku (e) ze wzoru analitycznego albo aproksymowany za pomocą skończonych różnic, macierz H przybliżająca hesjan $\nabla^{2} f$ może być kalkulowana w kroku (b) jeszcze na trzeci sposób - metodą BFGS - od nazwisk autorów: Broydena, Fletchera, Goldfarba i Shano (Head, Zerner, 1985)\nocite{BFGS_1985}. W niektórych algorytmach, w celu zaoszczędzenia czasu, kalkulacja gradientu i hesjanu nie odbywa się w każdej iteracji. W pewnych algorytmach nowy $x$ powstaje w kroku (d) z kolei poprzez dodanie do starego $x$ pewnej modyfikacji $d$, tj. $\lambda d$, gdzie $\lambda$ określa długość kroku w kierunku gradientu za pomocą jednej z metod: wyszukiwania liniowego (Kelley, 1999, s. 39-50), dogleg (Dennis, Mei, 1979)\nocite{Dennis_Mei_1979} lub hookstep (Mor\'{e}, 1978)\nocite{More_1978}. Więcej na temat różnych odmian metody Newtona można przeczytać w artykule Schnabela, Koontza i Weissa (1985)\nocite{Schnabel_Koontz_Weiss_1985}. Inną ważną kwestię stanowi sposób rozwiązania układu równań (c). Zazwyczaj stosowana jest w tym celu metoda dekompozycji macierzy Choleskiego, lecz wymaga ona dodatniej określoności macierzy współczynników układu równań. Powstały zatem metody odporne na brak dodatniej określoności $\nabla^{2}f$ - wykorzystują one inne macierze współczynników - należą do nich m.in. dogleg i hookstep. Generalnie, metody polegające na aproksymacji, a nie obliczaniu wprost hesjanu nazywają się quasi-newtonowskimi.       
 
@@ -46,17 +46,17 @@ W pakiecie \textit{optimx} zostały zaimplementowane dwa algorytmy newtonowskie 
 Pierwszy algorytm, \textit{nlm} (ang. nonlinear minimization) został opracowany na podstawie algorytmu stworzonego przez Dennisa i Schnabela (1983)\nocite{Dennis_Schnabel_1983}, opisanego także w pracy Schnabela, Koontza i Weissa (1985). Procedura \textit{nlm} wykorzystuje przeszukiwanie liniowe w etapie (d) wyżej przytoczonego algorytmu - ,,z kwadratową interpolacją dla pierwszego nawrotu oraz sześcienną interpolacją dla każdego następnego nawrotu w każdej iteracji'' (Schnabel, Koontz, Weiss, 1985, s. 8). W artykule tym można także poznać szczegóły techniczne algorytmu, dotyczące m.in.: kryteriów stopu; długości kroku potrzebnego do numerycznej aproksymacji pochodnych, a także sposobu ich obliczania (w początkowych iteracjach następnikowe, następnie centralne); aproksymacji hesjanu w sytuacji, gdy nie jest on macierzą dodatnio określoną; skalowania zmiennych niezależnych (co sprowadza się np. do podzielenia przez milion wartości tych zmiennych, których rząd wielkości jest bliski miliona, itd.).  
 
 Metoda \textit{BFGS} należy do klasy metod opartych na równaniu siecznej: 
-<img src="https://render.githubusercontent.com/render/math?math=H_{%2B} (x_{%2B} - x_{c}) = \nabla f(x_{%2B}) - \nabla f(x_{c})">.
+$H_{+} (x_{+} - x_{c}) = \nabla f(x_{+}) - \nabla f(x_{c})$.
 
 Wszystkie metody siecznych, w tym \textit{BFGS}, dla optymalizacji jednowymiarowej sprowadzają się do  równania (\ref{sieczna_1D}). Na jego podstawie można stwierdzić, że metoda siecznych przybliża drugą pochodną za pomocą względnego przyrostu $f'(x)$ na odcinku wyznaczonym przez $x$ z poprzednich iteracji ($x_{0}$ i $x_{1}$):
-<img src="https://render.githubusercontent.com/render/math?math=x_{2} = x_{1} - \frac{f'(x_{1})(x_{1} - x_{0})}{f'(x_{1}) - f'(x_{0})} =  x_{1} - \frac{f'(x_{1})}{\frac{f'(x_{1}) - f'(x_{0})}{x_{1} - x_{0}}} \approx x_{1} - \frac{f'(x_{1})}{f''(x_{1})}">
+$x_{2} = x_{1} - \frac{f'(x_{1})(x_{1} - x_{0})}{f'(x_{1}) - f'(x_{0})} =  x_{1} - \frac{f'(x_{1})}{\frac{f'(x_{1}) - f'(x_{0})}{x_{1} - x_{0}}} \approx x_{1} - \frac{f'(x_{1})}{f''(x_{1})}$
 
 Równanie dla funkcji wielu zmiennych przedstawia się następująco (Davidon, 1959; Fletcher i Powell, 1963)\nocite{Davidon_1959}\nocite{Fletcher_Powell_1963}:
-<img src="https://render.githubusercontent.com/render/math?math=H_{%2B} = H_{c} %2B \frac{(\nabla f(x_{%2B}) - \nabla f(x_{c})) (\nabla f(x_{%2B}) - \nabla f(x_{c}))^{T}}{(\nabla f(x_{%2B}) - \nabla f(x_{c}))^{T} (x_{%2B} - x_{c}) } - \frac{(H_{c}(x_{%2B} - x_{c}))(H_{c}(x_{%2B} - x_{c}))^{T}}{(x_{%2B} - x_{c})^{T}H_{c}(x_{%2B} - x_{c})}">.
+$H_{+} = H_{c} + \frac{(\nabla f(x_{+}) - \nabla f(x_{c})) (\nabla f(x_{+}) - \nabla f(x_{c}))^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T} (x_{+} - x_{c}) } - \frac{(H_{c}(x_{+} - x_{c}))(H_{c}(x_{+} - x_{c}))^{T}}{(x_{+} - x_{c})^{T}H_{c}(x_{+} - x_{c})}$.
 
 W celu zbudowania intuicji można zauważyć, że gdyby móc poskracać w równaniu (\ref{DFP}) te same wyrażenia w liczniku i mianowniku (co nie jest dopuszczalne w rachunku macierzowym), to uzyskalibyśmy równanie (\ref{rownanie_siecznej}). 
 
-W pakiecie \textit{optimx} metoda \textit{BFGS} została zmodyfikowana w oparciu o poprawki (m.in. dotyczące eliminacji wyszukiwania liniowego, które wyznacza $x_{%2B}$) autorstwa Fletchera (1970)\nocite{Fletcher_1970} i Nasha (1979)\nocite{Nash_1979}. 
+W pakiecie \textit{optimx} metoda \textit{BFGS} została zmodyfikowana w oparciu o poprawki (m.in. dotyczące eliminacji wyszukiwania liniowego, które wyznacza $x_{+}$) autorstwa Fletchera (1970)\nocite{Fletcher_1970} i Nasha (1979)\nocite{Nash_1979}. 
 
 Z kolei pakiet \textit{nlminb} wykorzystuje tzw. procedury (ang. routines) PORT zakodowane i opisane przez  Gaya (1990)\nocite{Gay_1990}, który z kolei opierał się m.in. na metodzie Davidona zmodyfikowanej  przez Stewarta (1967)\nocite{Stewart_1967}.  
 
@@ -68,26 +68,26 @@ Następny algorytm, \textit{L-BFGS-B}, został opisany przez Byrda i in. (1995)\
 * Oblicz kierunek przeszukiwania np. metodą gradientu sprzężonego. 
 * Wykonaj przeszukiwanie liniowe, przy zadanym warunku wymaganego spadku oraz wyznacz długość kroku.
 * Oblicz gradient w znalezionym punkcie. 
-* Jeżeli zmiana gradientu spełnia warunek krzywizny, to zaktualizuj listę par korekty - zastępując najstarszą przez najnowszą. Przez listę par korekty należy rozumieć m ostatnich par w postaci: $(s_{i}, y_{i}) = (x_{k%2B1} - x_{k}, \nabla_{k%2B1} - \nabla_{k})$
+* Jeżeli zmiana gradientu spełnia warunek krzywizny, to zaktualizuj listę par korekty - zastępując najstarszą przez najnowszą. Przez listę par korekty należy rozumieć m ostatnich par w postaci: $(s_{i}, y_{i}) = (x_{k+1} - x_{k}, \nabla_{k+1} - \nabla_{k})$
 * Wyznacz aproksymację hesjanu przy użyciu aktualnej listy par korekty. Można to osiągnąć względnie szybko w sensie złożoności obliczeniowej, z wykorzystaniem odpowiednich wzorów. 
 * Zwiększ numer iteracji o 1 i wróć do punktu 1. 
 
 Ostatni quasi-newtonowski algorytm użyty w optymalizacji numerycznej, \textit{ucminf} (Nielsen, 2000)\nocite{Nielsen_2000}, również wykorzystuje metodę BFGS, a także miękkie wyszukiwanie liniowe\footnote{Wyszukiwanie liniowe może być dokładne lub miękkie. Pierwsza metoda polega na dokładnym poszukiwaniu minimum funkcji w zadanym kierunku. Druga metoda polega na odnalezieniu w zadanym kierunku punktu, dla którego wartość funkcji wystarczająco obniża się, a następnie na aktualizacji kierunku. Wyszukiwanie miękkie jest częściej stosowane w praktyce, gdyż wymaga mniejszej liczby operacji, a przy tym zadany kierunek przeszukiwania przeważnie jest tylko kierunkiem w przybliżeniu prowadzącym do ekstremum funkcji.} z wykorzystaniem metody zaufanego obszaru. W przeciwieństwie do wcześniej opisanej metody \textit{BFGS}, \textit{ucminf} aproksymuje odwrotność hesjanu za pomocą wzoru będącego odpowiednikiem równania (\ref{DFP}):
 
-<img src="https://render.githubusercontent.com/render/math?math=H_{%2B}^{-1} = \left( I - \frac{(\nabla f(x_{%2B}) - \nabla f(x_{c}))(x_{%2B} - x_{c})^{T}}{(\nabla f(x_{%2B}) - \nabla f(x_{c}))^{T}(x_{%2B} - x_{c})} \right)^{T}  H_{c}^{-1} \left( I - \frac{(\nabla f(x_{%2B}) - \nabla f(x_{c}))(x_{%2B} - x_{c})^{T}}{(\nabla f(x_{%2B}) - \nabla f(x_{c}))^{T}(x_{%2B} - x_{c})} \right)^{T}">
-<img src="https://render.githubusercontent.com/render/math?math=%2B \frac{(x_{%2B} - x_{c})(x_{%2B} - x_{c})^{T}}{(\nabla f(x_{%2B}) - \nabla f(x_{c}))^{T}(x_{%2B} - x_{c})}">
+$H_{+}^{-1} = \left( I - \frac{(\nabla f(x_{+}) - \nabla f(x_{c}))(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})} \right)^{T}  H_{c}^{-1} \left( I - \frac{(\nabla f(x_{+}) - \nabla f(x_{c}))(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})} \right)^{T}$
+$+ \frac{(x_{+} - x_{c})(x_{+} - x_{c})^{T}}{(\nabla f(x_{+}) - \nabla f(x_{c}))^{T}(x_{+} - x_{c})}$
 
 Kolejne metody wymagają obliczania pochodnych funkcji celu, ale nie wymagają kalkulacji macierzy przybliżonego hesjanu. W pierwszym kroku algorytmu \textit{cg} (ang. conjugate gradient - gradient sprzężony) oblicza się gradient funkcji celu w punkcie startowym. W ten sposób wyznacza się kierunek najszybszego spadku wartości funkcji. Za pomocą metody optymalizacji jednowymiarowej funkcji celu (np. ww. metody Newtona), określa się minimum na odcinku położonym wzdłuż owego kierunku. Punkt ten staje się punktem startowym w drugiej iteracji. Ponownie obliczany jest kierunek najszybszego spadku. Jednak począwszy od drugiej iteracji, kierunek, wzdłuż którego wyszukuje się kolejny punkt, stanowi sumę bieżącego kierunku najszybszego spadku oraz pomnożonego przez parametr $\beta$ kierunku z poprzedniej iteracji. Domyślna formuła na $\beta$, w pakiecie \textit{optimx} pochodzi z artykułu Fletchera i Reevesa (1964)\nocite{Fletcher_Reeves_1964} i stanowi iloraz kwadratów norm gradientów z następujących po sobie iteracji. Im większy postęp w optymalizacji, tj. norma gradientu z bieżącej iteracji mniejsza co do modułu od normy z poprzedniej iteracji, tym mniejsza korekta kierunku najszybszego spadku. 
 
-Algorytm \textit{spg} (ang. spectral projected gradient) pochodzi z artykułu Birgina, Mart\'{i}neza i Raydana (2001)\nocite{Birgin_Martinez_Raydan_2001}. Punktem wyjścia tej metody stanowi równanie siecznej (\ref{rownanie_siecznej}) (por. Birgin, Mart\'{i}nez, Raydan i in., 2014)\nocite{Birgin_Martinez_Raydan_2014}. W \textit{spg} zakłada się bardzo prostą postać macierzy $H_{%2B} = \sigma I$. Równanie siecznej można więc zapisać następująco:
+Algorytm \textit{spg} (ang. spectral projected gradient) pochodzi z artykułu Birgina, Mart\'{i}neza i Raydana (2001)\nocite{Birgin_Martinez_Raydan_2001}. Punktem wyjścia tej metody stanowi równanie siecznej (\ref{rownanie_siecznej}) (por. Birgin, Mart\'{i}nez, Raydan i in., 2014)\nocite{Birgin_Martinez_Raydan_2014}. W \textit{spg} zakłada się bardzo prostą postać macierzy $H_{+} = \sigma I$. Równanie siecznej można więc zapisać następująco:
 
-<img src="https://render.githubusercontent.com/render/math?math=\sigma (x_{%2B} - x_{c}) \approx \nabla f(x_{%2B}) - \nabla f(x_{c})">.
+$\sigma (x_{+} - x_{c}) \approx \nabla f(x_{+}) - \nabla f(x_{c})$.
 
-Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie minimalizujące sumę kwadratów reszt. Jest to  równanie odpowiadające ekonometrycznemu estymatorowi klasycznej metody najmniejszych kwadratów: <img src="https://render.githubusercontent.com/render/math?math=\hat{\beta} = (X^{T}X)^{-1}(X^{T}y)">.: 
+Dokładne rozwiązanie tego równania nie istnieje, ale istnieje rozwiązanie minimalizujące sumę kwadratów reszt. Jest to  równanie odpowiadające ekonometrycznemu estymatorowi klasycznej metody najmniejszych kwadratów: $\hat{\beta} = (X^{T}X)^{-1}(X^{T}y)$.: 
 
-<img src="https://render.githubusercontent.com/render/math?math=\sigma = \frac{(x_{%2B} - x_{c})^{T} (\nabla f(x_{%2B}) - \nabla f(x_{c})) }{(x_{%2B} - x_{c})^{T} (x_{%2B} - x_{c})}">.
+$\sigma = \frac{(x_{+} - x_{c})^{T} (\nabla f(x_{+}) - \nabla f(x_{c})) }{(x_{+} - x_{c})^{T} (x_{+} - x_{c})}$.
 
-Dodatkowo nakłada się ograniczenie: $\sigma_{min} \leq \sigma \leq \sigma_{max}$. Jednocześnie $\sigma$ stanowi tzw. iloraz Rayleigha w odniesieniu do macierzy uśrednionego hesjanu na przedziale $(x_{c}, x_{%2B})$. Skądinąd wiadomo, że iloraz Rayleigha należy do przedziału pomiędzy minimalną a maksymalną wartością własną uśrednionego hesjanu. Zbiór wszystkich wartości własnych danej macierzy nazywa się spektrum macierzy, co tłumaczy genezę nazwy metody. Ostatecznie zatem w  metodzie \textit{spg}, macierz $\nabla^{2} f(x)$ zostaje zastąpiona przeskalowaną macierzą jednostkową $\sigma I$ w punkcie c) algorytmu Newtona. Zmodyfikowany jest także punkt d), gdzie stosuje się przeszukiwanie liniowe.  
+Dodatkowo nakłada się ograniczenie: $\sigma_{min} \leq \sigma \leq \sigma_{max}$. Jednocześnie $\sigma$ stanowi tzw. iloraz Rayleigha w odniesieniu do macierzy uśrednionego hesjanu na przedziale $(x_{c}, x_{+})$. Skądinąd wiadomo, że iloraz Rayleigha należy do przedziału pomiędzy minimalną a maksymalną wartością własną uśrednionego hesjanu. Zbiór wszystkich wartości własnych danej macierzy nazywa się spektrum macierzy, co tłumaczy genezę nazwy metody. Ostatecznie zatem w  metodzie \textit{spg}, macierz $\nabla^{2} f(x)$ zostaje zastąpiona przeskalowaną macierzą jednostkową $\sigma I$ w punkcie c) algorytmu Newtona. Zmodyfikowany jest także punkt d), gdzie stosuje się przeszukiwanie liniowe.  
 
 Niektóre z metod optymalizacji omawianych w niniejszym podrozdziale umożliwiają wprowadzenie wprost warunków ograniczających. Mimo to, wszystkie metody optymalizacji stosowanego tutaj metaalgorytmu zastosowano dla funkcji celu bez ograniczeń. Warunki ograniczające wymienione w podrozdziale \ref{zapis_rozwiazania} zostały bowiem uwzględnione w funkcji celu w postaci tzw. składnika kary pomnożonego przez największą co do modułu wartość zmiennej decyzyjnej. Kara przyjmuje wartość zerową, jeżeli żaden z 24 warunków ograniczających (dwanaście na ujemność zmiennych decyzyjnych: $c_{t}, i_{t}, u_{t}, t \in \{1,2,3,4\}$, cztery w postaci $u_{t} > U_{t}$, cztery na reguły nadwyżki bieżącej i cztery na reguły IWZ) nie jest spełniony. Za każdy niespełniony warunek wartość kary rośnie o 9999 (czyli bardzo dużą liczbę w porównaniu z typowymi wartościami funkcji celu). Pomnożenie kary przez największą co do modułu wartość zmiennej decyzyjnej zabezpiecza przed sytuacją, gdy kara wprawdzie nie byłaby zerowa, ale mimo to algorytm wybierałby takie rozwiązanie jako optymalne, gdyż zmienne decyzyjne przyjmowałyby wartości o ogromnym rzędzie wielkości (nie mające interpretacji ekonomicznej). W części aneksu (\ref{aneks_przykladowe_analit}), w sekcji ,,deklaracja funkcji użyteczności'' zaprezentowano funkcję celu ze składnikiem kary dla algorytmu szukającego optymalnego rozwiązania dla trzeciego roku. W tym przypadku kara składa się z dziewięciu warunków ograniczających (m.in. bez ograniczeń na zmienne z pierwszego i drugiego roku). 
 
