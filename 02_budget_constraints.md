@@ -11,7 +11,7 @@ $0 \leq \frac{u_{t}}{y_{t}} \leq \frac{U_{t}}{y_{t}} = \upsilon$
 Źródłem przychodu netto $z_{t}$ jest zaciągnięta pożyczka albo kredyt w roku t lub też, zgodnie z inną interpretacją, wpływ z wyemitowanych obligacji. Zmienna $z_{t}$ może przyjmować wartości ujemne, co należy interpretować jako spłatę netto części zadłużenia. Początkowy stan zadłużenia $b_0$ 
  powiększony o skumulowane pożyczki z kolejnych lat stanowi zadłużenie w roku t: 
 
-$$b_{t+1} = b_{0} + \sum_{\tau=0}^{t} z_{\tau}$$. 
+$$b_{t+1} = b_{0} + \sum_{\tau=0}^{t} z_{\tau}$$
 
 Wydatki mogą być przeznaczone na cztery cele. Z góry ustalone są odsetki od zadłużenia w wysokości iloczynu stałej stopy procentowej i długu $r b_{t}$. Decyzji podlega kwota przeznaczona na wydatki bieżące $c_{t}$ (wszystkie oprócz odsetek i wydatków majątkowych), a także inwestycje zwykłe $i_{t}$ oraz unijne $(1+\theta)u_{t}$. Współczynnik $\theta > 0$ reprezentuje część finansowania inwestycji ze środków własnych JST (tzw. współfinansowanie). 
 
