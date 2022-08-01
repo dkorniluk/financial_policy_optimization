@@ -12,7 +12,7 @@ $g(x) \leq 0,$
 
 gdzie $f: \mathbb{R}^{n} \rightarrow \mathbb{R},  h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}$.
 
-Niech:  $J(x^{o}) = \{j : g_{j}(x^{o}) = 0 \right\}$. Niech $x^{o}$ będzie punktem regularnym, tzn. takim, że wektory:
+Niech:  $J(x^{o}) = \{j : g_{j}(x^{o}) = 0 \}$. Niech $x^{o}$ będzie punktem regularnym, tzn. takim, że wektory:
 $\nabla h_{i}(x^{o}), \nabla g_{j}(x^{o}), 1 \leq i \leq m, j \in J(x^{o})$
 są liniowo niezależne. $C^{1}$ oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły (Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)).
 
