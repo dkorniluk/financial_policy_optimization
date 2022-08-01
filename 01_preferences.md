@@ -15,7 +15,7 @@ Mieszkańcy obszaru zarządzanego przez daną JST czerpią użyteczność z wyda
 Zakłada się tutaj tożsamość preferencji (z wyjątkiem horyzontu czasowego) władz i mieszkańców. Politycy starają się maksymalizować dokładnie znaną, logarytmiczną funkcję użyteczności mieszkańców po to, aby wygrać następne wybory. 
 
 Optymalizacji podlega więc następująca funkcja:
-$\max_{ \{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}} \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} + \left(1 - \alpha \right) \ln k_{t+1} \right)$
+$$\max_{ \{c_{t}\}, \{u_{t}\}, \{i_{t}\}, \{z_{t}\}} \sum_{t=1}^{4} \beta^{t} \left( \alpha \ln c_{t} + \left(1 - \alpha \right) \ln k_{t+1} \right)$$
 
 Założenie logarytmicznej, separowalnej względem $c_{t}$ i $k_{t+1}$ funkcji użyteczności jest zgodne z postulatem dodatniej, malejącej krańcowej użyteczności czerpanej z wydatków bieżących i infrastruktury. Spośród wielu funkcji o dodatniej pierwszej pochodnej i ujemnej drugiej pochodnej, wybrano logarytm ze względu na możliwość uzyskania prostych rachunków (pochodną logarytmu zmiennej jest odwrotność zmiennej, a separowalność sprawia, że pochodne mieszane drugiego rzędu są równe zero). Co więcej, logarytmy są często używane przez ekonomistów w funkcjach użyteczności (O logarytmicznie modelowanej użyteczności pisał już w XVIII wieku matematyk Bernoulli, jego praca została przedrukowana w Econometrice (1954) (Bernoulli, 1954). Założył on, że ,,jakikolwiek wzrost majątku (...) będzie zawsze skutkował wzrostem użyteczności odwrotnie proporcjonalnym do ilości dóbr już posiadanych'', a funkcją spełniającą powyższy warunek jest właśnie logarytm.). 
 
