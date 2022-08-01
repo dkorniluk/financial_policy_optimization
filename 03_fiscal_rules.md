@@ -10,7 +10,7 @@ $c_{t} + rb_{t} \leq y_{t}$.
 
 Od 2014 r., zgodnie z art. 243 ustawy o finansach publicznych, samorządy obowiązuje także przestrzeganie indywidualnych wskaźników zadłużenia, wyrażonych wzorem:     
 
-$\frac{\chi_{t}^{prim} b_{t} + r_{t} b_{t}}{y_{t} + k_{t}^{prim} + u_{t}} \leq \frac{1}{3} \sum_{\tau=t-3}^{t-1} \frac{y_{\tau} + k_{\tau}^{prim} - c_{\tau} - rb_{\tau}}{y_{\tau} + k_{\tau}^{prim} + u_{\tau}}$,
+$$\frac{\chi_{t}^{prim} b_{t} + r_{t} b_{t}}{y_{t} + k_{t}^{prim} + u_{t}} \leq \frac{1}{3} \sum_{\tau=t-3}^{t-1} \frac{y_{\tau} + k_{\tau}^{prim} - c_{\tau} - rb_{\tau}}{y_{\tau} + k_{\tau}^{prim} + u_{\tau}}$$,
 
 gdzie: \chi^{prim} - planowana na rok budżetowy łączna kwota z tytułu spłat rat kredytów i pożyczek(...) oraz wykupów papierów wartościowych przeznaczonych na finansowanie planowanego deficytu budżetu, spłatę wcześniej zaciągniętych zobowiązań, wyprzedzające finansowanie działań  finansowanych ze środków pochodzących z budżetu UE, a także na finansowanie przedsięwzięć inwestycyjnych.}; $k^{prim}$ - dochody ze sprzedaży majątku. W powyższej nierówności występują także zmienne, których definicje z niniejszego modelu są bardzo zbliżone do definicji ustawowych. W celu zachowania przejrzystości - pozostawiono ich oznaczenia bez zmian. Niemniej jednak należy zaznaczyć, że $rb$ w ustawie zdefiniowano jako planowane na rok budżetowy odsetki od kredytów i pożyczek(...) zaciągniętych na pokrycie występującego w ciągu roku przejściowego deficytu budżetu, finansowanie planowanego deficytu budżetu, spłatę wcześniej zaciągniętych zobowiązań, wyprzedzające finansowanie działań finansowanych ze środków pochodzących z budżetu UE oraz na finansowanie przedsięwzięć inwestycyjnych, a także odsetki i dyskonto od papierów wartościowych emitowanych na te cele oraz spłaty kwot wynikających z udzielonych poręczeń i gwarancji.}; $y + k^{prim} + u$ - dochody ogółem budżetu w danym roku budżetowym; $y$ - dochody bieżące; $c$ - wydatki bieżące.       
 
@@ -20,4 +20,4 @@ Uściślenia wymaga też kwestia dochodów. W statystyce samorządów, dochody o
 
 Ponadto, zastąpiono spłatę rat kredytów z' stałym odsetkiem zadłużenia, które zapada w danym roku $\chi \cdot b_{t}$. Należy zaznaczyć, że modelowany jest przyrost netto wartości zadłużenia (podobnie jak majątku), a nie poszczególne transakcje. Stała jest również stopa procentowa r. Poniższa nierówność uniemożliwia nieograniczone zaciąganie długu w ostatnim roku:
 
-$\frac{(\chi+r) b_{t}}{y_{t} + u_{t}} \leq \frac{1}{3} \sum_{\tau=t-3}^{t-1} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}$.
+$$\frac{(\chi+r) b_{t}}{y_{t} + u_{t}} \leq \frac{1}{3} \sum_{\tau=t-3}^{t-1} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}$$.
