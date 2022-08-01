@@ -12,15 +12,15 @@ $g(x) \leq 0,$
 
 gdzie $f: \mathbb{R}^{n} \rightarrow \mathbb{R},  h: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}, m \leq n, g: \mathbb{R}^{n} \rightarrow \mathbb{R}^{p}$.
 
-Niech:  $J(x^{*}) = \left\{j : g_{j}(x^{*}) = 0 \right\}$. Niech $x^{*}$ będzie punktem regularnym, tzn. takim, że wektory:
-$\nabla h_{i}(x^{*}), \nabla g_{j}(x^{*}), 1 \leq i \leq m, j \in J(x^{*})$
+Niech:  $J(x^{o}) = \left\{j : g_{j}(x^{o}) = 0 \right\}$. Niech $x^{o}$ będzie punktem regularnym, tzn. takim, że wektory:
+$\nabla h_{i}(x^{o}), \nabla g_{j}(x^{o}), 1 \leq i \leq m, j \in J(x^{o})$
 są liniowo niezależne. $C^{1}$ oznacza zbiór funkcji ciągłych i różniczkowalnych w sposób ciągły (Założenia twierdzenia KKT można nieco osłabić, ale dla funkcji wykorzystanych w niniejszym modelu nie ma to znaczenia (Palczewski, 2014, s. 57-58)).
 
-Niech $f, h, g \in C^{1}$. Niech $x^{*}$ będzie punktem regularnym, stanowiącym ekstremum lokalne f, pod warunkiem że $h(x) = 0$, $g(x) \leq 0$. Wtedy istnieje $\lambda^{*} \in \mathbb{R}^{m}$ (tzw. wektor mnożników Lagrange'a) i $\mu^{*} \in \mathbb{R}^{p}$ (tzw. wektor mnożników KKT), takie że:
+Niech $f, h, g \in C^{1}$. Niech $x^{o}$ będzie punktem regularnym, stanowiącym ekstremum lokalne f, pod warunkiem że $h(x) = 0$, $g(x) \leq 0$. Wtedy istnieje $\lambda^{o} \in \mathbb{R}^{m}$ (tzw. wektor mnożników Lagrange'a) i $\mu^{o} \in \mathbb{R}^{p}$ (tzw. wektor mnożników KKT), takie że:
 
-* $\mu^{*} \geq 0$;
-* $Df(x^{*}) + \lambda^{*T}D h(x^{*}) + \mu^{*T}D g(x^{*}) = 0^{T} $;
-* $\mu^{*T} g(x^{*}) = 0$.
+* $\mu^{o} \geq 0$;
+* $Df(x^{o}) + \lambda^{*T}D h(x^{o}) + \mu^{*T}D g(x^{o}) = 0^{T} $;
+* $\mu^{*T} g(x^{o}) = 0$.
 
 Dowód można znaleźć np. we wspomnianym podręczniku do optymalizacji autorstwa Chonga i Żaka (2001, s. 399-401).
 
@@ -48,9 +48,9 @@ $$g_{6t}(x): c_{t} + rb_{t} - y_{t} \leq  0$$
 
 dane: $b_{-1}, b_{0}, b_{1}, k_{1}, c_{-1}, c_{0}, u_{-1}, u_{0}, u_{5}.$
 
-Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: $x^{*} = [c_{1}^{*} c_{2}^{*} c_{3}^{*} c_{4}^{*} u_{1}^{*} u_{2}^{*} u_{3}^{*} u_{4}^{*} i_{1}^{*} i_{2}^{*} i_{3}^{*} i_{4}^{*} z_{1}^{*} z_{2}^{*} z_{3}^{*} z_{4}^{*}]^{T},$ spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(x) + \lambda h(x) + \mu g(x)$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
+Rozwiązanie modelu polega na znalezieniu wartości składowych wektora: $x^{o} = [c_{1}^{o} c_{2}^{o} c_{3}^{o} c_{4}^{o} u_{1}^{o} u_{2}^{o} u_{3}^{o} u_{4}^{o} i_{1}^{o} i_{2}^{o} i_{3}^{o} i_{4}^{o} z_{1}^{o} z_{2}^{o} z_{3}^{o} z_{4}^{o}]^{T},$ spełniających warunki z twierdzenia KKT. Wymaga to policzenia pochodnych funkcji $f(x) + \lambda h(x) + \mu g(x)$. Jednocześnie, w przypadku każdego warunku $g_{j}$: jeżeli $g_{j}(x) <0$, to $\mu_{j} = 0$ i analogicznie: jeżeli $\mu_{j} > 0$, to $g_{j}(x) = 0$. Wynika to z faktu, że oba czynniki $g_{j}(x)$ i $\mu_{j}$ nie mogą być jednocześnie niezerowe, gdyż taki iloczyn mógłby być tylko ujemny (co wynika z pierwszego warunku KKT i tego, że $g_{j} \leq 0$), a wówczas suma ujemnych i ewentualnie zerowych iloczynów dałaby liczbę ujemną, a nie zerową, co wymaga trzeci warunek KKT. 
 
-Warunki Kuhna-Tuckera są warunkami koniecznymi tylko wtedy, gdy spełnione są warunki tzw. kwalifikowalności\footnote{Szczegółową dyskusję na ten temat można znaleźć np. w podręczniku do ekonomii matematycznej Chianga (1994).}. Mogą istnieć bowiem rozwiązania optymalne, które nie spełniają warunków KKT, ale musiałyby one znajdować się w specyficznie określonych punktach brzegowych. W przykładzie z podrozdziału \ref{rozdzial_szescienne} pokazano, że rozwiązanie analityczne modelu może sprowadzać się do znalezienia, przy ustalonej strukturze warunków ograniczających, optymalnego poziomu inwestycji zwykłych ($i_{t}^{*}$). O poziomie tym założono w omawianym przykładzie, że nie jest zerowy, a zatem z góry przyjęto, że nie może znaleźć się w punkcie brzegowym. 
+Warunki Kuhna-Tuckera są warunkami koniecznymi tylko wtedy, gdy spełnione są warunki tzw. kwalifikowalności\footnote{Szczegółową dyskusję na ten temat można znaleźć np. w podręczniku do ekonomii matematycznej Chianga (1994).}. Mogą istnieć bowiem rozwiązania optymalne, które nie spełniają warunków KKT, ale musiałyby one znajdować się w specyficznie określonych punktach brzegowych. W przykładzie z podrozdziału \ref{rozdzial_szescienne} pokazano, że rozwiązanie analityczne modelu może sprowadzać się do znalezienia, przy ustalonej strukturze warunków ograniczających, optymalnego poziomu inwestycji zwykłych ($i_{t}^{o}$). O poziomie tym założono w omawianym przykładzie, że nie jest zerowy, a zatem z góry przyjęto, że nie może znaleźć się w punkcie brzegowym. 
 
 Teoretycznie ekstremów lokalnych spełniających warunki KKT mogłoby być więcej niż jeden i wówczas należałoby wybrać spośród nich ekstremum (ewentualnie ekstrema) globalne. Jednak ,,żaden punkt wewnętrzny zbioru rozwiązań dopuszczalnych, nie spełniający warunków KKT, nie może być rozwiązaniem optymalnym'' (Chiang, 1994). Oznacza to, że jeżeli ekstremum globalne istnieje  w punkcie wewnętrznym oraz jeżeli zbiór punktów spełniających warunki KKT jest jednoelementowy, to punkt należący do tego zbioru jest ekstremum globalnym. W dalszej części pracy (w szczególności w porozdziale \ref{rozdzial_szescienne} oraz części B i C aneksu) pokazano, że punkty spełniające warunki KKT dla pewnego podzbioru zbioru rozwiązań dopuszczalnych stanowią rozwiązanie równania sześciennego. Spośród trzech takich rozwiązań, dwa stanowią liczby zespolone, a tylko jeden należy do zbioru liczb rzeczywistych. Oznacza to, że punkt ten musi być globalnym rozwiązaniem optymalnym w ramach omawianego podzbioru.
 
@@ -68,26 +68,26 @@ Zmienne $y_{4}$, $b_{4}$ są z góry ustalone w roku czwartym. Widać zatem, że
 
 Z napiętego warunku IWZ można wyprowadzić wzór na optymalny deficyt w roku czwartym: 
 \begin{IEEEeqnarray}{rCl}
-\frac{(\chi+r) b_{5}^{*}}{y_{5} + u_{5}^{*}} & = & \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
-%b_{5}^{*} & = & \frac{{y_{5} + u_{5}^{*}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \nonumber \\
-%z_{4}^{*} & = & b_{5}^{*} - b_{4} \nonumber \\
-\Rightarrow z_{4}^{*} & = & \frac{y_{5} + u_{5}^{*}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. \nonumber
+\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} & = & \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
+%b_{5}^{o} & = & \frac{{y_{5} + u_{5}^{o}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \nonumber \\
+%z_{4}^{o} & = & b_{5}^{o} - b_{4} \nonumber \\
+\Rightarrow z_{4}^{o} & = & \frac{y_{5} + u_{5}^{o}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. \nonumber
 \end{IEEEeqnarray}
 
-Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{*}_{5} = U_{5}$.   
+Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{o}_{5} = U_{5}$.   
 
 {\footnotesize
 \begin{IEEEeqnarray}{rCl}
-\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*} + r b_{4} & = &  z_{4}^{*} + y_{4} \Rightarrow \nonumber \\
+\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} + r b_{4} & = &  z_{4}^{o} + y_{4} \Rightarrow \nonumber \\
 %
-%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*} & = &  \frac{y_{5} + U_{5}}{\chi+ r} \left( \frac{1}{3}  \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - (1+r) b_{4} + y_{4} \nonumber 
+%\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} & = &  \frac{y_{5} + U_{5}}{\chi+ r} \left( \frac{1}{3}  \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - (1+r) b_{4} + y_{4} \nonumber 
 %\\
-%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r ) b_{4} + y_{4} \nonumber
+%\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r ) b_{4} + y_{4} \nonumber
 %\\
-%\theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4} }{y_{4} + u_{4}^{*}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r) b_{4} + y_{4} \nonumber
+%\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4} }{y_{4} + u_{4}^{o}} & = & \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r) b_{4} + y_{4} \nonumber
 %\\
 \label{eq_ograniczenie_t4}
-\Rightarrow \theta u_{4}^{*} + i_{4}^{*} + c_{4}^{*}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} & = & \phi
+\Rightarrow \theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} & = & \phi
 \end{IEEEeqnarray}
 }
 
@@ -115,21 +115,21 @@ Funkcja Lagrange'a i warunki konieczne (pierwszego rzędu) przedstawiają się n
 \end{equation}
 
 \begin{equation} 
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \mu_{1}^{*} = 0 
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \mu_{1}^{o} = 0 
 \nonumber
 \end{equation}
 
 \begin{equation}
-\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*} - \mu_{2}^{*} = 0 
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o} - \mu_{2}^{o} = 0 
 \nonumber
 \end{equation}
 
 \begin{equation}
-\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) - \mu_{3}^{*} + \mu_{4}^{*} = 0.
+\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) - \mu_{3}^{o} + \mu_{4}^{o} = 0.
 \nonumber
 \end{equation}   
 
-Teoretycznie należałoby rozważyć szesnaście ($2^{4}$) zestawów potencjalnych rozwiązań optymalnych, gdyż każdy z czterech parametrów $\mu_{i}$ może przyjąć wartość zerową lub dodatnią. Poniżej przeanalizowano jednak tylko cztery wybrane warianty. Przede wszystkim założono, że $c^{*}_{4}>0$, co implikuje $\mu_{1} = 0$, a jednocześnie pozwala uniknąć rozpatrywania ośmiu wariantów. Trudno bowiem wyobrazić sobie samorząd, nawet o bardzo złym stanie infrastruktury, w którym nie poniesiono by żadnych wydatków bieżących. Zrezygnowano także z dwóch nierealistycznych scenariuszy: zerowych inwestycji zwykłych i unijnych dokładnie równych limitowi oraz dodatnich inwestycji zwykłych i zerowych unijnych, a także dwóch sprzecznych scenariuszy, które zakładałyby zerowe i zarazem równe limitowi inwestycje unijne (przy zerowych lub dodatnich inwestycjach zwykłych). Poniżej wyróżniono zatem cztery rodzaje rozwiązań, z których ostatnie zasługuje na szczególną uwagę. 
+Teoretycznie należałoby rozważyć szesnaście ($2^{4}$) zestawów potencjalnych rozwiązań optymalnych, gdyż każdy z czterech parametrów $\mu_{i}$ może przyjąć wartość zerową lub dodatnią. Poniżej przeanalizowano jednak tylko cztery wybrane warianty. Przede wszystkim założono, że $c^{o}_{4}>0$, co implikuje $\mu_{1} = 0$, a jednocześnie pozwala uniknąć rozpatrywania ośmiu wariantów. Trudno bowiem wyobrazić sobie samorząd, nawet o bardzo złym stanie infrastruktury, w którym nie poniesiono by żadnych wydatków bieżących. Zrezygnowano także z dwóch nierealistycznych scenariuszy: zerowych inwestycji zwykłych i unijnych dokładnie równych limitowi oraz dodatnich inwestycji zwykłych i zerowych unijnych, a także dwóch sprzecznych scenariuszy, które zakładałyby zerowe i zarazem równe limitowi inwestycje unijne (przy zerowych lub dodatnich inwestycjach zwykłych). Poniżej wyróżniono zatem cztery rodzaje rozwiązań, z których ostatnie zasługuje na szczególną uwagę. 
 
 Zbieżność poniższych rozwiązań, uzyskanych metodą analityczną, z rozwiązaniami otrzymanymi dzięki numerycznym metodom optymalizacyjnym, zaprezentowano szczegółowo w aneksie \ref{Aneks_kody}. Wyjątek stanowi wariant trzeci, który nie został uwzględniony w aneksie (jest mało realny), lecz metoda postępowania w jego przypadku byłaby analogiczna do wariantu drugiego. 
 
@@ -142,9 +142,9 @@ Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio wysoka, to największą uż
 \end{IEEEeqnarray}
 %
 \begin{IEEEeqnarray}{rCl}
-u^{*}_{4} & =  &0 \nonumber \\ 
-i^{*}_{4} & = & 0  \nonumber\\
-c^{*}_{4} & = & \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}. \label{eq_tylko_c4}
+u^{o}_{4} & =  &0 \nonumber \\ 
+i^{o}_{4} & = & 0  \nonumber\\
+c^{o}_{4} & = & \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}. \label{eq_tylko_c4}
 \end{IEEEeqnarray}
 
 Wariant II
@@ -152,28 +152,28 @@ Wariant II
 Jeżeli wartość $(1-\delta)k_{4}$ jest niższa, tzn. gdy warunek (\ref{eq_warunek}) nie zachodzi, to optymalnie jest przeznaczyć pewną część budżetu na inwestycje. Poniżej zakłada się, że optymalne inwestycje unijne nie przekroczą maksymalnej kwoty $U_{4}$. W pierwszej kolejności zazwyczaj (przeciwny przypadek został omówiony w dalszej części pracy) powinny być realizowane inwestycje unijne, gdyż są tańsze. Jeśli więc ich wysokość nie przekracza ustalonej granicy, wówczas realizacja jakichkolwiek inwestycji ze środków własnych może nie mieć uzasadnienia. 
 %
 \begin{IEEEeqnarray}{rCl}
-U_{4} > u^{*}_{4} &>& 0 \nonumber \\ 
-i^{*}_{4} &=& 0 \nonumber \\
-c^{*}_{4} &>& 0 \nonumber \\
-\mu_{2}^{*} &>& 0 \nonumber \\
-\mu_{3}^{*} &=& 0 \nonumber \\ 
-\mu_{4}^{*} &=& 0. \nonumber
+U_{4} > u^{o}_{4} &>& 0 \nonumber \\ 
+i^{o}_{4} &=& 0 \nonumber \\
+c^{o}_{4} &>& 0 \nonumber \\
+\mu_{2}^{o} &>& 0 \nonumber \\
+\mu_{3}^{o} &=& 0 \nonumber \\ 
+\mu_{4}^{o} &=& 0. \nonumber
 \end{IEEEeqnarray}
 
-Wartości trzech niewiadomych: $u^{*}_{4}$, $c^{*}_{4}$ i $\lambda^{*}$ można otrzymać, rozwiązując układ trzech równań złożonych z niżej zapisanych warunków I rzędu oraz ograniczenia budżetowego (\ref{eq_ograniczenie_t4}). Warto nadmienić, iż $\mu_{2}^{*}$ nie znajduje się w tych równaniach, ponieważ parametr ten pełni rolę pomocniczą - może on zostać obliczony z warunku I rzędu dla $i^{*}_{4}$. 
+Wartości trzech niewiadomych: $u^{o}_{4}$, $c^{o}_{4}$ i $\lambda^{o}$ można otrzymać, rozwiązując układ trzech równań złożonych z niżej zapisanych warunków I rzędu oraz ograniczenia budżetowego (\ref{eq_ograniczenie_t4}). Warto nadmienić, iż $\mu_{2}^{o}$ nie znajduje się w tych równaniach, ponieważ parametr ten pełni rolę pomocniczą - może on zostać obliczony z warunku I rzędu dla $i^{o}_{4}$. 
 
 \begin{equation}
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) = 0 
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 
 \label{eq_3_wariant_krotki}
 \end{equation}
 
 \begin{equation}
-\frac{\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) = 0 
+\frac{\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0 
 \label{eq_3_wariant_dlugi}
 \end{equation}
 
 \begin{equation}
-\theta u_{4}^{*} +  c_{4}^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} = \phi.
+\theta u_{4}^{o} +  c_{4}^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.
 \label{eq_3_wariant_budzet}
 \end{equation}
 
@@ -184,23 +184,23 @@ Wariant III
 Jednocześnie mogą być wykonywane inwestycje własne oraz unijne w wysokości poniżej limitu. Wynika to z faktu, iż wysoki poziom inwestycji unijnych utrudnia spełnianie reguły IWZ w czwartym roku. Powoduje bowiem wzrost dochodów JST, przez co zmniejsza przestrzeń na odsetki i spłatę rat zadłużenia. Dlatego, wbrew intuicji, inwestowanie ze środków własnych może być optymalne mimo możliwości tańszego finansowania unijnego. Podobnie jak w wariancie drugim, także w tym przypadku podanie optymalnego rozwiązania w postaci analitycznej było niemożliwe z uwagi na stopień złożoności rachunków. 
 
 \begin{IEEEeqnarray}{rCl}
-U_{4} > u^{*}_{4} & > & 0 \nonumber \\ 
-i^{*}_{4} & > & 0 \nonumber \\
-c^{*}_{4} & > & 0 \nonumber \\
-\mu_{2}^{*} & = & 0 \nonumber \\
-\mu_{3}^{*} & = & 0 \nonumber \\ 
-\mu_{4}^{*} & = & 0 \nonumber 
+U_{4} > u^{o}_{4} & > & 0 \nonumber \\ 
+i^{o}_{4} & > & 0 \nonumber \\
+c^{o}_{4} & > & 0 \nonumber \\
+\mu_{2}^{o} & = & 0 \nonumber \\
+\mu_{3}^{o} & = & 0 \nonumber \\ 
+\mu_{4}^{o} & = & 0 \nonumber 
 \end{IEEEeqnarray}
 
 \begin{equation}
 \begin{split}
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) = 0 
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 
 \\
-\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{*} + i_{4}^{*}} + \lambda^{*}  = 0  
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o}  = 0  
 \\  
-\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta)k_{4} + (1+\theta) u_{4}^{*} + i_{4}^{*}} + \lambda^{*} \left(\theta + (y_{4} - r b_{4} - c_{4}^{*}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{*})^{2}} \right) = 0
+\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta)k_{4} + (1+\theta) u_{4}^{o} + i_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0
 \\
-\theta u_{4}^{*} + i_{4}^{*} +  c_{4}^{*}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{*}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{*}} = \phi.
+\theta u_{4}^{o} + i_{4}^{o} +  c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.
 \nonumber
 \end{split}
 \end{equation}
@@ -210,38 +210,38 @@ Wariant IV
 Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio niska, może opłacać się zrealizować inwestycje unijne na możliwie największą skalę, a dodatkowo zrealizować inwestycje zwykłe. Jest to najbardziej prawdopodobny wariant:
 
 \begin{IEEEeqnarray}{rCl}
-u^{*}_{4} & = & U_{4} \nonumber \\ 
-i^{*}_{4} & > & 0 \nonumber \\
-c^{*}_{4} & > & 0 \nonumber \\
-\mu_{2}^{*} & = & 0 \nonumber \\
-\mu_{3}^{*} & = & 0 \nonumber \\ 
-\mu_{4}^{*} & > & 0 \nonumber 
+u^{o}_{4} & = & U_{4} \nonumber \\ 
+i^{o}_{4} & > & 0 \nonumber \\
+c^{o}_{4} & > & 0 \nonumber \\
+\mu_{2}^{o} & = & 0 \nonumber \\
+\mu_{3}^{o} & = & 0 \nonumber \\ 
+\mu_{4}^{o} & > & 0 \nonumber 
 \end{IEEEeqnarray}
 
 \begin{equation}
 \begin{split}
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{*}} + \lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) = 0 \Rightarrow  c_{4} = -\frac{\alpha}{\lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)}\\
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) = 0 \Rightarrow  c_{4} = -\frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)}\\
 %
-\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{*}} + \lambda^{*}  = 0  \Rightarrow  i_{4}^{*} = -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4} \nonumber
+\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{o}} + \lambda^{o}  = 0  \Rightarrow  i_{4}^{o} = -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} \nonumber
 \end{split}
 \end{equation}
 
 \begin{equation}
 \begin{split}
-\theta U_{4} -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4} - \\
-- \frac{\alpha}{\lambda^{*} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4}+U_{4}} = \phi \nonumber 
+\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} - \\
+- \frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4}+U_{4}} = \phi \nonumber 
 \\
-\theta U_{4} -\frac{1 - \alpha}{\lambda^{*}} - (1-\delta)k_{4} - (1+\theta)U_{4}  -\frac{\alpha}{\lambda^{*}} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi \nonumber 
+\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4}  -\frac{\alpha}{\lambda^{o}} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi \nonumber 
 \\
-- U_{4} -\frac{1}{\lambda^{*}} - (1-\delta)k_{4} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi\nonumber 
+- U_{4} -\frac{1}{\lambda^{o}} - (1-\delta)k_{4} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi\nonumber 
 \\
-\lambda^{*}  = -\frac{1}{\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + u_{4}^{*} + (1-\delta)k_{4}}  \nonumber
+\lambda^{o}  = -\frac{1}{\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + u_{4}^{o} + (1-\delta)k_{4}}  \nonumber
 \end{split}
 \end{equation}
 
 \begin{IEEEeqnarray}{rCl}
-c_{4}^{*} & = & \frac{\alpha (\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + (1-\delta)k_{4} + U_{4})}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}} \label{eq_c4_wariant4} \\
-i_{4}^{*} & = & (1 - \alpha) \left(\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - \alpha (1-\delta)k_{4} - (\theta + \alpha) U_{4}. \label{eq_i4_wariant4}
+c_{4}^{o} & = & \frac{\alpha (\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + (1-\delta)k_{4} + U_{4})}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}} \label{eq_c4_wariant4} \\
+i_{4}^{o} & = & (1 - \alpha) \left(\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - \alpha (1-\delta)k_{4} - (\theta + \alpha) U_{4}. \label{eq_i4_wariant4}
 \end{IEEEeqnarray}
 
 Optymalny poziom wydatków bieżących zależy dodatnio od: parametru $\alpha$ opisującego preferencje samorządów w odniesieniu do $c$, stałej $\phi_{0}$ oraz dochodów $y_{4}$, które wyznaczają przestrzeń fiskalną, infrastruktury $k_{4}$ (im większa, tym mniej potrzebne są inwestycje) oraz limitu $U_{4}$ (im większy, tym wystarczy realizować mniej inwestycji zwykłych). Z kolei optymalny poziom inwestycji zwykłych również zależą dodatnio od $\phi_{0}$ i $y_{4}$, a ujemnie od: $\alpha$, $k_{4}$, $U_{4}$, a także $\theta$. 
@@ -250,7 +250,7 @@ Optymalny poziom wydatków bieżących zależy dodatnio od: parametru $\alpha$ o
 
 Po znalezieniu optymalnych wartości zmiennych decyzyjnych z roku czwartego, można przejść do poszukiwania rozwiązań dla roku trzeciego. W tym celu problem decyzyjny został najpierw przeformułowany w warunkach roku trzeciego, a następnie rozwiązany za pomocą warunków KKT. Funkcja celu tego problemu ma następującą postać: 
 \begin{equation}
-\max_{c_{3}, u_{3}, i_{3}, z_{3}}  f(x_{3}) = \beta^{3} \left( \alpha \ln c_{3} + (1 - \alpha) \ln k_{4} \right) + \beta^{4} \left( \alpha \ln c_{4}^{*} + (1-\alpha) \ln k_{5}^{*} \right).  \nonumber
+\max_{c_{3}, u_{3}, i_{3}, z_{3}}  f(x_{3}) = \beta^{3} \left( \alpha \ln c_{3} + (1 - \alpha) \ln k_{4} \right) + \beta^{4} \left( \alpha \ln c_{4}^{o} + (1-\alpha) \ln k_{5}^{o} \right).  \nonumber
 \end{equation}
  
 Zakłada się, że w czwartym roku realizowany jest wariant czwarty z podrozdziału \ref{podrozdzial_napiety_IWZ_bez_nadwyzki}, t.j. z inwestycjami unijnymi na maksymalnym poziomie. Wariant ten wydaje się być najbardziej realistyczny, gdyż z symulacji opisanych w podrozdziale \ref{podrozdz_struktura} wynika, że w zdecydowanej większości przypadków taki wariant jest optymalny. Ponadto, można domniemywać, że inwestycje w czwartym roku mogą być wyjątkowo wysokie z uwagi na ignorowanie przez decydentów przyszłego zadłużenia oraz IWZ dotyczących przyszłych lat. Wartość funkcji można dla uproszczenia podzielić przez $\beta^{3}$:
