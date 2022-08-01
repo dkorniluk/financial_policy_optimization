@@ -32,7 +32,7 @@ $$\mbox{p.w. } \forall t \in {1, 2, 3, 4}$$
 
 $$h_{1t}(x): \theta u_{t} + i_{t} + c_{t} + r b_{t} - y_{t} - z_{t} = 0$$
 $$h_{2t}(x): b_{t+1} - b_{1} - \sum_{\tau=1}^{t} z_{\tau} = 0$$
-$h_{3t}(x): k_{t+1} - (1-\delta)k_{t} - i_{t} - (1+\theta)u_{t} = 0$ 
+$$h_{3t}(x): k_{t+1} - (1-\delta)k_{t} - i_{t} - (1+\theta)u_{t} = 0$$ 
 
 $$g_{1t}(x): -u_{t} \leq 0$$
 
