@@ -158,9 +158,9 @@ Wariant III
 
 Jednocześnie mogą być wykonywane inwestycje własne oraz unijne w wysokości poniżej limitu. Wynika to z faktu, iż wysoki poziom inwestycji unijnych utrudnia spełnianie reguły IWZ w czwartym roku. Powoduje bowiem wzrost dochodów JST, przez co zmniejsza przestrzeń na odsetki i spłatę rat zadłużenia. Dlatego, wbrew intuicji, inwestowanie ze środków własnych może być optymalne mimo możliwości tańszego finansowania unijnego. Podobnie jak w wariancie drugim, także w tym przypadku podanie optymalnego rozwiązania w postaci analitycznej było niemożliwe z uwagi na stopień złożoności rachunków. 
 
-$$U_{4} > u^{o}_{4} > 0 $$
-$$i^{o}_{4} > 0 $$
-$$c^{o}_{4} > 0 $$
+$$U_{4} > u_{4}^{o} > 0 $$
+$$i_{4}^{o} > 0 $$
+$$c_{4}^{o} > 0 $$
 $$\mu_{2}^{o} = 0 $$
 $$\mu_{3}^{o} = 0 $$
 $$\mu_{4}^{o} = 0  $$
@@ -174,22 +174,17 @@ Wariant IV
 
 Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio niska, może opłacać się zrealizować inwestycje unijne na możliwie największą skalę, a dodatkowo zrealizować inwestycje zwykłe. Jest to najbardziej prawdopodobny wariant:
 
-\begin{IEEEeqnarray}{rCl}
-u^{o}_{4} & = & U_{4} \nonumber \\ 
-i^{o}_{4} & > & 0 \nonumber \\
-c^{o}_{4} & > & 0 \nonumber \\
-\mu_{2}^{o} & = & 0 \nonumber \\
-\mu_{3}^{o} & = & 0 \nonumber \\ 
-\mu_{4}^{o} & > & 0 \nonumber 
-\end{IEEEeqnarray}
+$$u_{4}^{o} = U_{4}$$
+$$i_{4}^{o}_{4} > 0 $$
+$$c_{4}^{o}_{4} >  0 $$
+$$\mu_{2}^{o} =  0 $$
+$$\mu_{3}^{o} =  0 $$ 
+$$\mu_{4}^{o}  >  0 $$
 
-\begin{equation}
-\begin{split}
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) = 0 \Rightarrow  c_{4} = -\frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)}\\
-%
-\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{o}} + \lambda^{o}  = 0  \Rightarrow  i_{4}^{o} = -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} \nonumber
-\end{split}
-\end{equation}
+$$
+\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) = 0 \Rightarrow  c_{4} = -\frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)}$$
+
+$$\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{o}} + \lambda^{o}  = 0  \Rightarrow  i_{4}^{o} = -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} $$$
 
 \begin{equation}
 \begin{split}
