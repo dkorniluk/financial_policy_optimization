@@ -96,11 +96,8 @@ $$u_{4} - U_{4}  \leq  0$$
 $$c_{4} + r b_{4}  =  y_{4}.$$
 
 Funkcja Lagrange'a i warunki konieczne (pierwszego rzędu) przedstawiają się następująco:
-$$
-L(c_{4}, u_{4}, i_{4}) = \alpha \ln c_{4} + \left(1 - \alpha \right) \ln  \left( (1-\delta) k_{4} + (1+\theta)u_{4} + i_{4} \right) +\\
-+ \lambda \left[ \theta u_{4} + i_{4} + c_{4}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi\right]\\ - \mu_{1}c_{4} - \mu_{2}i_{4} - \mu_{3}u_{4} + \mu_{4}(u_{4} - U_{4})
-\nonumber
-$$
+$$L(c_{4}, u_{4}, i_{4}) = \alpha \ln c_{4} + \left(1 - \alpha \right) \ln  \left( (1-\delta) k_{4} + (1+\theta)u_{4} + i_{4} \right) +\\
++ \lambda \left[ \theta u_{4} + i_{4} + c_{4}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi\right]\\ - \mu_{1}c_{4} - \mu_{2}i_{4} - \mu_{3}u_{4} + \mu_{4}(u_{4} - U_{4})$$
 
 \begin{equation} 
 \frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \mu_{1}^{o} = 0 
