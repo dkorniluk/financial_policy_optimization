@@ -65,12 +65,12 @@ $$\theta u_{4} + i_{4} + c_{4} = z_{4} + y_{4} - rb_{4}.$$
 Zmienne $y_{4}$, $b_{4}$ są z góry ustalone w roku czwartym. Widać zatem, że suma wydatków bieżących i inwestycyjnych zależy dodatnio od wielkości zaciągniętego długu w czwartym roku. Optymalnie byłoby zatem powiększyć dług jak najbardziej to możliwe, czyli na tyle, na ile pozwalają reguły fiskalne. Z analizy rozwiązań optymalnych uzyskanych za pomocą metod numerycznych (rozdz. \ref{rozdz_numeryczna_metoda}) wynika, że prawie zawsze napięty jest warunek indywidualnego wskaźnika zadłużenia (IWZ, patrz równanie (\ref{IWZ})), a bardzo rzadko - zrównoważonego wyniku bieżącego (ZWB, patrz równanie (\ref{regula_bez_nadwyzki})). Dlatego dalej założono, że IWZ jest warunkiem napiętym, a ZWB - luźnym. 
 
 Z napiętego warunku IWZ można wyprowadzić wzór na optymalny deficyt w roku czwartym: 
-\begin{IEEEeqnarray}{rCl}
-\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} & = & \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
+$$
+\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} =  \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
 %b_{5}^{o} & = & \frac{{y_{5} + u_{5}^{o}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \nonumber \\
 %z_{4}^{o} & = & b_{5}^{o} - b_{4} \nonumber \\
 \Rightarrow z_{4}^{o} & = & \frac{y_{5} + u_{5}^{o}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. \nonumber
-\end{IEEEeqnarray}
+$$
 
 Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{o}_{5} = U_{5}$.   
 
