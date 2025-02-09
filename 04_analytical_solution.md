@@ -220,30 +220,16 @@ $$+ \beta  (1-\alpha) \ln ( (1-\alpha) (1-\delta) ((1-\delta) k_{3} + (1+\theta)
 $$+   (1 - \alpha) \left(\frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left( \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}}  + \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - (1+r) b_{4} + y_{4}\right)  - (\theta + \alpha) U_{4}) $$
 
 
-\begin{IEEEeqnarray}{lCl}
-\mbox{p.w.} \nonumber
-\\
-& & \nonumber
-\\
-h_{13}(x_{3}): \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3} & = & 0
-\label{h13}
-\\
-h_{23}(x_{3}): b_{4} - b_{3} - z_{3} & = & 0
-\label{h23}
-\\
-g_{13}(x_{3}): -u_{3} & \leq & 0 \nonumber
-\\
-g_{23}(x_{3}): u_{3} - U_{3} & \leq & 0 \nonumber
-\\
-g_{33}(x_{3}): -c_{3} & \leq & 0 \nonumber
-\\
-g_{43}(x_{3}): -i_{3} & \leq & 0 \nonumber
-\\
-g_{53}(x_{3}): \frac{(\chi + r) b_{4}}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right)  & \leq & 0 
-\label{g53}
-\\
-g_{63}(x_{3}): c_{3} + r b_{3} - y_{3} & \leq & 0. \label{g63}
-\end{IEEEeqnarray}
+$$\mbox{p.w.}$$
+
+$$h_{13}(x_{3}): \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3}  =  0$$
+$$h_{23}(x_{3}): b_{4} - b_{3} - z_{3}  =  0 $$
+$$g_{13}(x_{3}): -u_{3} \leq  0 $$
+$$g_{23}(x_{3}): u_{3} - U_{3}  \leq  0 $$
+$$g_{33}(x_{3}): -c_{3}  \leq  0 $$
+$$g_{43}(x_{3}): -i_{3} \leq  0 $$
+$$g_{53}(x_{3}): \frac{(\chi + r) b_{4}}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right)   \leq  0  $$
+$$g_{63}(x_{3}): c_{3} + r b_{3} - y_{3}  \leq  0.$$
 
 Powyższy problem można uprościć poprzez wyeliminowanie zmiennych $b_{4}$ i $z_{3}$, których wartości mogą zostać obliczone rezydualnie, po znalezieniu optymalnych wartości pozostałych zmiennych decyzyjnych $u_{3}$, $i_{3}$ i $c_{3}$: 
 
