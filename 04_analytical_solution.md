@@ -123,39 +123,38 @@ Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio wysoka, to największą uż
 $$\frac {\partial f}{\partial c_{4}}  >   \frac {\partial f}{\partial k_{5}} \mbox{ dla } k_{5} = (1-\delta) k_{4} $$
 $$\frac{\alpha \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right)}{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r}}  >  \frac{1- \alpha}{(1-\delta)k_{4}}.$$
 
-$$u^{o}_{4}  = 0 $$
-$$i^{o}_{4}  =  0$$
-$$c^{o}_{4}  =  \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}.$$
+$$u_{4}^{o}  = 0 $$
+$$i_{4}^{o}  =  0$$
+$$c_{4}^{o}  =  \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}.$$
 
 Wariant II
 
 Jeżeli wartość $(1-\delta)k_{4}$ jest niższa, tzn. gdy warunek (\ref{eq_warunek}) nie zachodzi, to optymalnie jest przeznaczyć pewną część budżetu na inwestycje. Poniżej zakłada się, że optymalne inwestycje unijne nie przekroczą maksymalnej kwoty $U_{4}$. W pierwszej kolejności zazwyczaj (przeciwny przypadek został omówiony w dalszej części pracy) powinny być realizowane inwestycje unijne, gdyż są tańsze. Jeśli więc ich wysokość nie przekracza ustalonej granicy, wówczas realizacja jakichkolwiek inwestycji ze środków własnych może nie mieć uzasadnienia. 
-%
-\begin{IEEEeqnarray}{rCl}
-U_{4} > u^{o}_{4} &>& 0 \nonumber \\ 
-i^{o}_{4} &=& 0 \nonumber \\
-c^{o}_{4} &>& 0 \nonumber \\
-\mu_{2}^{o} &>& 0 \nonumber \\
-\mu_{3}^{o} &=& 0 \nonumber \\ 
-\mu_{4}^{o} &=& 0. \nonumber
-\end{IEEEeqnarray}
 
-Wartości trzech niewiadomych: $u^{o}_{4}$, $c^{o}_{4}$ i $\lambda^{o}$ można otrzymać, rozwiązując układ trzech równań złożonych z niżej zapisanych warunków I rzędu oraz ograniczenia budżetowego (\ref{eq_ograniczenie_t4}). Warto nadmienić, iż $\mu_{2}^{o}$ nie znajduje się w tych równaniach, ponieważ parametr ten pełni rolę pomocniczą - może on zostać obliczony z warunku I rzędu dla $i^{o}_{4}$. 
 
-\begin{equation}
+$$U_{4} > u_{4}^{o} &>& 0 $$ 
+$$i_{4}^{o} = 0 $$
+$$c_{4}^{o} > 0 $$
+$$\mu_{2}^{o} > 0 $$
+$$\mu_{3}^{o} = 0 $$ 
+$$\mu_{4}^{o} = 0.$$
+
+Wartości trzech niewiadomych: $u_{4}^{o}$, $c_{4}^{o}$ i $\lambda^{o}$ można otrzymać, rozwiązując układ trzech równań złożonych z niżej zapisanych warunków I rzędu oraz ograniczenia budżetowego (\ref{eq_ograniczenie_t4}). Warto nadmienić, iż $\mu_{2}^{o}$ nie znajduje się w tych równaniach, ponieważ parametr ten pełni rolę pomocniczą - może on zostać obliczony z warunku I rzędu dla $i_{4}^{o}$. 
+
+$$
 \frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 
 \label{eq_3_wariant_krotki}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \frac{\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0 
 \label{eq_3_wariant_dlugi}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 \theta u_{4}^{o} +  c_{4}^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.
 \label{eq_3_wariant_budzet}
-\end{equation}
+$$
 
 Próba analitycznego rozwiązania powyższego układu równań prowadzi do na tyle skomplikowanych rachunków, że nie zostały przedstawione. Co więcej, należy uznać całkowity brak inwestycji własnych samorządu za mało prawdopodobną sytuację. Niemniej jednak, optymalne rozwiązanie można uzyskać za pomocą numerycznych metod optymalizacji, o ile otrzymane rozwiązane spełnia powyższe równania. 
 
