@@ -185,23 +185,20 @@ $$\frac {\partial L}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \
 
 $$\frac {\partial L}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)U_{4} + i_{4}^{o}} + \lambda^{o}  = 0  \Rightarrow  i_{4}^{o} = -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} $$$
 
-\begin{equation}
-\begin{split}
-\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} - \\
-- \frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4}+U_{4}} = \phi \nonumber 
-\\
-\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4}  -\frac{\alpha}{\lambda^{o}} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi \nonumber 
-\\
-- U_{4} -\frac{1}{\lambda^{o}} - (1-\delta)k_{4} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi\nonumber 
-\\
-\lambda^{o}  = -\frac{1}{\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + u_{4}^{o} + (1-\delta)k_{4}}  \nonumber
-\end{split}
-\end{equation}
+$$
+\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4} -$$
 
-\begin{IEEEeqnarray}{rCl}
-c_{4}^{o} & = & \frac{\alpha (\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + (1-\delta)k_{4} + U_{4})}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}} \label{eq_c4_wariant4} \\
-i_{4}^{o} & = & (1 - \alpha) \left(\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - \alpha (1-\delta)k_{4} - (\theta + \alpha) U_{4}. \label{eq_i4_wariant4}
-\end{IEEEeqnarray}
+$$- \frac{\alpha}{\lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right)} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}} \right) - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4}+U_{4}} = \phi $$
+
+$$\theta U_{4} -\frac{1 - \alpha}{\lambda^{o}} - (1-\delta)k_{4} - (1+\theta)U_{4}  -\frac{\alpha}{\lambda^{o}} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi $$
+
+$$- U_{4} -\frac{1}{\lambda^{o}} - (1-\delta)k_{4} - \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} = \phi $$
+
+$$\lambda^{o}  = -\frac{1}{\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + u_{4}^{o} + (1-\delta)k_{4}} $$
+
+$$c_{4}^{o} = \frac{\alpha (\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} + (1-\delta)k_{4} + U_{4})}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}} $$ 
+
+$$ i_{4}^{o} =  (1 - \alpha) \left(\phi+ \frac{y_{5}+U_{5}}{\chi+r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - \alpha (1-\delta)k_{4} - (\theta + \alpha) U_{4}. $$
 
 Optymalny poziom wydatków bieżących zależy dodatnio od: parametru $\alpha$ opisującego preferencje samorządów w odniesieniu do $c$, stałej $\phi_{0}$ oraz dochodów $y_{4}$, które wyznaczają przestrzeń fiskalną, infrastruktury $k_{4}$ (im większa, tym mniej potrzebne są inwestycje) oraz limitu $U_{4}$ (im większy, tym wystarczy realizować mniej inwestycji zwykłych). Z kolei optymalny poziom inwestycji zwykłych również zależą dodatnio od $\phi_{0}$ i $y_{4}$, a ujemnie od: $\alpha$, $k_{4}$, $U_{4}$, a także $\theta$. 
 
