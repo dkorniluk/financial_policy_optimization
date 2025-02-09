@@ -72,8 +72,7 @@ $$\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} =  \frac{1}{3} \sum_{\tau=2}^{4} 
 
 Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{o}_{5} = U_{5}$.   
 
-$$
-\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} + r b_{4}  =   z_{4}^{o} + y_{4} \Rightarrow \nonumber \\
+$$\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} + r b_{4}  =   z_{4}^{o} + y_{4} \Rightarrow \nonumber \\
 %
 %\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}  =  \frac{y_{5} + U_{5}}{\chi+ r} \left( \frac{1}{3}  \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - (1+r) b_{4} + y_{4} \nonumber 
 %\\
@@ -82,8 +81,7 @@ $$
 %\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4} }{y_{4} + u_{4}^{o}} = \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r) b_{4} + y_{4} \nonumber
 %\\
 \label{eq_ograniczenie_t4}
-\Rightarrow \theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}}  =  \phi
-$$
+\Rightarrow \theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}}  =  \phi$$
 
 
 Czynnik dyskontujący $\beta^{4}$ można w funkcji celu pominąć, gdyż w tym rozdziale brany pod uwagę jest tylko jeden rok. Model optymalizacyjny można zapisać zatem w następujący sposób: 
