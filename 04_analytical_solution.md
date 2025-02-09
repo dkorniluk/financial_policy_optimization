@@ -210,13 +210,11 @@ Po znalezieniu optymalnych wartości zmiennych decyzyjnych z roku czwartego, mo�
  
 Zakłada się, że w czwartym roku realizowany jest wariant czwarty z podrozdziału \ref{podrozdzial_napiety_IWZ_bez_nadwyzki}, t.j. z inwestycjami unijnymi na maksymalnym poziomie. Wariant ten wydaje się być najbardziej realistyczny, gdyż z symulacji opisanych w podrozdziale \ref{podrozdz_struktura} wynika, że w zdecydowanej większości przypadków taki wariant jest optymalny. Ponadto, można domniemywać, że inwestycje w czwartym roku mogą być wyjątkowo wysokie z uwagi na ignorowanie przez decydentów przyszłego zadłużenia oraz IWZ dotyczących przyszłych lat. Wartość funkcji można dla uproszczenia podzielić przez $\beta^{3}$:
 
-$$
-f(x_{3}) = \alpha \ln c_{3} + (1 - \alpha) \ln ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) +$$
+$$f(x_{3}) = \alpha \ln c_{3} + (1 - \alpha) \ln ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) +$$
 
 $$+ \beta \alpha \ln \left( \frac{\alpha \left(  \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left(\sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}} + \frac{y_{4} - r b_{4}}{y_{4} + U_{4}}  \right) - (1+r) b_{4} + y_{4} + (1-\delta)((1-\delta)k_{3} + (1+\theta)u_{3} + i_{3}) + U_{4} \right) }{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + U_{4}}}  \right) + $$
 
-$$
-+ \beta  (1-\alpha) \ln ( (1-\alpha) (1-\delta) ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) + (1+\theta) U_{4} +$$
+$$+ \beta  (1-\alpha) \ln ( (1-\alpha) (1-\delta) ((1-\delta) k_{3} + (1+\theta) u_{3} + i_{3}) + (1+\theta) U_{4} +$$
 
 $$+   (1 - \alpha) \left(\frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \left( \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - r b_{\tau}}{y_{\tau} + u_{\tau}}  + \frac{y_{4} - r b_{4}}{y_{4} + U_{4}} \right) - (1+r) b_{4} + y_{4}\right)  - (\theta + \alpha) U_{4}) $$
 
