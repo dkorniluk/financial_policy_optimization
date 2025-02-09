@@ -150,7 +150,6 @@ $$
 
 $$
 \theta u_{4}^{o} +  c_{4}^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.
-\label{eq_3_wariant_budzet}
 $$
 
 Próba analitycznego rozwiązania powyższego układu równań prowadzi do na tyle skomplikowanych rachunków, że nie zostały przedstawione. Co więcej, należy uznać całkowity brak inwestycji własnych samorządu za mało prawdopodobną sytuację. Niemniej jednak, optymalne rozwiązanie można uzyskać za pomocą numerycznych metod optymalizacji, o ile otrzymane rozwiązane spełnia powyższe równania. 
@@ -159,27 +158,17 @@ Wariant III
 
 Jednocześnie mogą być wykonywane inwestycje własne oraz unijne w wysokości poniżej limitu. Wynika to z faktu, iż wysoki poziom inwestycji unijnych utrudnia spełnianie reguły IWZ w czwartym roku. Powoduje bowiem wzrost dochodów JST, przez co zmniejsza przestrzeń na odsetki i spłatę rat zadłużenia. Dlatego, wbrew intuicji, inwestowanie ze środków własnych może być optymalne mimo możliwości tańszego finansowania unijnego. Podobnie jak w wariancie drugim, także w tym przypadku podanie optymalnego rozwiązania w postaci analitycznej było niemożliwe z uwagi na stopień złożoności rachunków. 
 
-\begin{IEEEeqnarray}{rCl}
-U_{4} > u^{o}_{4} & > & 0 \nonumber \\ 
-i^{o}_{4} & > & 0 \nonumber \\
-c^{o}_{4} & > & 0 \nonumber \\
-\mu_{2}^{o} & = & 0 \nonumber \\
-\mu_{3}^{o} & = & 0 \nonumber \\ 
-\mu_{4}^{o} & = & 0 \nonumber 
-\end{IEEEeqnarray}
+$$U_{4} > u^{o}_{4} > 0 $$
+$$i^{o}_{4} > 0 $$
+$$c^{o}_{4} > 0 $$
+$$\mu_{2}^{o} = 0 $$
+$$\mu_{3}^{o} = 0 $$
+$$\mu_{4}^{o} = 0  $$
 
-\begin{equation}
-\begin{split}
-\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 
-\\
-\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o}  = 0  
-\\  
-\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta)k_{4} + (1+\theta) u_{4}^{o} + i_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0
-\\
-\theta u_{4}^{o} + i_{4}^{o} +  c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.
-\nonumber
-\end{split}
-\end{equation}
+$$\frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 $$
+$$\frac {\partial \mathcal{L}}{\partial i_{4}} =  \frac{1-\alpha}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o}  = 0  $$
+$$\frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta)k_{4} + (1+\theta) u_{4}^{o} + i_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0$$
+$$\theta u_{4}^{o} + i_{4}^{o} +  c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}} = \phi.$$
 
 Wariant IV
 
