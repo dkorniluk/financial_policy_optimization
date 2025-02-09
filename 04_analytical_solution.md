@@ -60,9 +60,7 @@ Wyznaczenie pełnego rozwiązania analitycznego takiego modelu jest niewykonalne
 
 Uprośćmy teraz problem, znajdując ,,na skróty'' optymalne wartości dla zmiennych z roku czwartego. W tym celu warunek $h_{14}(x)$ należy przekształcić do postaci:
 
-$$
-\theta u_{4} + i_{4} + c_{4}   & = &  z_{4} + y_{4} - rb_{4}.
-$$
+$$\theta u_{4} + i_{4} + c_{4}   & = &  z_{4} + y_{4} - rb_{4}.$$
 Zmienne $y_{4}$, $b_{4}$ są z góry ustalone w roku czwartym. Widać zatem, że suma wydatków bieżących i inwestycyjnych zależy dodatnio od wielkości zaciągniętego długu w czwartym roku. Optymalnie byłoby zatem powiększyć dług jak najbardziej to możliwe, czyli na tyle, na ile pozwalają reguły fiskalne. Z analizy rozwiązań optymalnych uzyskanych za pomocą metod numerycznych (rozdz. \ref{rozdz_numeryczna_metoda}) wynika, że prawie zawsze napięty jest warunek indywidualnego wskaźnika zadłużenia (IWZ, patrz równanie (\ref{IWZ})), a bardzo rzadko - zrównoważonego wyniku bieżącego (ZWB, patrz równanie (\ref{regula_bez_nadwyzki})). Dlatego dalej założono, że IWZ jest warunkiem napiętym, a ZWB - luźnym. 
 
 Z napiętego warunku IWZ można wyprowadzić wzór na optymalny deficyt w roku czwartym: 
