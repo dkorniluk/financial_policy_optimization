@@ -131,8 +131,7 @@ Wariant II
 
 Jeżeli wartość $(1-\delta)k_{4}$ jest niższa, tzn. gdy warunek (\ref{eq_warunek}) nie zachodzi, to optymalnie jest przeznaczyć pewną część budżetu na inwestycje. Poniżej zakłada się, że optymalne inwestycje unijne nie przekroczą maksymalnej kwoty $U_{4}$. W pierwszej kolejności zazwyczaj (przeciwny przypadek został omówiony w dalszej części pracy) powinny być realizowane inwestycje unijne, gdyż są tańsze. Jeśli więc ich wysokość nie przekracza ustalonej granicy, wówczas realizacja jakichkolwiek inwestycji ze środków własnych może nie mieć uzasadnienia. 
 
-
-$$U_{4} > u_{4}^{o} &>& 0 $$ 
+$$U_{4} > u_{4}^{o} > 0 $$ 
 $$i_{4}^{o} = 0 $$
 $$c_{4}^{o} > 0 $$
 $$\mu_{2}^{o} > 0 $$
