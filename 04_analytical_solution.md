@@ -66,10 +66,10 @@ Zmienne $y_{4}$, $b_{4}$ są z góry ustalone w roku czwartym. Widać zatem, że
 
 Z napiętego warunku IWZ można wyprowadzić wzór na optymalny deficyt w roku czwartym: 
 $$
-\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} =  \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \nonumber \\
-%b_{5}^{o} & = & \frac{{y_{5} + u_{5}^{o}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \nonumber \\
+\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} =  \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \Rightarrow \\
+%b_{5}^{o} & = & \frac{{y_{5} + u_{5}^{o}} }{\chi + r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}} \right) \\
 %z_{4}^{o} & = & b_{5}^{o} - b_{4} \nonumber \\
-\Rightarrow z_{4}^{o} & = & \frac{y_{5} + u_{5}^{o}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. \nonumber
+\Rightarrow z_{4}^{o} =  \frac{y_{5} + u_{5}^{o}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}. 
 $$
 
 Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{o}_{5} = U_{5}$.   
