@@ -233,23 +233,14 @@ $$g_{63}(x_{3}): c_{3} + r b_{3} - y_{3}  \leq  0.$$
 
 Powyższy problem można uprościć poprzez wyeliminowanie zmiennych $b_{4}$ i $z_{3}$, których wartości mogą zostać obliczone rezydualnie, po znalezieniu optymalnych wartości pozostałych zmiennych decyzyjnych $u_{3}$, $i_{3}$ i $c_{3}$: 
 
-\begin{equation} 
-%\theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3} = 0\\
-z_{3} = \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3}, 
-\end{equation}
+$$\theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} - z_{3} = 0$$
+$$z_{3} = \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3},$$
 
-\begin{equation} 
-b_{4} = b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3}. 
-\end{equation}
+$$b_{4} = b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3}.$$
 
 Dzięki powyższym przekształceniom, problem ogranicza się do trzech zmiennych decyzyjnych: $u_{3}$, $i_{3}$ i $c_{3}$. Wyeliminowane zostają też warunki ograniczające (\ref{h13}) i (\ref{h23}), które zostaną wykorzystane dopiero w celu obliczenia $b_{4}$ i $z_{3}$. Modyfikacji ulegnie także warunek (\ref{g53}):
 
-{\footnotesize
-\begin{equation}
-g_{53}(x): \frac{(\chi + r) \left(b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} \right)}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right) \leq  0. 
-\nonumber
-\end{equation}
-}
+$$g_{53}(x): \frac{(\chi + r) \left(b_{3} + \theta u_{3} + i_{3} + c_{3} + r b_{3} - y_{3} \right)}{y_{4} + U_{4}} - \frac{1}{3} \left( \frac{y_{1} - c_{1} - r b_{1}}{y_{1} + u_{1}} + \frac{y_{2} - c_{2} - r b_{2}}{y_{2}+u_{2}} + \frac{y_{3} - c_{3} - r b_{3}}{y_{3}+u_{3}} \right) \leq  0.$$
 
 Wydatki bieżące wynikają z napiętego warunku IWZ.
 
