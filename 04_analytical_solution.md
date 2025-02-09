@@ -112,23 +112,20 @@ $$
 \frac {\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o} + i_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) - \mu_{3}^{o} + \mu_{4}^{o} = 0.
 $$  
 
-Teoretycznie należałoby rozważyć szesnaście ($2^{4}$) zestawów potencjalnych rozwiązań optymalnych, gdyż każdy z czterech parametrów $\mu_{i}$ może przyjąć wartość zerową lub dodatnią. Poniżej przeanalizowano jednak tylko cztery wybrane warianty. Przede wszystkim założono, że $c^\frac{o}{4}>0$, co implikuje $\mu_{1} = 0$, a jednocześnie pozwala uniknąć rozpatrywania ośmiu wariantów. Trudno bowiem wyobrazić sobie samorząd, nawet o bardzo złym stanie infrastruktury, w którym nie poniesiono by żadnych wydatków bieżących. Zrezygnowano także z dwóch nierealistycznych scenariuszy: zerowych inwestycji zwykłych i unijnych dokładnie równych limitowi oraz dodatnich inwestycji zwykłych i zerowych unijnych, a także dwóch sprzecznych scenariuszy, które zakładałyby zerowe i zarazem równe limitowi inwestycje unijne (przy zerowych lub dodatnich inwestycjach zwykłych). Poniżej wyróżniono zatem cztery rodzaje rozwiązań, z których ostatnie zasługuje na szczególną uwagę. 
+Teoretycznie należałoby rozważyć szesnaście ($2^{4}$) zestawów potencjalnych rozwiązań optymalnych, gdyż każdy z czterech parametrów $\mu_{i}$ może przyjąć wartość zerową lub dodatnią. Poniżej przeanalizowano jednak tylko cztery wybrane warianty. Przede wszystkim założono, że $c^{o}_{4}>0$, co implikuje $\mu_{1} = 0$, a jednocześnie pozwala uniknąć rozpatrywania ośmiu wariantów. Trudno bowiem wyobrazić sobie samorząd, nawet o bardzo złym stanie infrastruktury, w którym nie poniesiono by żadnych wydatków bieżących. Zrezygnowano także z dwóch nierealistycznych scenariuszy: zerowych inwestycji zwykłych i unijnych dokładnie równych limitowi oraz dodatnich inwestycji zwykłych i zerowych unijnych, a także dwóch sprzecznych scenariuszy, które zakładałyby zerowe i zarazem równe limitowi inwestycje unijne (przy zerowych lub dodatnich inwestycjach zwykłych). Poniżej wyróżniono zatem cztery rodzaje rozwiązań, z których ostatnie zasługuje na szczególną uwagę. 
 
 Zbieżność poniższych rozwiązań, uzyskanych metodą analityczną, z rozwiązaniami otrzymanymi dzięki numerycznym metodom optymalizacyjnym, zaprezentowano szczegółowo w aneksie \ref{Aneks_kody}. Wyjątek stanowi wariant trzeci, który nie został uwzględniony w aneksie (jest mało realny), lecz metoda postępowania w jego przypadku byłaby analogiczna do wariantu drugiego. 
 
 Wariant I
 
 Jeżeli wartość $(1-\delta)k_{4}$ jest odpowiednio wysoka, to największą użyteczność przynosi przeznaczenie całych dostępnych funduszy na wydatki bieżące. Warunek (\ref{eq_warunek}) oznacza, że krańcowa użyteczność z wydatków bieżących sfinansowanych z całego dostępnego budżetu jest wyższa niż z dowolnie małego powiększenia infrastruktury: 
-\begin{IEEEeqnarray}{rCl}
-\frac {\partial f}{\partial c_{4}} & > &  \frac {\partial f}{\partial k_{5}} \mbox{ dla } k_{5} = (1-\delta) k_{4} \label{eq_warunek} \\
-\frac{\alpha \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right)}{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r}} & > & \frac{1- \alpha}{(1-\delta)k_{4}}. \nonumber
-\end{IEEEeqnarray}
-%
-\begin{IEEEeqnarray}{rCl}
-u^{o}_{4} & =  &0 \nonumber \\ 
-i^{o}_{4} & = & 0  \nonumber\\
-c^{o}_{4} & = & \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}. \label{eq_tylko_c4}
-\end{IEEEeqnarray}
+
+$$\frac {\partial f}{\partial c_{4}}  >   \frac {\partial f}{\partial k_{5}} \mbox{ dla } k_{5} = (1-\delta) k_{4} $$
+$$\frac{\alpha \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right)}{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r}}  >  \frac{1- \alpha}{(1-\delta)k_{4}}.$$
+
+$$u^{o}_{4}  = 0 $$
+$$i^{o}_{4}  =  0$$
+$$c^{o}_{4}  =  \frac{\phi+ \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{y_{4} - r b_{4}}{y_{4}}}{1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4}}}.$$
 
 Wariant II
 
