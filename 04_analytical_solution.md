@@ -142,12 +142,10 @@ Wartości trzech niewiadomych: $u_{4}^{o}$, $c_{4}^{o}$ i $\lambda^{o}$ można o
 
 $$
 \frac {\partial \mathcal{L}}{\partial c_{4}} =  \frac{\alpha}{c_{4}^{o}} + \lambda^{o} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) = 0 
-\label{eq_3_wariant_krotki}
 $$
 
 $$
 \frac{\partial \mathcal{L}}{\partial u_{4}} = \frac{(1-\alpha)(1+\theta)}{(1-\delta) k_{4} + (1+\theta)u_{4}^{o}} + \lambda^{o} \left(\theta + (y_{4} - r b_{4} - c_{4}^{o}) \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{(y_{4} + u_{4}^{o})^{2}} \right) = 0 
-\label{eq_3_wariant_dlugi}
 $$
 
 $$
