@@ -70,9 +70,9 @@ $$\frac{(\chi+r) b_{5}^{o}}{y_{5} + u_{5}^{o}} =  \frac{1}{3} \sum_{\tau=2}^{4} 
 %z_{4}^{o} & = & b_{5}^{o} - b_{4} \nonumber \\
 \Rightarrow z_{4}^{o} =  \frac{y_{5} + u_{5}^{o}}{\chi+ r} \left( \frac{1}{3} \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - b_{4}.$$
 
-Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^{o}_{5} = U_{5}$.   
+Następnie można przekształcić ograniczenie budżetowe tak, aby po lewej stronie występowały tylko zmienne decyzyjne (ponieważ powinny przyjąć optymalne wartości, to zostały oznaczone gwiazdkami), a po prawej stronie -  zmienne z góry ustalone w roku czwartym (ich suma to $\phi= \mbox{const}\lvert_{t=4}$). Wyjątek stanowi zmienna $u_{5} \leq U_{5}$, której wartość jest określana dopiero przez następne władze samorządowe, co wykracza poza omawiane tu zagadnienie optymalizacyjne. Na potrzeby rozwiązania można założyć, że w roku piątym kwota inwestycji unijnych opiewa na maksymalny limit, tj. $u^\frac{o}{5} = U_{5}$.   
 
-$$\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} + r b_{4}  =   z_{4}^{o} + y_{4} \Rightarrow$$  
+$$\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o} + r b_{4}  =   z_{4}^{o} + y_{4}$$  
 
 $$\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}  =  \frac{y_{5} + U_{5}}{\chi+ r} \left( \frac{1}{3}  \sum_{\tau=2}^{4} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  \right) - (1+r) b_{4} + y_{4} 
 \theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left( 1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}^{o}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}^{o}}  = \frac{y_{5} + U_{5}}{\chi+ r} \frac{1}{3} \sum_{\tau=2}^{3} \frac{y_{\tau} - c_{\tau} - rb_{\tau}}{y_{\tau} + u_{\tau}}  - (1+r ) b_{4} + y_{4}$$
@@ -83,18 +83,19 @@ $$\theta u_{4}^{o} + i_{4}^{o} + c_{4}^{o}\left(1 + \frac{1}{3} \frac{y_{5} + U_
 
 
 Czynnik dyskontujący $\beta^{4}$ można w funkcji celu pominąć, gdyż w tym rozdziale brany pod uwagę jest tylko jeden rok. Model optymalizacyjny można zapisać zatem w następujący sposób: 
-\begin{equation}
-\max_{c_{4}, u_{4}, i_{4}} \left( \alpha \ln c_{4} + \left(1 - \alpha \right) \ln k_{5} \right) \nonumber
-\end{equation}
+
+$$\max_{c_{4}, u_{4}, i_{4}} \left( \alpha \ln c_{4} + \left(1 - \alpha \right) \ln k_{5} \right) \nonumber$$
+
 p.w.
-\begin{IEEEeqnarray}{rCl}
-\theta u_{4} + i_{4} + c_{4} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi& = & 0 \nonumber \\
--c_{4} & \leq & 0 \nonumber \\
--i_{4} & \leq & 0 \nonumber \\
--u_{4} & \leq & 0 \nonumber \\
-u_{4} - U_{4} & \leq & 0 \nonumber \\
-c_{4} + r b_{4} & = & y_{4}. \nonumber
-\end{IEEEeqnarray}
+
+$$
+\theta u_{4} + i_{4} + c_{4} \left(1 + \frac{1}{3} \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{y_{4} + u_{4}} \right) - \frac{y_{5} + U_{5}}{\chi + r} \frac{1}{3} \frac{y_{4} - r b_{4}}{y_{4} + u_{4}} - \phi = 0 \nonumber \\
+-c_{4}  \leq  0 \\
+-i_{4}  \leq  0  \\
+-u_{4}  \leq  0  \\
+u_{4} - U_{4}  \leq  0  \\
+c_{4} + r b_{4}  =  y_{4}. 
+$$
 
 Funkcja Lagrange'a i warunki konieczne (pierwszego rzędu) przedstawiają się następująco:
 \begin{equation}
